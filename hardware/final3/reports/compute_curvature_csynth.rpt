@@ -1,0 +1,496 @@
+
+
+================================================================
+== Vitis HLS Report for 'compute_curvature'
+================================================================
+* Date:           Thu Oct 29 07:54:09 2026
+
+* Version:        2024.2 (Build 5238294 on Nov  8 2024)
+* Project:        hls_build.prj
+* Solution:       solution1 (Vivado IP Flow Target)
+* Product family: zynquplus
+* Target device:  xck26-sfvc784-2LV-c
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+---------+----------+------------+
+    |  Clock |  Target | Estimated| Uncertainty|
+    +--------+---------+----------+------------+
+    |ap_clk  |  5.00 ns|  3.551 ns|     1.35 ns|
+    +--------+---------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-------+-------+---------+
+    |  Latency (cycles) |  Latency (absolute) |    Interval   | Pipeline|
+    |   min   |   max   |    min   |    max   |  min  |  max  |   Type  |
+    +---------+---------+----------+----------+-------+-------+---------+
+    |    28981|    28981|  0.145 ms|  0.145 ms|  28981|  28981|       no|
+    +---------+---------+----------+----------+-------+-------+---------+
+
+    + Detail: 
+        * Instance: 
+        +---------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------+---------+---------+----------+----------+-------+-------+------------------------------------------------+
+        |                                                                                             |                                                                                  |  Latency (cycles) |  Latency (absolute) |    Interval   |                    Pipeline                    |
+        |                                           Instance                                          |                                      Module                                      |   min   |   max   |    min   |    max   |  min  |  max  |                      Type                      |
+        +---------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------+---------+---------+----------+----------+-------+-------+------------------------------------------------+
+        |grp_compute_curvature_Pipeline_loop_reset_compute_curvature_buffer_VITIS_LOOP_1188_1_fu_250  |compute_curvature_Pipeline_loop_reset_compute_curvature_buffer_VITIS_LOOP_1188_1  |      178|      178|  0.890 us|  0.890 us|    177|    177|  loop auto-rewind stp (delay=0 clock cycles(s))|
+        |grp_compute_curvature_Pipeline_loop_compute_curvature_main_fu_326                            |compute_curvature_Pipeline_loop_compute_curvature_main                            |    28633|    28633|  0.143 ms|  0.143 ms|  28625|  28625|  loop auto-rewind stp (delay=0 clock cycles(s))|
+        |grp_compute_curvature_Pipeline_loop_out_final_compute_curvature_stream_loop_out_fina_fu_392  |compute_curvature_Pipeline_loop_out_final_compute_curvature_stream_loop_out_fina  |      165|      165|  0.825 us|  0.825 us|    161|    161|  loop auto-rewind stp (delay=0 clock cycles(s))|
+        +---------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------+---------+---------+----------+----------+-------+-------+------------------------------------------------+
+
+        * Loop: 
+        N/A
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+------+--------+--------+-----+
+|       Name      | BRAM_18K|  DSP |   FF   |   LUT  | URAM|
++-----------------+---------+------+--------+--------+-----+
+|DSP              |        -|     -|       -|       -|    -|
+|Expression       |        -|     -|       0|     151|    -|
+|FIFO             |        -|     -|       -|       -|    -|
+|Instance         |        -|     8|    3300|    8242|    -|
+|Memory           |       99|     -|    1024|     128|    0|
+|Multiplexer      |        -|     -|       0|    3645|    -|
+|Register         |        -|     -|      75|       -|    -|
++-----------------+---------+------+--------+--------+-----+
+|Total            |       99|     8|    4399|   12166|    0|
++-----------------+---------+------+--------+--------+-----+
+|Available        |      288|  1248|  234240|  117120|   64|
++-----------------+---------+------+--------+--------+-----+
+|Utilization (%)  |       34|    ~0|       1|      10|    0|
++-----------------+---------+------+--------+--------+-----+
+
++ Detail: 
+    * Instance: 
+    +---------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------+---------+----+------+------+-----+
+    |                                           Instance                                          |                                      Module                                      | BRAM_18K| DSP|  FF  |  LUT | URAM|
+    +---------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------+---------+----+------+------+-----+
+    |grp_compute_curvature_Pipeline_loop_compute_curvature_main_fu_326                            |compute_curvature_Pipeline_loop_compute_curvature_main                            |        0|   7|  3036|  7273|    0|
+    |grp_compute_curvature_Pipeline_loop_out_final_compute_curvature_stream_loop_out_fina_fu_392  |compute_curvature_Pipeline_loop_out_final_compute_curvature_stream_loop_out_fina  |        0|   1|   184|   755|    0|
+    |grp_compute_curvature_Pipeline_loop_reset_compute_curvature_buffer_VITIS_LOOP_1188_1_fu_250  |compute_curvature_Pipeline_loop_reset_compute_curvature_buffer_VITIS_LOOP_1188_1  |        0|   0|    80|   214|    0|
+    +---------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------+---------+----+------+------+-----+
+    |Total                                                                                        |                                                                                  |        0|   8|  3300|  8242|    0|
+    +---------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------+---------+----+------+------+-----+
+
+    * DSP: 
+    N/A
+
+    * Memory: 
+    +----------------------------------+--------------------------------------------------------------+---------+----+----+-----+------+-----+------+-------------+
+    |              Memory              |                            Module                            | BRAM_18K| FF | LUT| URAM| Words| Bits| Banks| W*Bits*Banks|
+    +----------------------------------+--------------------------------------------------------------+---------+----+----+-----+------+-----+------+-------------+
+    |rangeimage_curvature_buffer_U     |compute_curvature_rangeimage_curvature_buffer_RAM_AUTO_1R1W   |        0|  64|   8|    0|    16|   32|     1|          512|
+    |rangeimage_curvature_buffer_1_U   |compute_curvature_rangeimage_curvature_buffer_RAM_AUTO_1R1W   |        0|  64|   8|    0|    16|   32|     1|          512|
+    |rangeimage_curvature_buffer_2_U   |compute_curvature_rangeimage_curvature_buffer_RAM_AUTO_1R1W   |        0|  64|   8|    0|    16|   32|     1|          512|
+    |rangeimage_curvature_buffer_3_U   |compute_curvature_rangeimage_curvature_buffer_RAM_AUTO_1R1W   |        0|  64|   8|    0|    16|   32|     1|          512|
+    |rangeimage_curvature_buffer_4_U   |compute_curvature_rangeimage_curvature_buffer_RAM_AUTO_1R1W   |        0|  64|   8|    0|    16|   32|     1|          512|
+    |rangeimage_curvature_buffer_5_U   |compute_curvature_rangeimage_curvature_buffer_RAM_AUTO_1R1W   |        0|  64|   8|    0|    16|   32|     1|          512|
+    |rangeimage_curvature_buffer_6_U   |compute_curvature_rangeimage_curvature_buffer_RAM_AUTO_1R1W   |        0|  64|   8|    0|    16|   32|     1|          512|
+    |rangeimage_curvature_buffer_7_U   |compute_curvature_rangeimage_curvature_buffer_RAM_AUTO_1R1W   |        0|  64|   8|    0|    16|   32|     1|          512|
+    |rangeimage_curvature_buffer_8_U   |compute_curvature_rangeimage_curvature_buffer_RAM_AUTO_1R1W   |        0|  64|   8|    0|    16|   32|     1|          512|
+    |rangeimage_curvature_buffer_9_U   |compute_curvature_rangeimage_curvature_buffer_RAM_AUTO_1R1W   |        0|  64|   8|    0|    16|   32|     1|          512|
+    |rangeimage_curvature_buffer_10_U  |compute_curvature_rangeimage_curvature_buffer_RAM_AUTO_1R1W   |        0|  64|   8|    0|    16|   32|     1|          512|
+    |rangeimage_curvature_buffer_11_U  |compute_curvature_rangeimage_curvature_buffer_RAM_AUTO_1R1W   |        0|  64|   8|    0|    16|   32|     1|          512|
+    |rangeimage_curvature_buffer_12_U  |compute_curvature_rangeimage_curvature_buffer_RAM_AUTO_1R1W   |        0|  64|   8|    0|    16|   32|     1|          512|
+    |rangeimage_curvature_buffer_13_U  |compute_curvature_rangeimage_curvature_buffer_RAM_AUTO_1R1W   |        0|  64|   8|    0|    16|   32|     1|          512|
+    |rangeimage_curvature_buffer_14_U  |compute_curvature_rangeimage_curvature_buffer_RAM_AUTO_1R1W   |        0|  64|   8|    0|    16|   32|     1|          512|
+    |rangeimage_curvature_buffer_15_U  |compute_curvature_rangeimage_curvature_buffer_RAM_AUTO_1R1W   |        0|  64|   8|    0|    16|   32|     1|          512|
+    |rangeimage_line_buffer_0_U        |compute_curvature_rangeimage_line_buffer_0_RAM_AUTO_1R1W      |        5|   0|   0|    0|    16|   80|     1|         1280|
+    |rangeimage_line_buffer_1_U        |compute_curvature_rangeimage_line_buffer_0_RAM_AUTO_1R1W      |        5|   0|   0|    0|    16|   80|     1|         1280|
+    |rangeimage_line_buffer_2_U        |compute_curvature_rangeimage_line_buffer_0_RAM_AUTO_1R1W      |        5|   0|   0|    0|    16|   80|     1|         1280|
+    |rangeimage_line_buffer_3_U        |compute_curvature_rangeimage_line_buffer_0_RAM_AUTO_1R1W      |        5|   0|   0|    0|    16|   80|     1|         1280|
+    |rangeimage_line_buffer_4_U        |compute_curvature_rangeimage_line_buffer_0_RAM_AUTO_1R1W      |        5|   0|   0|    0|    16|   80|     1|         1280|
+    |rangeimage_line_buffer_5_U        |compute_curvature_rangeimage_line_buffer_0_RAM_AUTO_1R1W      |        5|   0|   0|    0|    16|   80|     1|         1280|
+    |rangeimage_line_buffer_6_U        |compute_curvature_rangeimage_line_buffer_0_RAM_AUTO_1R1W      |        5|   0|   0|    0|    16|   80|     1|         1280|
+    |rangeimage_line_buffer_7_U        |compute_curvature_rangeimage_line_buffer_0_RAM_AUTO_1R1W      |        5|   0|   0|    0|    16|   80|     1|         1280|
+    |rangeimage_line_buffer_8_U        |compute_curvature_rangeimage_line_buffer_0_RAM_AUTO_1R1W      |        5|   0|   0|    0|    16|   80|     1|         1280|
+    |rangeimage_line_buffer_9_U        |compute_curvature_rangeimage_line_buffer_0_RAM_AUTO_1R1W      |        5|   0|   0|    0|    16|   80|     1|         1280|
+    |rangeimage_line_buffer_10_U       |compute_curvature_rangeimage_line_buffer_0_RAM_AUTO_1R1W      |        5|   0|   0|    0|    16|   80|     1|         1280|
+    |rangeimage_line_buffer_11_U       |compute_curvature_rangeimage_line_buffer_0_RAM_AUTO_1R1W      |        5|   0|   0|    0|    16|   80|     1|         1280|
+    |rangeimage_line_buffer_12_U       |compute_curvature_rangeimage_line_buffer_0_RAM_AUTO_1R1W      |        5|   0|   0|    0|    16|   80|     1|         1280|
+    |rangeimage_line_buffer_13_U       |compute_curvature_rangeimage_line_buffer_0_RAM_AUTO_1R1W      |        5|   0|   0|    0|    16|   80|     1|         1280|
+    |rangeimage_line_buffer_14_U       |compute_curvature_rangeimage_line_buffer_0_RAM_AUTO_1R1W      |        5|   0|   0|    0|    16|   80|     1|         1280|
+    |rangeimage_line_buffer_15_U       |compute_curvature_rangeimage_line_buffer_0_RAM_AUTO_1R1W      |        5|   0|   0|    0|    16|   80|     1|         1280|
+    |rangeimage_picked_buffer_U        |compute_curvature_rangeimage_picked_buffer_RAM_AUTO_1R1W      |        1|   0|   0|    0|  1808|    1|     1|         1808|
+    |rangeimage_picked_buffer_1_U      |compute_curvature_rangeimage_picked_buffer_RAM_AUTO_1R1W      |        1|   0|   0|    0|  1808|    1|     1|         1808|
+    |rangeimage_picked_buffer_2_U      |compute_curvature_rangeimage_picked_buffer_RAM_AUTO_1R1W      |        1|   0|   0|    0|  1808|    1|     1|         1808|
+    |rangeimage_picked_buffer_3_U      |compute_curvature_rangeimage_picked_buffer_RAM_AUTO_1R1W      |        1|   0|   0|    0|  1808|    1|     1|         1808|
+    |rangeimage_picked_buffer_4_U      |compute_curvature_rangeimage_picked_buffer_RAM_AUTO_1R1W      |        1|   0|   0|    0|  1808|    1|     1|         1808|
+    |rangeimage_picked_buffer_5_U      |compute_curvature_rangeimage_picked_buffer_RAM_AUTO_1R1W      |        1|   0|   0|    0|  1808|    1|     1|         1808|
+    |rangeimage_picked_buffer_6_U      |compute_curvature_rangeimage_picked_buffer_RAM_AUTO_1R1W      |        1|   0|   0|    0|  1808|    1|     1|         1808|
+    |rangeimage_picked_buffer_7_U      |compute_curvature_rangeimage_picked_buffer_RAM_AUTO_1R1W      |        1|   0|   0|    0|  1808|    1|     1|         1808|
+    |rangeimage_picked_buffer_8_U      |compute_curvature_rangeimage_picked_buffer_RAM_AUTO_1R1W      |        1|   0|   0|    0|  1808|    1|     1|         1808|
+    |rangeimage_picked_buffer_9_U      |compute_curvature_rangeimage_picked_buffer_RAM_AUTO_1R1W      |        1|   0|   0|    0|  1808|    1|     1|         1808|
+    |rangeimage_picked_buffer_10_U     |compute_curvature_rangeimage_picked_buffer_RAM_AUTO_1R1W      |        1|   0|   0|    0|  1808|    1|     1|         1808|
+    |rangeimage_picked_buffer_11_U     |compute_curvature_rangeimage_picked_buffer_RAM_AUTO_1R1W      |        1|   0|   0|    0|  1808|    1|     1|         1808|
+    |rangeimage_picked_buffer_12_U     |compute_curvature_rangeimage_picked_buffer_RAM_AUTO_1R1W      |        1|   0|   0|    0|  1808|    1|     1|         1808|
+    |rangeimage_picked_buffer_13_U     |compute_curvature_rangeimage_picked_buffer_RAM_AUTO_1R1W      |        1|   0|   0|    0|  1808|    1|     1|         1808|
+    |rangeimage_picked_buffer_14_U     |compute_curvature_rangeimage_picked_buffer_RAM_AUTO_1R1W      |        1|   0|   0|    0|  1808|    1|     1|         1808|
+    |rangeimage_picked_buffer_15_U     |compute_curvature_rangeimage_picked_buffer_RAM_AUTO_1R1W      |        1|   0|   0|    0|  1808|    1|     1|         1808|
+    |rangeimage_range_buffer_U         |compute_curvature_rangeimage_range_buffer_RAM_1WNR_BRAM_1R1W  |        3|   0|   0|    0|   256|   18|     1|         4608|
+    +----------------------------------+--------------------------------------------------------------+---------+----+----+-----+------+-----+------+-------------+
+    |Total                             |                                                              |       99|1024| 128|    0| 29696| 1826|    49|        62208|
+    +----------------------------------+--------------------------------------------------------------+---------+----+----+-----+------+-----+------+-------------+
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +-------------------------+----------+----+---+----+------------+------------+
+    |      Variable Name      | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +-------------------------+----------+----+---+----+------------+------------+
+    |column_i_fu_528_p2       |         +|   0|  0|  39|          32|           5|
+    |sub_ln1369_fu_549_p2     |         -|   0|  0|  39|          32|          32|
+    |empty_fu_535_p2          |      icmp|   0|  0|  39|          32|          11|
+    |ap_block_state1          |        or|   0|  0|   2|           1|           1|
+    |select_ln1369_fu_541_p3  |    select|   0|  0|  32|           1|          32|
+    +-------------------------+----------+----+---+----+------------+------------+
+    |Total                    |          |   0|  0| 151|          98|          81|
+    +-------------------------+----------+----+---+----+------------+------------+
+
+    * Multiplexer: 
+    +-----------------------------------------+----+-----------+-----+-----------+
+    |                   Name                  | LUT| Input Size| Bits| Total Bits|
+    +-----------------------------------------+----+-----------+-----+-----------+
+    |ap_NS_fsm                                |  37|          7|    1|          7|
+    |ap_done                                  |   9|          2|    1|          2|
+    |cache_image_point_stream5_read           |  14|          3|    1|          3|
+    |cache_image_range_stream6_read           |  14|          3|    1|          3|
+    |curvature_out_curvature_stream9_din      |   9|          2|   32|         64|
+    |curvature_out_curvature_stream9_write    |  14|          3|    1|          3|
+    |curvature_out_picked_stream10_din        |   9|          2|    1|          2|
+    |curvature_out_picked_stream10_write      |  14|          3|    1|          3|
+    |curvature_out_point_stream7_din          |   9|          2|   80|        160|
+    |curvature_out_point_stream7_write        |  14|          3|    1|          3|
+    |curvature_out_range_stream8_din          |   9|          2|   18|         36|
+    |curvature_out_range_stream8_write        |  14|          3|    1|          3|
+    |rangeimage_curvature_buffer_10_address0  |  20|          4|    4|         16|
+    |rangeimage_curvature_buffer_10_ce0       |  20|          4|    1|          4|
+    |rangeimage_curvature_buffer_10_ce1       |   9|          2|    1|          2|
+    |rangeimage_curvature_buffer_10_d0        |  14|          3|   32|         96|
+    |rangeimage_curvature_buffer_10_we0       |  14|          3|    1|          3|
+    |rangeimage_curvature_buffer_11_address0  |  14|          3|    4|         12|
+    |rangeimage_curvature_buffer_11_ce0       |  14|          3|    1|          3|
+    |rangeimage_curvature_buffer_11_ce1       |   9|          2|    1|          2|
+    |rangeimage_curvature_buffer_11_we0       |   9|          2|    1|          2|
+    |rangeimage_curvature_buffer_12_address0  |  14|          3|    4|         12|
+    |rangeimage_curvature_buffer_12_ce0       |  14|          3|    1|          3|
+    |rangeimage_curvature_buffer_12_ce1       |   9|          2|    1|          2|
+    |rangeimage_curvature_buffer_12_we0       |   9|          2|    1|          2|
+    |rangeimage_curvature_buffer_13_address0  |  14|          3|    4|         12|
+    |rangeimage_curvature_buffer_13_ce0       |  14|          3|    1|          3|
+    |rangeimage_curvature_buffer_13_ce1       |   9|          2|    1|          2|
+    |rangeimage_curvature_buffer_13_we0       |   9|          2|    1|          2|
+    |rangeimage_curvature_buffer_14_address0  |  14|          3|    4|         12|
+    |rangeimage_curvature_buffer_14_ce0       |  14|          3|    1|          3|
+    |rangeimage_curvature_buffer_14_ce1       |   9|          2|    1|          2|
+    |rangeimage_curvature_buffer_14_we0       |   9|          2|    1|          2|
+    |rangeimage_curvature_buffer_15_address0  |  14|          3|    4|         12|
+    |rangeimage_curvature_buffer_15_ce0       |  14|          3|    1|          3|
+    |rangeimage_curvature_buffer_15_ce1       |   9|          2|    1|          2|
+    |rangeimage_curvature_buffer_15_we0       |   9|          2|    1|          2|
+    |rangeimage_curvature_buffer_1_address0   |  20|          4|    4|         16|
+    |rangeimage_curvature_buffer_1_ce0        |  20|          4|    1|          4|
+    |rangeimage_curvature_buffer_1_ce1        |   9|          2|    1|          2|
+    |rangeimage_curvature_buffer_1_d0         |  14|          3|   32|         96|
+    |rangeimage_curvature_buffer_1_we0        |  14|          3|    1|          3|
+    |rangeimage_curvature_buffer_2_address0   |  20|          4|    4|         16|
+    |rangeimage_curvature_buffer_2_ce0        |  20|          4|    1|          4|
+    |rangeimage_curvature_buffer_2_ce1        |   9|          2|    1|          2|
+    |rangeimage_curvature_buffer_2_d0         |  14|          3|   32|         96|
+    |rangeimage_curvature_buffer_2_we0        |  14|          3|    1|          3|
+    |rangeimage_curvature_buffer_3_address0   |  20|          4|    4|         16|
+    |rangeimage_curvature_buffer_3_ce0        |  20|          4|    1|          4|
+    |rangeimage_curvature_buffer_3_ce1        |   9|          2|    1|          2|
+    |rangeimage_curvature_buffer_3_d0         |  14|          3|   32|         96|
+    |rangeimage_curvature_buffer_3_we0        |  14|          3|    1|          3|
+    |rangeimage_curvature_buffer_4_address0   |  20|          4|    4|         16|
+    |rangeimage_curvature_buffer_4_ce0        |  20|          4|    1|          4|
+    |rangeimage_curvature_buffer_4_ce1        |   9|          2|    1|          2|
+    |rangeimage_curvature_buffer_4_d0         |  14|          3|   32|         96|
+    |rangeimage_curvature_buffer_4_we0        |  14|          3|    1|          3|
+    |rangeimage_curvature_buffer_5_address0   |  20|          4|    4|         16|
+    |rangeimage_curvature_buffer_5_ce0        |  20|          4|    1|          4|
+    |rangeimage_curvature_buffer_5_ce1        |   9|          2|    1|          2|
+    |rangeimage_curvature_buffer_5_d0         |  14|          3|   32|         96|
+    |rangeimage_curvature_buffer_5_we0        |  14|          3|    1|          3|
+    |rangeimage_curvature_buffer_6_address0   |  20|          4|    4|         16|
+    |rangeimage_curvature_buffer_6_ce0        |  20|          4|    1|          4|
+    |rangeimage_curvature_buffer_6_ce1        |   9|          2|    1|          2|
+    |rangeimage_curvature_buffer_6_d0         |  14|          3|   32|         96|
+    |rangeimage_curvature_buffer_6_we0        |  14|          3|    1|          3|
+    |rangeimage_curvature_buffer_7_address0   |  20|          4|    4|         16|
+    |rangeimage_curvature_buffer_7_ce0        |  20|          4|    1|          4|
+    |rangeimage_curvature_buffer_7_ce1        |   9|          2|    1|          2|
+    |rangeimage_curvature_buffer_7_d0         |  14|          3|   32|         96|
+    |rangeimage_curvature_buffer_7_we0        |  14|          3|    1|          3|
+    |rangeimage_curvature_buffer_8_address0   |  20|          4|    4|         16|
+    |rangeimage_curvature_buffer_8_ce0        |  20|          4|    1|          4|
+    |rangeimage_curvature_buffer_8_ce1        |   9|          2|    1|          2|
+    |rangeimage_curvature_buffer_8_d0         |  14|          3|   32|         96|
+    |rangeimage_curvature_buffer_8_we0        |  14|          3|    1|          3|
+    |rangeimage_curvature_buffer_9_address0   |  20|          4|    4|         16|
+    |rangeimage_curvature_buffer_9_ce0        |  20|          4|    1|          4|
+    |rangeimage_curvature_buffer_9_ce1        |   9|          2|    1|          2|
+    |rangeimage_curvature_buffer_9_d0         |  14|          3|   32|         96|
+    |rangeimage_curvature_buffer_9_we0        |  14|          3|    1|          3|
+    |rangeimage_curvature_buffer_address0     |  20|          4|    4|         16|
+    |rangeimage_curvature_buffer_ce0          |  20|          4|    1|          4|
+    |rangeimage_curvature_buffer_ce1          |   9|          2|    1|          2|
+    |rangeimage_curvature_buffer_d0           |  14|          3|   32|         96|
+    |rangeimage_curvature_buffer_we0          |  14|          3|    1|          3|
+    |rangeimage_line_buffer_0_address0        |  20|          4|    4|         16|
+    |rangeimage_line_buffer_0_ce0             |  20|          4|    1|          4|
+    |rangeimage_line_buffer_0_ce1             |   9|          2|    1|          2|
+    |rangeimage_line_buffer_0_d0              |  14|          3|   80|        240|
+    |rangeimage_line_buffer_0_we0             |  14|          3|    1|          3|
+    |rangeimage_line_buffer_10_address0       |  20|          4|    4|         16|
+    |rangeimage_line_buffer_10_ce0            |  20|          4|    1|          4|
+    |rangeimage_line_buffer_10_ce1            |   9|          2|    1|          2|
+    |rangeimage_line_buffer_10_d0             |  14|          3|   80|        240|
+    |rangeimage_line_buffer_10_we0            |  14|          3|    1|          3|
+    |rangeimage_line_buffer_11_address0       |  14|          3|    4|         12|
+    |rangeimage_line_buffer_11_ce0            |  14|          3|    1|          3|
+    |rangeimage_line_buffer_11_ce1            |   9|          2|    1|          2|
+    |rangeimage_line_buffer_11_we0            |   9|          2|    1|          2|
+    |rangeimage_line_buffer_12_address0       |  14|          3|    4|         12|
+    |rangeimage_line_buffer_12_ce0            |  14|          3|    1|          3|
+    |rangeimage_line_buffer_12_ce1            |   9|          2|    1|          2|
+    |rangeimage_line_buffer_12_we0            |   9|          2|    1|          2|
+    |rangeimage_line_buffer_13_address0       |  14|          3|    4|         12|
+    |rangeimage_line_buffer_13_ce0            |  14|          3|    1|          3|
+    |rangeimage_line_buffer_13_ce1            |   9|          2|    1|          2|
+    |rangeimage_line_buffer_13_we0            |   9|          2|    1|          2|
+    |rangeimage_line_buffer_14_address0       |  14|          3|    4|         12|
+    |rangeimage_line_buffer_14_ce0            |  14|          3|    1|          3|
+    |rangeimage_line_buffer_14_ce1            |   9|          2|    1|          2|
+    |rangeimage_line_buffer_14_we0            |   9|          2|    1|          2|
+    |rangeimage_line_buffer_15_address0       |  14|          3|    4|         12|
+    |rangeimage_line_buffer_15_ce0            |  14|          3|    1|          3|
+    |rangeimage_line_buffer_15_ce1            |   9|          2|    1|          2|
+    |rangeimage_line_buffer_15_we0            |   9|          2|    1|          2|
+    |rangeimage_line_buffer_1_address0        |  20|          4|    4|         16|
+    |rangeimage_line_buffer_1_ce0             |  20|          4|    1|          4|
+    |rangeimage_line_buffer_1_ce1             |   9|          2|    1|          2|
+    |rangeimage_line_buffer_1_d0              |  14|          3|   80|        240|
+    |rangeimage_line_buffer_1_we0             |  14|          3|    1|          3|
+    |rangeimage_line_buffer_2_address0        |  20|          4|    4|         16|
+    |rangeimage_line_buffer_2_ce0             |  20|          4|    1|          4|
+    |rangeimage_line_buffer_2_ce1             |   9|          2|    1|          2|
+    |rangeimage_line_buffer_2_d0              |  14|          3|   80|        240|
+    |rangeimage_line_buffer_2_we0             |  14|          3|    1|          3|
+    |rangeimage_line_buffer_3_address0        |  20|          4|    4|         16|
+    |rangeimage_line_buffer_3_ce0             |  20|          4|    1|          4|
+    |rangeimage_line_buffer_3_ce1             |   9|          2|    1|          2|
+    |rangeimage_line_buffer_3_d0              |  14|          3|   80|        240|
+    |rangeimage_line_buffer_3_we0             |  14|          3|    1|          3|
+    |rangeimage_line_buffer_4_address0        |  20|          4|    4|         16|
+    |rangeimage_line_buffer_4_ce0             |  20|          4|    1|          4|
+    |rangeimage_line_buffer_4_ce1             |   9|          2|    1|          2|
+    |rangeimage_line_buffer_4_d0              |  14|          3|   80|        240|
+    |rangeimage_line_buffer_4_we0             |  14|          3|    1|          3|
+    |rangeimage_line_buffer_5_address0        |  20|          4|    4|         16|
+    |rangeimage_line_buffer_5_ce0             |  20|          4|    1|          4|
+    |rangeimage_line_buffer_5_ce1             |   9|          2|    1|          2|
+    |rangeimage_line_buffer_5_d0              |  14|          3|   80|        240|
+    |rangeimage_line_buffer_5_we0             |  14|          3|    1|          3|
+    |rangeimage_line_buffer_6_address0        |  20|          4|    4|         16|
+    |rangeimage_line_buffer_6_ce0             |  20|          4|    1|          4|
+    |rangeimage_line_buffer_6_ce1             |   9|          2|    1|          2|
+    |rangeimage_line_buffer_6_d0              |  14|          3|   80|        240|
+    |rangeimage_line_buffer_6_we0             |  14|          3|    1|          3|
+    |rangeimage_line_buffer_7_address0        |  20|          4|    4|         16|
+    |rangeimage_line_buffer_7_ce0             |  20|          4|    1|          4|
+    |rangeimage_line_buffer_7_ce1             |   9|          2|    1|          2|
+    |rangeimage_line_buffer_7_d0              |  14|          3|   80|        240|
+    |rangeimage_line_buffer_7_we0             |  14|          3|    1|          3|
+    |rangeimage_line_buffer_8_address0        |  20|          4|    4|         16|
+    |rangeimage_line_buffer_8_ce0             |  20|          4|    1|          4|
+    |rangeimage_line_buffer_8_ce1             |   9|          2|    1|          2|
+    |rangeimage_line_buffer_8_d0              |  14|          3|   80|        240|
+    |rangeimage_line_buffer_8_we0             |  14|          3|    1|          3|
+    |rangeimage_line_buffer_9_address0        |  20|          4|    4|         16|
+    |rangeimage_line_buffer_9_ce0             |  20|          4|    1|          4|
+    |rangeimage_line_buffer_9_ce1             |   9|          2|    1|          2|
+    |rangeimage_line_buffer_9_d0              |  14|          3|   80|        240|
+    |rangeimage_line_buffer_9_we0             |  14|          3|    1|          3|
+    |rangeimage_picked_buffer_10_address0     |  20|          4|   11|         44|
+    |rangeimage_picked_buffer_10_ce0          |  20|          4|    1|          4|
+    |rangeimage_picked_buffer_10_ce1          |   9|          2|    1|          2|
+    |rangeimage_picked_buffer_10_d0           |  14|          3|    1|          3|
+    |rangeimage_picked_buffer_10_we0          |  14|          3|    1|          3|
+    |rangeimage_picked_buffer_10_we1          |   9|          2|    1|          2|
+    |rangeimage_picked_buffer_11_address0     |  14|          3|   11|         33|
+    |rangeimage_picked_buffer_11_ce0          |  14|          3|    1|          3|
+    |rangeimage_picked_buffer_11_ce1          |   9|          2|    1|          2|
+    |rangeimage_picked_buffer_11_we0          |   9|          2|    1|          2|
+    |rangeimage_picked_buffer_11_we1          |   9|          2|    1|          2|
+    |rangeimage_picked_buffer_12_address0     |  14|          3|   11|         33|
+    |rangeimage_picked_buffer_12_ce0          |  14|          3|    1|          3|
+    |rangeimage_picked_buffer_12_ce1          |   9|          2|    1|          2|
+    |rangeimage_picked_buffer_12_we0          |   9|          2|    1|          2|
+    |rangeimage_picked_buffer_12_we1          |   9|          2|    1|          2|
+    |rangeimage_picked_buffer_13_address0     |  14|          3|   11|         33|
+    |rangeimage_picked_buffer_13_ce0          |  14|          3|    1|          3|
+    |rangeimage_picked_buffer_13_ce1          |   9|          2|    1|          2|
+    |rangeimage_picked_buffer_13_we0          |   9|          2|    1|          2|
+    |rangeimage_picked_buffer_13_we1          |   9|          2|    1|          2|
+    |rangeimage_picked_buffer_14_address0     |  14|          3|   11|         33|
+    |rangeimage_picked_buffer_14_ce0          |  14|          3|    1|          3|
+    |rangeimage_picked_buffer_14_ce1          |   9|          2|    1|          2|
+    |rangeimage_picked_buffer_14_we0          |   9|          2|    1|          2|
+    |rangeimage_picked_buffer_14_we1          |   9|          2|    1|          2|
+    |rangeimage_picked_buffer_15_address0     |  14|          3|   11|         33|
+    |rangeimage_picked_buffer_15_ce0          |  14|          3|    1|          3|
+    |rangeimage_picked_buffer_15_ce1          |   9|          2|    1|          2|
+    |rangeimage_picked_buffer_15_we0          |   9|          2|    1|          2|
+    |rangeimage_picked_buffer_15_we1          |   9|          2|    1|          2|
+    |rangeimage_picked_buffer_1_address0      |  20|          4|   11|         44|
+    |rangeimage_picked_buffer_1_ce0           |  20|          4|    1|          4|
+    |rangeimage_picked_buffer_1_ce1           |   9|          2|    1|          2|
+    |rangeimage_picked_buffer_1_d0            |  14|          3|    1|          3|
+    |rangeimage_picked_buffer_1_we0           |  14|          3|    1|          3|
+    |rangeimage_picked_buffer_1_we1           |   9|          2|    1|          2|
+    |rangeimage_picked_buffer_2_address0      |  20|          4|   11|         44|
+    |rangeimage_picked_buffer_2_ce0           |  20|          4|    1|          4|
+    |rangeimage_picked_buffer_2_ce1           |   9|          2|    1|          2|
+    |rangeimage_picked_buffer_2_d0            |  14|          3|    1|          3|
+    |rangeimage_picked_buffer_2_we0           |  14|          3|    1|          3|
+    |rangeimage_picked_buffer_2_we1           |   9|          2|    1|          2|
+    |rangeimage_picked_buffer_3_address0      |  20|          4|   11|         44|
+    |rangeimage_picked_buffer_3_ce0           |  20|          4|    1|          4|
+    |rangeimage_picked_buffer_3_ce1           |   9|          2|    1|          2|
+    |rangeimage_picked_buffer_3_d0            |  14|          3|    1|          3|
+    |rangeimage_picked_buffer_3_we0           |  14|          3|    1|          3|
+    |rangeimage_picked_buffer_3_we1           |   9|          2|    1|          2|
+    |rangeimage_picked_buffer_4_address0      |  20|          4|   11|         44|
+    |rangeimage_picked_buffer_4_ce0           |  20|          4|    1|          4|
+    |rangeimage_picked_buffer_4_ce1           |   9|          2|    1|          2|
+    |rangeimage_picked_buffer_4_d0            |  14|          3|    1|          3|
+    |rangeimage_picked_buffer_4_we0           |  14|          3|    1|          3|
+    |rangeimage_picked_buffer_4_we1           |   9|          2|    1|          2|
+    |rangeimage_picked_buffer_5_address0      |  20|          4|   11|         44|
+    |rangeimage_picked_buffer_5_ce0           |  20|          4|    1|          4|
+    |rangeimage_picked_buffer_5_ce1           |   9|          2|    1|          2|
+    |rangeimage_picked_buffer_5_d0            |  14|          3|    1|          3|
+    |rangeimage_picked_buffer_5_we0           |  14|          3|    1|          3|
+    |rangeimage_picked_buffer_5_we1           |   9|          2|    1|          2|
+    |rangeimage_picked_buffer_6_address0      |  20|          4|   11|         44|
+    |rangeimage_picked_buffer_6_ce0           |  20|          4|    1|          4|
+    |rangeimage_picked_buffer_6_ce1           |   9|          2|    1|          2|
+    |rangeimage_picked_buffer_6_d0            |  14|          3|    1|          3|
+    |rangeimage_picked_buffer_6_we0           |  14|          3|    1|          3|
+    |rangeimage_picked_buffer_6_we1           |   9|          2|    1|          2|
+    |rangeimage_picked_buffer_7_address0      |  20|          4|   11|         44|
+    |rangeimage_picked_buffer_7_ce0           |  20|          4|    1|          4|
+    |rangeimage_picked_buffer_7_ce1           |   9|          2|    1|          2|
+    |rangeimage_picked_buffer_7_d0            |  14|          3|    1|          3|
+    |rangeimage_picked_buffer_7_we0           |  14|          3|    1|          3|
+    |rangeimage_picked_buffer_7_we1           |   9|          2|    1|          2|
+    |rangeimage_picked_buffer_8_address0      |  20|          4|   11|         44|
+    |rangeimage_picked_buffer_8_ce0           |  20|          4|    1|          4|
+    |rangeimage_picked_buffer_8_ce1           |   9|          2|    1|          2|
+    |rangeimage_picked_buffer_8_d0            |  14|          3|    1|          3|
+    |rangeimage_picked_buffer_8_we0           |  14|          3|    1|          3|
+    |rangeimage_picked_buffer_8_we1           |   9|          2|    1|          2|
+    |rangeimage_picked_buffer_9_address0      |  20|          4|   11|         44|
+    |rangeimage_picked_buffer_9_ce0           |  20|          4|    1|          4|
+    |rangeimage_picked_buffer_9_ce1           |   9|          2|    1|          2|
+    |rangeimage_picked_buffer_9_d0            |  14|          3|    1|          3|
+    |rangeimage_picked_buffer_9_we0           |  14|          3|    1|          3|
+    |rangeimage_picked_buffer_9_we1           |   9|          2|    1|          2|
+    |rangeimage_picked_buffer_address0        |  20|          4|   11|         44|
+    |rangeimage_picked_buffer_ce0             |  20|          4|    1|          4|
+    |rangeimage_picked_buffer_ce1             |   9|          2|    1|          2|
+    |rangeimage_picked_buffer_d0              |  14|          3|    1|          3|
+    |rangeimage_picked_buffer_we0             |  14|          3|    1|          3|
+    |rangeimage_picked_buffer_we1             |   9|          2|    1|          2|
+    |rangeimage_range_buffer_address0         |  20|          4|    8|         32|
+    |rangeimage_range_buffer_ce0              |  20|          4|    1|          4|
+    |rangeimage_range_buffer_ce1              |   9|          2|    1|          2|
+    |rangeimage_range_buffer_ce2              |   9|          2|    1|          2|
+    |rangeimage_range_buffer_ce3              |   9|          2|    1|          2|
+    |rangeimage_range_buffer_d0               |  14|          3|   18|         54|
+    |rangeimage_range_buffer_we0              |  14|          3|    1|          3|
+    |real_start                               |   9|          2|    1|          2|
+    +-----------------------------------------+----+-----------+-----+-----------+
+    |Total                                    |3645|        767| 1878|       5674|
+    +-----------------------------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +----------------------------------------------------------------------------------------------------------+----+----+-----+-----------+
+    |                                                   Name                                                   | FF | LUT| Bits| Const Bits|
+    +----------------------------------------------------------------------------------------------------------+----+----+-----+-----------+
+    |ap_CS_fsm                                                                                                 |   6|   0|    6|          0|
+    |ap_done_reg                                                                                               |   1|   0|    1|          0|
+    |column_i_reg_596                                                                                          |  32|   0|   32|          0|
+    |grp_compute_curvature_Pipeline_loop_compute_curvature_main_fu_326_ap_start_reg                            |   1|   0|    1|          0|
+    |grp_compute_curvature_Pipeline_loop_out_final_compute_curvature_stream_loop_out_fina_fu_392_ap_start_reg  |   1|   0|    1|          0|
+    |grp_compute_curvature_Pipeline_loop_reset_compute_curvature_buffer_VITIS_LOOP_1188_1_fu_250_ap_start_reg  |   1|   0|    1|          0|
+    |start_once_reg                                                                                            |   1|   0|    1|          0|
+    |tmp_29_reg_601                                                                                            |  32|   0|   36|          4|
+    +----------------------------------------------------------------------------------------------------------+----+----+-----+-----------+
+    |Total                                                                                                     |  75|   0|   79|          4|
+    +----------------------------------------------------------------------------------------------------------+----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++------------------------------------------------+-----+-----+------------+---------------------------------+--------------+
+|                    RTL Ports                   | Dir | Bits|  Protocol  |          Source Object          |    C Type    |
++------------------------------------------------+-----+-----+------------+---------------------------------+--------------+
+|ap_clk                                          |   in|    1|  ap_ctrl_hs|                compute_curvature|  return value|
+|ap_rst                                          |   in|    1|  ap_ctrl_hs|                compute_curvature|  return value|
+|ap_start                                        |   in|    1|  ap_ctrl_hs|                compute_curvature|  return value|
+|start_full_n                                    |   in|    1|  ap_ctrl_hs|                compute_curvature|  return value|
+|ap_done                                         |  out|    1|  ap_ctrl_hs|                compute_curvature|  return value|
+|ap_continue                                     |   in|    1|  ap_ctrl_hs|                compute_curvature|  return value|
+|ap_idle                                         |  out|    1|  ap_ctrl_hs|                compute_curvature|  return value|
+|ap_ready                                        |  out|    1|  ap_ctrl_hs|                compute_curvature|  return value|
+|start_out                                       |  out|    1|  ap_ctrl_hs|                compute_curvature|  return value|
+|start_write                                     |  out|    1|  ap_ctrl_hs|                compute_curvature|  return value|
+|cache_image_point_stream5_dout                  |   in|   80|     ap_fifo|        cache_image_point_stream5|       pointer|
+|cache_image_point_stream5_empty_n               |   in|    1|     ap_fifo|        cache_image_point_stream5|       pointer|
+|cache_image_point_stream5_read                  |  out|    1|     ap_fifo|        cache_image_point_stream5|       pointer|
+|cache_image_point_stream5_num_data_valid        |   in|    5|     ap_fifo|        cache_image_point_stream5|       pointer|
+|cache_image_point_stream5_fifo_cap              |   in|    5|     ap_fifo|        cache_image_point_stream5|       pointer|
+|cache_image_range_stream6_dout                  |   in|   18|     ap_fifo|        cache_image_range_stream6|       pointer|
+|cache_image_range_stream6_empty_n               |   in|    1|     ap_fifo|        cache_image_range_stream6|       pointer|
+|cache_image_range_stream6_read                  |  out|    1|     ap_fifo|        cache_image_range_stream6|       pointer|
+|cache_image_range_stream6_num_data_valid        |   in|    5|     ap_fifo|        cache_image_range_stream6|       pointer|
+|cache_image_range_stream6_fifo_cap              |   in|    5|     ap_fifo|        cache_image_range_stream6|       pointer|
+|curvature_out_point_stream7_din                 |  out|   80|     ap_fifo|      curvature_out_point_stream7|       pointer|
+|curvature_out_point_stream7_full_n              |   in|    1|     ap_fifo|      curvature_out_point_stream7|       pointer|
+|curvature_out_point_stream7_write               |  out|    1|     ap_fifo|      curvature_out_point_stream7|       pointer|
+|curvature_out_point_stream7_num_data_valid      |   in|   32|     ap_fifo|      curvature_out_point_stream7|       pointer|
+|curvature_out_point_stream7_fifo_cap            |   in|   32|     ap_fifo|      curvature_out_point_stream7|       pointer|
+|curvature_out_range_stream8_din                 |  out|   18|     ap_fifo|      curvature_out_range_stream8|       pointer|
+|curvature_out_range_stream8_full_n              |   in|    1|     ap_fifo|      curvature_out_range_stream8|       pointer|
+|curvature_out_range_stream8_write               |  out|    1|     ap_fifo|      curvature_out_range_stream8|       pointer|
+|curvature_out_range_stream8_num_data_valid      |   in|   32|     ap_fifo|      curvature_out_range_stream8|       pointer|
+|curvature_out_range_stream8_fifo_cap            |   in|   32|     ap_fifo|      curvature_out_range_stream8|       pointer|
+|curvature_out_curvature_stream9_din             |  out|   32|     ap_fifo|  curvature_out_curvature_stream9|       pointer|
+|curvature_out_curvature_stream9_full_n          |   in|    1|     ap_fifo|  curvature_out_curvature_stream9|       pointer|
+|curvature_out_curvature_stream9_write           |  out|    1|     ap_fifo|  curvature_out_curvature_stream9|       pointer|
+|curvature_out_curvature_stream9_num_data_valid  |   in|   32|     ap_fifo|  curvature_out_curvature_stream9|       pointer|
+|curvature_out_curvature_stream9_fifo_cap        |   in|   32|     ap_fifo|  curvature_out_curvature_stream9|       pointer|
+|curvature_out_picked_stream10_din               |  out|    1|     ap_fifo|    curvature_out_picked_stream10|       pointer|
+|curvature_out_picked_stream10_full_n            |   in|    1|     ap_fifo|    curvature_out_picked_stream10|       pointer|
+|curvature_out_picked_stream10_write             |  out|    1|     ap_fifo|    curvature_out_picked_stream10|       pointer|
+|curvature_out_picked_stream10_num_data_valid    |   in|   32|     ap_fifo|    curvature_out_picked_stream10|       pointer|
+|curvature_out_picked_stream10_fifo_cap          |   in|   32|     ap_fifo|    curvature_out_picked_stream10|       pointer|
++------------------------------------------------+-----+-----+------------+---------------------------------+--------------+
+

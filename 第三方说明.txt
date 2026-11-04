@@ -1,0 +1,1 @@
+本包包含团队源码及所使用的开源组件与厂商 IP/SDK 接口。各模块的原始版权声明、许可证及厂商文件头按源码保留。hardware/final3/LICENSE 为原始硬件与定位源码包附带的 BSD 许可证；电脑端 Three.js 文件保留其 MIT 声明。ROS、PCL、OpenCV、Ceres、GTSAM、PYNQ 与 Orbbec SDK 按各项目和厂商发布方式安装。

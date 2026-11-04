@@ -1,0 +1,74 @@
+{
+  "status": "CANDIDATES_ONLY",
+  "camera_serial_matches": true,
+  "camera_imu_reprojection_mean_px": 0.22644881648764473,
+  "camera_imu_time_shift_s": -0.020487974424352694,
+  "lidar_imu_reported_time_lag_s": -0.289501,
+  "time_offsets_ported_to_new_driver": false,
+  "formula": "T_lidar_depth = inverse(T_imu_lidar) @ inverse(T_color_imu) @ T_color_depth",
+  "deployed_jetson_uses": "initialization, not refinement",
+  "candidates": {
+    "initialization": {
+      "T_lidar_depth": [
+        [
+          0.9942418844064729,
+          0.018493186119792032,
+          0.10555257554094379,
+          -0.13126900144726156
+        ],
+        [
+          -0.10632342728037092,
+          0.04736794554614503,
+          0.9932025804483606,
+          0.054311669413124035
+        ],
+        [
+          0.013367674439088411,
+          -0.99870670603072,
+          0.049061674411214104,
+          -0.0025292965952762006
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "lidar_imu_baseline_m": 0.28567719396024593,
+      "lidar_depth_baseline_m": 0.1420834456109103
+    },
+    "refinement": {
+      "T_lidar_depth": [
+        [
+          0.9700588994480124,
+          -0.21230560633308423,
+          0.11795091425492932,
+          -0.0315014940437281
+        ],
+        [
+          -0.07983878070577449,
+          0.1799074937725365,
+          0.98043858128784,
+          0.613107987458797
+        ],
+        [
+          -0.2293726892127737,
+          -0.9604998923775268,
+          0.1575706919706964,
+          1.0363547189089948
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "lidar_imu_baseline_m": 0.9783204575132833,
+      "lidar_depth_baseline_m": 1.2045434204783592
+    }
+  },
+  "initialization_refinement_translation_difference_m": 1.1526135079548565,
+  "initialization_refinement_rotation_difference_deg": 15.452683547473653
+}

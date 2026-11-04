@@ -1,0 +1,62 @@
+================================================================
+== Design Size Report
+================================================================
+
+* Total Instructions per Compilation Phase
++---------------+-----------------------------+--------------+----------------------------------------------------------------------------------------+
+| Phase         | Step                        | Instructions | Description                                                                            |
++---------------+-----------------------------+--------------+----------------------------------------------------------------------------------------+
+| Compile/Link  |                             | 31,591       | After all functions are compiled and linked into a single design                       |
+|               |                             |              |                                                                                        |
+| Unroll/Inline |                             |              | After user unroll and inline pragmas are applied                                       |
+|               | (1) unroll                  | 11,111       | user unroll pragmas are applied                                                        |
+|               | (2) simplification          |  5,463       | simplification of applied user unroll pragmas                                          |
+|               | (3) inline                  |  5,239       | user inline pragmas are applied                                                        |
+|               | (4) simplification          |  5,006       | simplification of applied user inline pragmas                                          |
+|               |                             |              |                                                                                        |
+| Array/Struct  |                             |              | After user array partition and struct aggregate/disaggregate pragmas are applied       |
+|               | (1) array partition         |  9,580       | user array partition pragmas are applied                                               |
+|               | (2) simplification          |  7,027       | simplification of applied user array partition & struct aggregate/disaggregate pragmas |
+|               | (3) aggregate/disaggregate  |  8,126       | user struct aggregate/disaggregate pragmas are applied                                 |
+|               | (4) array reshape           |  8,672       | apply array reshape pragmas                                                            |
+|               | (5) access patterns         |  8,824       | array access pattern optmizations                                                      |
+|               |                             |              |                                                                                        |
+| Performance   |                             |              | After transformations are applied to meet performance pragma targets                   |
+|               | (1) loop simplification     |  8,081       | loop and instruction simplification                                                    |
+|               | (2) parallelization         |  8,037       | loops are unrolled or pipelined to meet performance targets                            |
+|               | (3) array partition         |  8,076       | arrays are partitioned to meet performance targets                                     |
+|               | (4) simplification          |  8,033       | simplification of design after performance transformations                             |
+|               |                             |              |                                                                                        |
+| HW Transforms |                             |              | After hardware transfomations                                                          |
+|               | (1) lowering                |  7,895       | initial conversion to HW specific instructions                                         |
+|               | (2) optimizations           |  7,887       | high level synthesis optimizations                                                     |
++---------------+-----------------------------+--------------+----------------------------------------------------------------------------------------+
+
+* Instructions per Function for each Compilation Phase
++-------------------------------------+----------------------------------+--------------+---------------+--------------+-------------+---------------+
+| Function                            | Location                         | Compile/Link | Unroll/Inline | Array/Struct | Performance | HW Transforms |
++-------------------------------------+----------------------------------+--------------+---------------+--------------+-------------+---------------+
+| + fpga_feature_extract_hw           | fpga_feature_extract_hw.cpp:2318 | 31,591       | 5,006         | 8,824        | 8,033       | 7,887         |
+|  + fpga_feature_extract_dataflo...  | fpga_feature_extract_hw.cpp:2137 | 31,572       | 4,979         | 8,794        | 8,003       | 7,842         |
+|     array_to_stream                 | fpga_feature_extract_hw.cpp:450  | 1,702        |  195          |  235         |  234        |  248          |
+|   + allocate_rangeimage             | fpga_feature_extract_hw.cpp:477  | 7,674        | 1,557         | 1,590        | 1,580       | 1,586         |
+|      sqrt_fixed<36, 20>             | hls_sqrt_apfixed.h:16            |              | 1,437         | 1,405        |             |               |
+|     organize_point_cloud            | fpga_feature_extract_hw.cpp:564  | 2,615        |  354          | 1,400        | 1,398       | 1,397         |
+|     update_range                    | fpga_feature_extract_hw.cpp:907  |   698        |  239          |  527         |  477        |  493          |
+|     cache_rangeimage                | fpga_feature_extract_hw.cpp:1096 |   110        |   22          |   10         |   10        |   22          |
+|     compute_curvature               | fpga_feature_extract_hw.cpp:1139 | 9,628        |  606          | 2,543        | 1,840       | 1,863         |
+|     compute_ground                  | fpga_feature_extract_hw.cpp:1398 | 1,403        |  108          |  117         |  111        |  141          |
+|     integrate_features              | fpga_feature_extract_hw.cpp:1547 |   228        |   48          |   47         |   47        |   64          |
+|     extract_features                | fpga_feature_extract_hw.cpp:1610 | 5,921        | 1,219         | 1,367        | 1,350       | 1,308         |
+|     out_point_range_lessflat_res... | fpga_feature_extract_hw.cpp:2046 |   809        |  328          |  372         |  372        |  395          |
+|     out_flat_sharp_result           | fpga_feature_extract_hw.cpp:2093 |   186        |   64          |  356         |  356        |  191          |
++-------------------------------------+----------------------------------+--------------+---------------+--------------+-------------+---------------+
+
+* Design Size Message Settings
++---------------------------------------------+--------+------------------------------------------------------------------+
+| Message Setting                             | Value  | Description                                                      |
++---------------------------------------------+--------+------------------------------------------------------------------+
+| config_compile -design_size_maximum_warning | 100000 | Show a warning when total design instructions exceeds this value |
++---------------------------------------------+--------+------------------------------------------------------------------+
+
+

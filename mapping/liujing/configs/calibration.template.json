@@ -1,0 +1,129 @@
+{
+  "description": "RGB-D 标定参数模板；内参和单位外参为示例值。",
+  "verified": {
+    "intrinsics": false,
+    "depth_color": false,
+    "pose_camera": false,
+    "time_alignment": false,
+    "pose_axes": false
+  },
+  "depth": {
+    "width": 640,
+    "height": 400,
+    "fx": 477.61795,
+    "fy": 477.61795,
+    "cx": 319.5,
+    "cy": 199.5,
+    "near_z": 0.3,
+    "far_z": 5.0,
+    "distortion": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  "color": {
+    "width": 640,
+    "height": 480,
+    "fx": 453.68915,
+    "fy": 453.68915,
+    "cx": 319.5,
+    "cy": 239.5,
+    "distortion": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  "T_color_depth": [
+    [
+      1,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      1,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      1,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      1
+    ]
+  ],
+  "T_pose_depth": [
+    [
+      1,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      1,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      1,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      1
+    ]
+  ],
+  "T_map_source": [
+    [
+      1,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      1,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      1,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      1
+    ]
+  ],
+  "rgb_time_offset_s": 0.0,
+  "depth_time_offset_s": 0.0,
+  "timestamp_basis": "host receipt time; calibration pending"
+}

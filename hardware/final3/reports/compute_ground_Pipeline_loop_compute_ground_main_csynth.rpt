@@ -1,0 +1,250 @@
+
+
+================================================================
+== Vitis HLS Report for 'compute_ground_Pipeline_loop_compute_ground_main'
+================================================================
+* Date:           Thu Oct 29 07:54:09 2026
+
+* Version:        2024.2 (Build 5238294 on Nov  8 2024)
+* Project:        hls_build.prj
+* Solution:       solution1 (Vivado IP Flow Target)
+* Product family: zynquplus
+* Target device:  xck26-sfvc784-2LV-c
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+---------+----------+------------+
+    |  Clock |  Target | Estimated| Uncertainty|
+    +--------+---------+----------+------------+
+    |ap_clk  |  5.00 ns|  2.867 ns|     1.35 ns|
+    +--------+---------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-------+-------+------------------------------------------------+
+    |  Latency (cycles) |  Latency (absolute) |    Interval   |                    Pipeline                    |
+    |   min   |   max   |    min   |    max   |  min  |  max  |                      Type                      |
+    +---------+---------+----------+----------+-------+-------+------------------------------------------------+
+    |    28802|    28802|  0.144 ms|  0.144 ms|  28801|  28801|  loop auto-rewind stp (delay=0 clock cycles(s))|
+    +---------+---------+----------+----------+-------+-------+------------------------------------------------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +----------------------------+---------+---------+----------+-----------+-----------+-------+----------+
+        |                            |  Latency (cycles) | Iteration|  Initiation Interval  |  Trip |          |
+        |          Loop Name         |   min   |   max   |  Latency |  achieved |   target  | Count | Pipelined|
+        +----------------------------+---------+---------+----------+-----------+-----------+-------+----------+
+        |- loop_compute_ground_main  |    28800|    28800|         2|          1|          1|  28800|       yes|
+        +----------------------------+---------+---------+----------+-----------+-----------+-------+----------+
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+------+--------+--------+-----+
+|       Name      | BRAM_18K|  DSP |   FF   |   LUT  | URAM|
++-----------------+---------+------+--------+--------+-----+
+|DSP              |        -|     -|       -|       -|    -|
+|Expression       |        -|     -|       0|     366|    -|
+|FIFO             |        -|     -|       -|       -|    -|
+|Instance         |        -|     -|       -|       -|    -|
+|Memory           |        -|     -|       -|       -|    -|
+|Multiplexer      |        -|     -|       0|     144|    -|
+|Register         |        -|     -|     334|       -|    -|
++-----------------+---------+------+--------+--------+-----+
+|Total            |        0|     0|     334|     510|    0|
++-----------------+---------+------+--------+--------+-----+
+|Available        |      288|  1248|  234240|  117120|   64|
++-----------------+---------+------+--------+--------+-----+
+|Utilization (%)  |        0|     0|      ~0|      ~0|    0|
++-----------------+---------+------+--------+--------+-----+
+
++ Detail: 
+    * Instance: 
+    N/A
+
+    * DSP: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +---------------------------------------+----------+----+---+----+------------+------------+
+    |             Variable Name             | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +---------------------------------------+----------+----+---+----+------------+------------+
+    |add_ln1513_fu_343_p2                   |         +|   0|  0|  39|          32|           1|
+    |add_ln1517_fu_365_p2                   |         +|   0|  0|  39|          32|           1|
+    |loop_i_6_fu_299_p2                     |         +|   0|  0|  22|          15|           1|
+    |ap_block_pp0_stage0_01001_grp1         |       and|   0|  0|   2|           1|           1|
+    |ap_block_pp0_stage0_01001_grp2         |       and|   0|  0|   2|           1|           1|
+    |ap_block_pp0_stage0_01001_grp3         |       and|   0|  0|   2|           1|           1|
+    |ap_block_pp0_stage0_01001_grp4         |       and|   0|  0|   2|           1|           1|
+    |ap_block_pp0_stage0_01001_grp5         |       and|   0|  0|   2|           1|           1|
+    |ap_block_pp0_stage0_01001_grp6         |       and|   0|  0|   2|           1|           1|
+    |ap_block_pp0_stage0_11001              |       and|   0|  0|   2|           1|           1|
+    |ap_block_state3_pp0_stage0_iter2_grp5  |       and|   0|  0|   2|           1|           1|
+    |ap_block_state3_pp0_stage0_iter2_grp6  |       and|   0|  0|   2|           1|           1|
+    |cmp52_fu_309_p2                        |      icmp|   0|  0|  39|          32|           1|
+    |current_point_ground_fu_325_p2         |      icmp|   0|  0|  37|          30|           1|
+    |icmp_ln1460_fu_293_p2                  |      icmp|   0|  0|  22|          15|          13|
+    |icmp_ln1493_fu_331_p2                  |      icmp|   0|  0|  39|          32|           1|
+    |icmp_ln1513_fu_359_p2                  |      icmp|   0|  0|  35|          28|           1|
+    |ap_block_state3_pp0_stage0_iter2_grp1  |        or|   0|  0|   2|           1|           1|
+    |ap_block_state3_pp0_stage0_iter2_grp2  |        or|   0|  0|   2|           1|           1|
+    |ap_block_state3_pp0_stage0_iter2_grp3  |        or|   0|  0|   2|           1|           1|
+    |ap_block_state3_pp0_stage0_iter2_grp4  |        or|   0|  0|   2|           1|           1|
+    |or_ln1493_fu_337_p2                    |        or|   0|  0|   2|           1|           1|
+    |current_column_id_3_fu_371_p3          |    select|   0|  0|  32|           1|          32|
+    |read_i_fu_379_p3                       |    select|   0|  0|  32|           1|           1|
+    |ap_enable_pp0                          |       xor|   0|  0|   2|           1|           2|
+    +---------------------------------------+----------+----+---+----+------------+------------+
+    |Total                                  |          |   0|  0| 366|         233|          69|
+    +---------------------------------------+----------+----+---+----+------------+------------+
+
+    * Multiplexer: 
+    +---------------------------------------+----+-----------+-----+-----------+
+    |                  Name                 | LUT| Input Size| Bits| Total Bits|
+    +---------------------------------------+----+-----------+-----+-----------+
+    |ap_done_int                            |   9|          2|    1|          2|
+    |ap_enable_reg_pp0_iter1                |   9|          2|    1|          2|
+    |ap_enable_reg_pp0_iter2                |   9|          2|    1|          2|
+    |current_column_id_fu_128               |   9|          2|   32|         64|
+    |curvature_out_curvature_stream9_blk_n  |   9|          2|    1|          2|
+    |curvature_out_picked_stream10_blk_n    |   9|          2|    1|          2|
+    |curvature_out_point_stream7_blk_n      |   9|          2|    1|          2|
+    |curvature_out_range_stream8_blk_n      |   9|          2|    1|          2|
+    |ground_out_curvature_stream13_blk_n    |   9|          2|    1|          2|
+    |ground_out_ground_stream16_blk_n       |   9|          2|    1|          2|
+    |ground_out_picked_stream14_blk_n       |   9|          2|    1|          2|
+    |ground_out_point_stream11_blk_n        |   9|          2|    1|          2|
+    |ground_out_range_stream12_blk_n        |   9|          2|    1|          2|
+    |ground_out_sortind_stream15_blk_n      |   9|          2|    1|          2|
+    |loop_i_fu_136                          |   9|          2|   15|         30|
+    |scan_i_fu_132                          |   9|          2|   32|         64|
+    +---------------------------------------+----+-----------+-----+-----------+
+    |Total                                  | 144|         32|   92|        184|
+    +---------------------------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +-------------------------------------------+----+----+-----+-----------+
+    |                    Name                   | FF | LUT| Bits| Const Bits|
+    +-------------------------------------------+----+----+-----+-----------+
+    |ap_CS_fsm                                  |   1|   0|    1|          0|
+    |ap_block_pp0_stage0_subdone_grp1_done_reg  |   1|   0|    1|          0|
+    |ap_block_pp0_stage0_subdone_grp2_done_reg  |   1|   0|    1|          0|
+    |ap_block_pp0_stage0_subdone_grp3_done_reg  |   1|   0|    1|          0|
+    |ap_block_pp0_stage0_subdone_grp4_done_reg  |   1|   0|    1|          0|
+    |ap_block_pp0_stage0_subdone_grp5_done_reg  |   1|   0|    1|          0|
+    |ap_block_pp0_stage0_subdone_grp6_done_reg  |   1|   0|    1|          0|
+    |ap_done_reg                                |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter1                    |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter2                    |   1|   0|    1|          0|
+    |arrayidx58_0_0_0_0_load27_fu_140           |  18|   0|   18|          0|
+    |arrayidx58_1_0_0_0_load29_fu_144           |  18|   0|   18|          0|
+    |arrayidx58_2_0_0_0_load31_fu_148           |  18|   0|   18|          0|
+    |arrayidx58_3_0_0_0_load33_fu_152           |  26|   0|   26|          0|
+    |arrayidx62_0_0_0_load35_fu_156             |  18|   0|   18|          0|
+    |arrayidx66_0_0_0_load38_fu_160             |  32|   0|   32|          0|
+    |arrayidx70_0_0_0_load41_fu_120             |   1|   0|    1|          0|
+    |arrayidx74_0_0_0_load44_fu_164             |  16|   0|   16|          0|
+    |current_column_id_fu_128                   |  32|   0|   32|          0|
+    |current_point_ground_reg_632               |   1|   0|    1|          0|
+    |loop_i_fu_136                              |  15|   0|   15|          0|
+    |or_ln1493_reg_637                          |   1|   0|    1|          0|
+    |p_phi_fu_124                               |  80|   0|   80|          0|
+    |scan_i_fu_132                              |  32|   0|   32|          0|
+    |this_sortind_reg_627                       |  16|   0|   16|          0|
+    +-------------------------------------------+----+----+-----+-----------+
+    |Total                                      | 334|   0|  334|          0|
+    +-------------------------------------------+----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++------------------------------------------------+-----+-----+------------+--------------------------------------------------+--------------+
+|                    RTL Ports                   | Dir | Bits|  Protocol  |                   Source Object                  |    C Type    |
++------------------------------------------------+-----+-----+------------+--------------------------------------------------+--------------+
+|ap_clk                                          |   in|    1|  ap_ctrl_hs|  compute_ground_Pipeline_loop_compute_ground_main|  return value|
+|ap_rst                                          |   in|    1|  ap_ctrl_hs|  compute_ground_Pipeline_loop_compute_ground_main|  return value|
+|ap_start                                        |   in|    1|  ap_ctrl_hs|  compute_ground_Pipeline_loop_compute_ground_main|  return value|
+|ap_done                                         |  out|    1|  ap_ctrl_hs|  compute_ground_Pipeline_loop_compute_ground_main|  return value|
+|ap_idle                                         |  out|    1|  ap_ctrl_hs|  compute_ground_Pipeline_loop_compute_ground_main|  return value|
+|ap_ready                                        |  out|    1|  ap_ctrl_hs|  compute_ground_Pipeline_loop_compute_ground_main|  return value|
+|curvature_out_point_stream7_dout                |   in|   80|     ap_fifo|                       curvature_out_point_stream7|       pointer|
+|curvature_out_point_stream7_empty_n             |   in|    1|     ap_fifo|                       curvature_out_point_stream7|       pointer|
+|curvature_out_point_stream7_read                |  out|    1|     ap_fifo|                       curvature_out_point_stream7|       pointer|
+|curvature_out_point_stream7_num_data_valid      |   in|    5|     ap_fifo|                       curvature_out_point_stream7|       pointer|
+|curvature_out_point_stream7_fifo_cap            |   in|    5|     ap_fifo|                       curvature_out_point_stream7|       pointer|
+|curvature_out_range_stream8_dout                |   in|   18|     ap_fifo|                       curvature_out_range_stream8|       pointer|
+|curvature_out_range_stream8_empty_n             |   in|    1|     ap_fifo|                       curvature_out_range_stream8|       pointer|
+|curvature_out_range_stream8_read                |  out|    1|     ap_fifo|                       curvature_out_range_stream8|       pointer|
+|curvature_out_range_stream8_num_data_valid      |   in|    5|     ap_fifo|                       curvature_out_range_stream8|       pointer|
+|curvature_out_range_stream8_fifo_cap            |   in|    5|     ap_fifo|                       curvature_out_range_stream8|       pointer|
+|curvature_out_curvature_stream9_dout            |   in|   32|     ap_fifo|                   curvature_out_curvature_stream9|       pointer|
+|curvature_out_curvature_stream9_empty_n         |   in|    1|     ap_fifo|                   curvature_out_curvature_stream9|       pointer|
+|curvature_out_curvature_stream9_read            |  out|    1|     ap_fifo|                   curvature_out_curvature_stream9|       pointer|
+|curvature_out_curvature_stream9_num_data_valid  |   in|    5|     ap_fifo|                   curvature_out_curvature_stream9|       pointer|
+|curvature_out_curvature_stream9_fifo_cap        |   in|    5|     ap_fifo|                   curvature_out_curvature_stream9|       pointer|
+|curvature_out_picked_stream10_dout              |   in|    1|     ap_fifo|                     curvature_out_picked_stream10|       pointer|
+|curvature_out_picked_stream10_empty_n           |   in|    1|     ap_fifo|                     curvature_out_picked_stream10|       pointer|
+|curvature_out_picked_stream10_read              |  out|    1|     ap_fifo|                     curvature_out_picked_stream10|       pointer|
+|curvature_out_picked_stream10_num_data_valid    |   in|    5|     ap_fifo|                     curvature_out_picked_stream10|       pointer|
+|curvature_out_picked_stream10_fifo_cap          |   in|    5|     ap_fifo|                     curvature_out_picked_stream10|       pointer|
+|ground_out_point_stream11_din                   |  out|   80|     ap_fifo|                         ground_out_point_stream11|       pointer|
+|ground_out_point_stream11_full_n                |   in|    1|     ap_fifo|                         ground_out_point_stream11|       pointer|
+|ground_out_point_stream11_write                 |  out|    1|     ap_fifo|                         ground_out_point_stream11|       pointer|
+|ground_out_point_stream11_num_data_valid        |   in|    5|     ap_fifo|                         ground_out_point_stream11|       pointer|
+|ground_out_point_stream11_fifo_cap              |   in|    5|     ap_fifo|                         ground_out_point_stream11|       pointer|
+|ground_out_range_stream12_din                   |  out|   18|     ap_fifo|                         ground_out_range_stream12|       pointer|
+|ground_out_range_stream12_full_n                |   in|    1|     ap_fifo|                         ground_out_range_stream12|       pointer|
+|ground_out_range_stream12_write                 |  out|    1|     ap_fifo|                         ground_out_range_stream12|       pointer|
+|ground_out_range_stream12_num_data_valid        |   in|    5|     ap_fifo|                         ground_out_range_stream12|       pointer|
+|ground_out_range_stream12_fifo_cap              |   in|    5|     ap_fifo|                         ground_out_range_stream12|       pointer|
+|ground_out_curvature_stream13_din               |  out|   32|     ap_fifo|                     ground_out_curvature_stream13|       pointer|
+|ground_out_curvature_stream13_full_n            |   in|    1|     ap_fifo|                     ground_out_curvature_stream13|       pointer|
+|ground_out_curvature_stream13_write             |  out|    1|     ap_fifo|                     ground_out_curvature_stream13|       pointer|
+|ground_out_curvature_stream13_num_data_valid    |   in|    5|     ap_fifo|                     ground_out_curvature_stream13|       pointer|
+|ground_out_curvature_stream13_fifo_cap          |   in|    5|     ap_fifo|                     ground_out_curvature_stream13|       pointer|
+|ground_out_picked_stream14_din                  |  out|    1|     ap_fifo|                        ground_out_picked_stream14|       pointer|
+|ground_out_picked_stream14_full_n               |   in|    1|     ap_fifo|                        ground_out_picked_stream14|       pointer|
+|ground_out_picked_stream14_write                |  out|    1|     ap_fifo|                        ground_out_picked_stream14|       pointer|
+|ground_out_picked_stream14_num_data_valid       |   in|    5|     ap_fifo|                        ground_out_picked_stream14|       pointer|
+|ground_out_picked_stream14_fifo_cap             |   in|    5|     ap_fifo|                        ground_out_picked_stream14|       pointer|
+|ground_out_sortind_stream15_din                 |  out|   16|     ap_fifo|                       ground_out_sortind_stream15|       pointer|
+|ground_out_sortind_stream15_full_n              |   in|    1|     ap_fifo|                       ground_out_sortind_stream15|       pointer|
+|ground_out_sortind_stream15_write               |  out|    1|     ap_fifo|                       ground_out_sortind_stream15|       pointer|
+|ground_out_sortind_stream15_num_data_valid      |   in|    5|     ap_fifo|                       ground_out_sortind_stream15|       pointer|
+|ground_out_sortind_stream15_fifo_cap            |   in|    5|     ap_fifo|                       ground_out_sortind_stream15|       pointer|
+|ground_out_ground_stream16_din                  |  out|    2|     ap_fifo|                        ground_out_ground_stream16|       pointer|
+|ground_out_ground_stream16_full_n               |   in|    1|     ap_fifo|                        ground_out_ground_stream16|       pointer|
+|ground_out_ground_stream16_write                |  out|    1|     ap_fifo|                        ground_out_ground_stream16|       pointer|
+|ground_out_ground_stream16_num_data_valid       |   in|    5|     ap_fifo|                        ground_out_ground_stream16|       pointer|
+|ground_out_ground_stream16_fifo_cap             |   in|    5|     ap_fifo|                        ground_out_ground_stream16|       pointer|
+|arrayidx74_0_0_0_load44_out                     |  out|   16|      ap_vld|                       arrayidx74_0_0_0_load44_out|       pointer|
+|arrayidx74_0_0_0_load44_out_ap_vld              |  out|    1|      ap_vld|                       arrayidx74_0_0_0_load44_out|       pointer|
+|arrayidx70_0_0_0_load41_out                     |  out|    1|      ap_vld|                       arrayidx70_0_0_0_load41_out|       pointer|
+|arrayidx70_0_0_0_load41_out_ap_vld              |  out|    1|      ap_vld|                       arrayidx70_0_0_0_load41_out|       pointer|
+|arrayidx66_0_0_0_load38_out                     |  out|   32|      ap_vld|                       arrayidx66_0_0_0_load38_out|       pointer|
+|arrayidx66_0_0_0_load38_out_ap_vld              |  out|    1|      ap_vld|                       arrayidx66_0_0_0_load38_out|       pointer|
+|arrayidx62_0_0_0_load35_out                     |  out|   18|      ap_vld|                       arrayidx62_0_0_0_load35_out|       pointer|
+|arrayidx62_0_0_0_load35_out_ap_vld              |  out|    1|      ap_vld|                       arrayidx62_0_0_0_load35_out|       pointer|
+|p_phi_out                                       |  out|   80|      ap_vld|                                         p_phi_out|       pointer|
+|p_phi_out_ap_vld                                |  out|    1|      ap_vld|                                         p_phi_out|       pointer|
++------------------------------------------------+-----+-----+------------+--------------------------------------------------+--------------+
+

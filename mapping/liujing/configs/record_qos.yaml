@@ -1,0 +1,30 @@
+/point_cloud_raw:
+  history: keep_last
+  depth: 16
+  reliability: reliable
+  durability: volatile
+/camera/color/image_raw:
+  history: keep_last
+  depth: 8
+  reliability: best_effort
+  durability: volatile
+/camera/color/image_raw/compressed:
+  history: keep_last
+  depth: 16
+  reliability: best_effort
+  durability: volatile
+/camera/depth/image_raw:
+  history: keep_last
+  depth: 8
+  reliability: best_effort
+  durability: volatile
+/camera/frame_metadata:
+  history: keep_last
+  depth: 64
+  reliability: best_effort
+  durability: volatile
+/odom_init/laser_odom:
+  history: keep_last
+  depth: 32
+  reliability: reliable
+  durability: volatile

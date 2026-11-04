@@ -1,0 +1,169 @@
+
+
+================================================================
+== Vitis HLS Report for 'update_range_Pipeline_loop_update_range_final_write'
+================================================================
+* Date:           Thu Oct 29 07:54:07 2026
+
+* Version:        2024.2 (Build 5238294 on Nov  8 2024)
+* Project:        hls_build.prj
+* Solution:       solution1 (Vivado IP Flow Target)
+* Product family: zynquplus
+* Target device:  xck26-sfvc784-2LV-c
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+---------+----------+------------+
+    |  Clock |  Target | Estimated| Uncertainty|
+    +--------+---------+----------+------------+
+    |ap_clk  |  5.00 ns|  2.185 ns|     1.35 ns|
+    +--------+---------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+-----------+-----------+-----+-----+------------------------------------------------+
+    |  Latency (cycles) |   Latency (absolute)  |  Interval |                    Pipeline                    |
+    |   min   |   max   |    min    |    max    | min | max |                      Type                      |
+    +---------+---------+-----------+-----------+-----+-----+------------------------------------------------+
+    |        4|        4|  20.000 ns|  20.000 ns|    3|    3|  loop auto-rewind stp (delay=0 clock cycles(s))|
+    +---------+---------+-----------+-----------+-----+-----+------------------------------------------------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +---------------------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |                                 |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
+        |            Loop Name            |   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
+        +---------------------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |- loop_update_range_final_write  |        2|        2|         2|          1|          1|     2|       yes|
+        +---------------------------------+---------+---------+----------+-----------+-----------+------+----------+
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+------+--------+--------+-----+
+|       Name      | BRAM_18K|  DSP |   FF   |   LUT  | URAM|
++-----------------+---------+------+--------+--------+-----+
+|DSP              |        -|     -|       -|       -|    -|
+|Expression       |        -|     -|       0|     130|    -|
+|FIFO             |        -|     -|       -|       -|    -|
+|Instance         |        -|     -|       -|       -|    -|
+|Memory           |        -|     -|       -|       -|    -|
+|Multiplexer      |        -|     -|       0|      54|    -|
+|Register         |        -|     -|       8|       -|    -|
++-----------------+---------+------+--------+--------+-----+
+|Total            |        0|     0|       8|     184|    0|
++-----------------+---------+------+--------+--------+-----+
+|Available        |      288|  1248|  234240|  117120|   64|
++-----------------+---------+------+--------+--------+-----+
+|Utilization (%)  |        0|     0|      ~0|      ~0|    0|
++-----------------+---------+------+--------+--------+-----+
+
++ Detail: 
+    * Instance: 
+    N/A
+
+    * DSP: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +-------------------------------------------------+----------+----+---+----+------------+------------+
+    |                  Variable Name                  | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +-------------------------------------------------+----------+----+---+----+------------+------------+
+    |add_ln1069_fu_154_p2                             |         +|   0|  0|   9|           2|           1|
+    |ap_block_pp0_stage0_01001_grp1                   |       and|   0|  0|   2|           1|           1|
+    |ap_block_pp0_stage0_01001_grp2                   |       and|   0|  0|   2|           1|           1|
+    |ap_block_pp0_stage0_11001                        |       and|   0|  0|   2|           1|           1|
+    |icmp_ln1069_fu_148_p2                            |      icmp|   0|  0|  10|           2|           3|
+    |icmp_ln1075_fu_160_p2                            |      icmp|   0|  0|   9|           2|           1|
+    |select_ln1076_1_fu_182_p3                        |    select|   0|  0|  17|           1|          18|
+    |select_ln1076_2_fu_187_p3                        |    select|   0|  0|  17|           1|          18|
+    |select_ln1076_3_fu_192_p3                        |    select|   0|  0|  26|           1|          26|
+    |select_ln1076_fu_177_p3                          |    select|   0|  0|  17|           1|          18|
+    |update_registrate_point_cloud_range_stream4_din  |    select|   0|  0|  17|           1|          18|
+    |ap_enable_pp0                                    |       xor|   0|  0|   2|           1|           2|
+    +-------------------------------------------------+----------+----+---+----+------------+------------+
+    |Total                                            |          |   0|  0| 130|          15|         108|
+    +-------------------------------------------------+----------+----+---+----+------------+------------+
+
+    * Multiplexer: 
+    +---------------------------------------------------+----+-----------+-----+-----------+
+    |                        Name                       | LUT| Input Size| Bits| Total Bits|
+    +---------------------------------------------------+----+-----------+-----+-----------+
+    |ap_done_int                                        |   9|          2|    1|          2|
+    |ap_enable_reg_pp0_iter1                            |   9|          2|    1|          2|
+    |ap_sig_allocacmp_delay_i_1                         |   9|          2|    2|          4|
+    |delay_i_fu_62                                      |   9|          2|    2|          4|
+    |update_registrate_point_cloud_point_stream3_blk_n  |   9|          2|    1|          2|
+    |update_registrate_point_cloud_range_stream4_blk_n  |   9|          2|    1|          2|
+    +---------------------------------------------------+----+-----------+-----+-----------+
+    |Total                                              |  54|         12|    8|         16|
+    +---------------------------------------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +-------------------------------------------+---+----+-----+-----------+
+    |                    Name                   | FF| LUT| Bits| Const Bits|
+    +-------------------------------------------+---+----+-----+-----------+
+    |ap_CS_fsm                                  |  1|   0|    1|          0|
+    |ap_block_pp0_stage0_subdone_grp1_done_reg  |  1|   0|    1|          0|
+    |ap_block_pp0_stage0_subdone_grp2_done_reg  |  1|   0|    1|          0|
+    |ap_done_reg                                |  1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter1                    |  1|   0|    1|          0|
+    |delay_i_fu_62                              |  2|   0|    2|          0|
+    |icmp_ln1075_reg_270                        |  1|   0|    1|          0|
+    +-------------------------------------------+---+----+-----+-----------+
+    |Total                                      |  8|   0|    8|          0|
+    +-------------------------------------------+---+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++------------------------------------------------------------+-----+-----+------------+-----------------------------------------------------+--------------+
+|                          RTL Ports                         | Dir | Bits|  Protocol  |                    Source Object                    |    C Type    |
++------------------------------------------------------------+-----+-----+------------+-----------------------------------------------------+--------------+
+|ap_clk                                                      |   in|    1|  ap_ctrl_hs|  update_range_Pipeline_loop_update_range_final_write|  return value|
+|ap_rst                                                      |   in|    1|  ap_ctrl_hs|  update_range_Pipeline_loop_update_range_final_write|  return value|
+|ap_start                                                    |   in|    1|  ap_ctrl_hs|  update_range_Pipeline_loop_update_range_final_write|  return value|
+|ap_done                                                     |  out|    1|  ap_ctrl_hs|  update_range_Pipeline_loop_update_range_final_write|  return value|
+|ap_idle                                                     |  out|    1|  ap_ctrl_hs|  update_range_Pipeline_loop_update_range_final_write|  return value|
+|ap_ready                                                    |  out|    1|  ap_ctrl_hs|  update_range_Pipeline_loop_update_range_final_write|  return value|
+|update_registrate_point_cloud_range_stream4_din             |  out|   18|     ap_fifo|          update_registrate_point_cloud_range_stream4|       pointer|
+|update_registrate_point_cloud_range_stream4_full_n          |   in|    1|     ap_fifo|          update_registrate_point_cloud_range_stream4|       pointer|
+|update_registrate_point_cloud_range_stream4_write           |  out|    1|     ap_fifo|          update_registrate_point_cloud_range_stream4|       pointer|
+|update_registrate_point_cloud_range_stream4_num_data_valid  |   in|   32|     ap_fifo|          update_registrate_point_cloud_range_stream4|       pointer|
+|update_registrate_point_cloud_range_stream4_fifo_cap        |   in|   32|     ap_fifo|          update_registrate_point_cloud_range_stream4|       pointer|
+|update_registrate_point_cloud_point_stream3_din             |  out|   80|     ap_fifo|          update_registrate_point_cloud_point_stream3|       pointer|
+|update_registrate_point_cloud_point_stream3_full_n          |   in|    1|     ap_fifo|          update_registrate_point_cloud_point_stream3|       pointer|
+|update_registrate_point_cloud_point_stream3_write           |  out|    1|     ap_fifo|          update_registrate_point_cloud_point_stream3|       pointer|
+|update_registrate_point_cloud_point_stream3_num_data_valid  |   in|   32|     ap_fifo|          update_registrate_point_cloud_point_stream3|       pointer|
+|update_registrate_point_cloud_point_stream3_fifo_cap        |   in|   32|     ap_fifo|          update_registrate_point_cloud_point_stream3|       pointer|
+|range_window_buffer_reload                                  |   in|   18|     ap_none|                           range_window_buffer_reload|        scalar|
+|p_reload339                                                 |   in|   18|     ap_none|                                          p_reload339|        scalar|
+|point_window_buffer_x_reload                                |   in|   18|     ap_none|                         point_window_buffer_x_reload|        scalar|
+|p_0_0_0_04536_reload                                        |   in|   18|     ap_none|                                 p_0_0_0_04536_reload|        scalar|
+|point_window_buffer_y_reload                                |   in|   18|     ap_none|                         point_window_buffer_y_reload|        scalar|
+|p_1_0_0_04637_reload                                        |   in|   18|     ap_none|                                 p_1_0_0_04637_reload|        scalar|
+|point_window_buffer_z_reload                                |   in|   18|     ap_none|                         point_window_buffer_z_reload|        scalar|
+|p_2_0_0_04738_reload                                        |   in|   18|     ap_none|                                 p_2_0_0_04738_reload|        scalar|
+|point_window_buffer_intensity_reload                        |   in|   26|     ap_none|                 point_window_buffer_intensity_reload|        scalar|
+|p_3_0_0_04839_reload                                        |   in|   26|     ap_none|                                 p_3_0_0_04839_reload|        scalar|
++------------------------------------------------------------+-----+-----+------------+-----------------------------------------------------+--------------+
+

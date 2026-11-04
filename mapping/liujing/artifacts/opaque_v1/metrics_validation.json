@@ -1,0 +1,10 @@
+{
+  "passed": true,
+  "scope": "exact packaged passive counter and control RTL; datapath C/RTL and board tests are separate",
+  "sha256": {
+    "renderer_metrics.v": "6d20afbcbe78ddf5467197a66477c6f9c6dd3cd6686c5b2d5da3c741f9ff540b",
+    "tb_metrics.sv": "16fe0533220ff8dc41b3590f2bfe4c52c35ba23c2bf37e2d1ceb2a670049b0d2",
+    "tb_control_metrics.sv": "daf69a94cb430c709f1bc483d100cc362a455c3107b8c9d73e2a9af02ffbcd8f",
+    "lj_raster_control_s_axi.v": "07f3cba4ca49a7bb847b29757759973a97081572dc7aec0053673d9e7d4f2990"
+  }
+}

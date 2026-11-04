@@ -1,0 +1,105 @@
+{
+  "scope": "synthetic RAM checks; no real sensors/localization or mobile acceptance",
+  "matched_calls": 156,
+  "mismatched_pixels": 0,
+  "synthetic_pipeline": {
+    "scope": "synthetic_RAM_pipeline_not_mobile_acceptance",
+    "summary": {
+      "summary": true,
+      "frames": 495,
+      "changed_images": 495,
+      "map_updates": 50,
+      "map_surfels": 3195,
+      "prepare_replaced": 0,
+      "encode_replaced": 0,
+      "budget_rejected": 0,
+      "pl_completions": 495
+    },
+    "steady_interval_s": [
+      5,
+      25
+    ],
+    "min_rolling_10s_changed_image_fps": 19.9,
+    "steady_frames": 400,
+    "latency_ms": {
+      "count": 400,
+      "median": 53.1939624998,
+      "p95": 54.05179299904,
+      "p99": 56.175316009208,
+      "maximum": 85.6648970002
+    },
+    "map_age_ms": {
+      "count": 400,
+      "median": 582.1338925,
+      "p95": 803.5588720518,
+      "p99": 804.4210558990101,
+      "maximum": 804.919000999
+    },
+    "prepare_ms": {
+      "count": 400,
+      "median": 1.84251850078,
+      "p95": 1.9319625511304999,
+      "p99": 2.0151222891590996,
+      "maximum": 2.83198800025
+    },
+    "render_ms": {
+      "count": 400,
+      "median": 38.75823200175,
+      "p95": 39.38842405058,
+      "p99": 39.749395911091995,
+      "maximum": 41.5015649996
+    },
+    "encode_ms": {
+      "count": 400,
+      "median": 12.37264900095,
+      "p95": 12.673360550770001,
+      "p99": 14.626062900329,
+      "maximum": 31.2946229987
+    },
+    "visible": {
+      "count": 400,
+      "median": 2598.0,
+      "p95": 2598.0,
+      "p99": 2598.0,
+      "maximum": 2598
+    },
+    "candidates": {
+      "count": 400,
+      "median": 1155486.0,
+      "p95": 1177414.35,
+      "p99": 1179912.11,
+      "maximum": 1183359
+    },
+    "fusion_ms": {
+      "count": 40,
+      "median": 290.5512815015,
+      "p95": 292.93991105,
+      "p99": 294.21280029061,
+      "maximum": 294.999270001
+    },
+    "map_commit_rate_hz": 1.999692612475134
+  },
+  "full_budget_call_ms": {
+    "count": 5,
+    "median": 78.7194,
+    "p95": 79.38226,
+    "p99": 79.450372,
+    "maximum": 79.4674
+  },
+  "PL_50ms_budget": "NOT_MET full budget",
+  "mobile_acceptance": "NOT_RUN per user instruction: no real sensors this round",
+  "evidence_sha256": {
+    "board_bench_summary.json": "5144ddd999b4ad8164a3ed176d241222a369d1320bd4896ced3bcc97a78f5695",
+    "board_joint\\c16_check.json": "727763cb24af8e9acd5ab4cf86c14972fe230bbdd2c5a8681d03d3e42242ead8",
+    "board_joint\\comparison.jsonl": "c67462dd47f0deaa90247101c7ced6b4b7418bad1963733e4b3b83748d6c9e51",
+    "board_pipeline\\c16_check.json": "914289a538cb850a24516168fb5502b586ecd055ae48534a9357fd5db208590d",
+    "board_pipeline\\comparison.jsonl": "31e465f6dfaac3422911695e4505b0ff92a9f0fe08a7eeecaf22ea06756d822b",
+    "board_pipeline\\pipeline.jsonl": "757379b48a71c45db2deb8cb794772abca047a57e1e4ac06582b42a57c05fdc9",
+    "board_smoke\\c16_check.json": "4a98a21bce4ccd18af2741ca3e6079f3a181705f3772e94cdc21edf62a97a8b6",
+    "board_smoke\\comparison.jsonl": "1a940c130006725f3b7ff834ff6f52b472250d232fe8a526159765f7a89ce019",
+    "board_stress\\c16_check.json": "a6019248cd07ef44851eb50da9667c12f28df053f7bd12517b9f8c779b9979ae",
+    "board_stress\\comparison.jsonl": "3669d0ff3c2e36048ac9c8d8d3f022ad5bd81483a26769df6d0456afbee59bd4",
+    "deployment_manifest.json": "3a877971060d940ff851e804beb6e869098482340eedaf29d38fd1d3e21f331a",
+    "session_status_test.txt": "ab284ffe3bc932e3f613dc5357e7a113060f553aba2e794290cfb35d4df8094d"
+  }
+}

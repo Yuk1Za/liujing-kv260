@@ -1,0 +1,62 @@
+{
+  "name": "留境：雷达视觉定位与彩色三维重建",
+  "map_capacity": 2000000,
+  "modules": {
+    "capture": "Orbbec RGB-D / C16 LiDAR",
+    "pl_frontend": "final3: LiDAR feature + Shi-Tomasi + NMS + sparse LK",
+    "vision_pose": "integration/visual_frontend.py + vision/lvi_board/vo_core.py",
+    "localization": "localization/final3/src/laserOdometry.cpp + map_optimization.cpp",
+    "fusion": "mapping/liujing/native_fusion_overflow",
+    "viewer": "pc/liujing/demo_fusion"
+  },
+  "connections": [
+    {
+      "from": "C16",
+      "to": "LiDAR feature",
+      "interface": "/point_cloud_raw, sensor_msgs/PointCloud2"
+    },
+    {
+      "from": "RGB-D capture",
+      "to": "vision_pose",
+      "interface": "RGBDFrame(stamp_ns, gray, registered depth_m), K, T_body_camera"
+    },
+    {
+      "from": "vision_pose",
+      "to": "localization",
+      "interface": "/vo_pnp/abs, geometry_msgs/PoseStamped, body-frame cumulative pose"
+    },
+    {
+      "from": "localization",
+      "to": "fusion",
+      "interface": "/odom_init/laser_odom + /mapping/odometry, nav_msgs/Odometry"
+    },
+    {
+      "from": "RGB-D capture",
+      "to": "fusion",
+      "interface": "synchronized RGB/Depth frames + calibration"
+    },
+    {
+      "from": "fusion",
+      "to": "viewer",
+      "interface": "8090 /status /camera.jpg; 8092 /color?after=VERSION; LJCD"
+    },
+    {
+      "from": "viewer",
+      "to": "user",
+      "interface": "8097 WebGL / WASD / Z-height colors / PLY export"
+    }
+  ],
+  "ownership": {
+    "camera": "one SDK capture owner; fan-out synchronized frames to vision and fusion",
+    "fpga": "one final3 overlay owner; remaining clients attach without downloading",
+    "timestamps": "sensor acquisition time, shared ROS clock",
+    "transforms": "T_A_B maps coordinates in B into A"
+  },
+  "entrypoint": "integration/run_final.sh",
+  "camera_fanout": {
+    "publisher": "mapping/liujing/native_fusion_overflow/runtime.cpp",
+    "topic": "/liujing/camera/color/compressed",
+    "subscriber": "integration/visual_node.py"
+  },
+  "visual_pose_topic": "/vo_pnp/abs"
+}

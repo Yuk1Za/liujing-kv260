@@ -1,0 +1,40 @@
+{
+  "passed": true,
+  "scope": "AWLEN external boundary retention; not complete functional acceptance",
+  "maximum_burst": 16,
+  "checks": [
+    {
+      "pin": "system_i/lj_raster_0/m_axi_output_mem_AWLEN[0]",
+      "external_sinks": [
+        "system_i/raster_mem/inst/s02_entry_pipeline/s02_mmu/inst/aw_sreg/skid_buffer_reg[1125]/D",
+        "system_i/raster_mem/inst/s02_entry_pipeline/s02_mmu/inst/aw_sreg/m_vector_i[1125]_i_1__0/I1"
+      ],
+      "retained": true
+    },
+    {
+      "pin": "system_i/lj_raster_0/m_axi_output_mem_AWLEN[1]",
+      "external_sinks": [
+        "system_i/raster_mem/inst/s02_entry_pipeline/s02_mmu/inst/aw_sreg/skid_buffer_reg[1126]/D",
+        "system_i/raster_mem/inst/s02_entry_pipeline/s02_mmu/inst/aw_sreg/m_vector_i[1126]_i_1__0/I1"
+      ],
+      "retained": true
+    },
+    {
+      "pin": "system_i/lj_raster_0/m_axi_output_mem_AWLEN[2]",
+      "external_sinks": [
+        "system_i/raster_mem/inst/s02_entry_pipeline/s02_mmu/inst/aw_sreg/skid_buffer_reg[1127]/D",
+        "system_i/raster_mem/inst/s02_entry_pipeline/s02_mmu/inst/aw_sreg/m_vector_i[1127]_i_1__0/I1"
+      ],
+      "retained": true
+    },
+    {
+      "pin": "system_i/lj_raster_0/m_axi_output_mem_AWLEN[3]",
+      "external_sinks": [
+        "system_i/raster_mem/inst/s02_entry_pipeline/s02_mmu/inst/aw_sreg/skid_buffer_reg[1128]/D",
+        "system_i/raster_mem/inst/s02_entry_pipeline/s02_mmu/inst/aw_sreg/m_vector_i[1128]_i_1__0/I1"
+      ],
+      "retained": true
+    }
+  ],
+  "source_sha256": "f39a7c06461bfb1f10fc336fa08041d26d863664b8e05aa367bec7f57133b4e6"
+}

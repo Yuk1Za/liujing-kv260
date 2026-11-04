@@ -1,0 +1,9 @@
+{
+  "status": "EXPERIMENT_NOT_BOARD_VALIDATED",
+  "baseline_sha256": "ddac851b3ff445d44a999476c1f1120ce0eded89d1cdc1ca9c78823c8f68e1ce",
+  "changes": "dual-port tile caches; experimental inter-iteration dependence assertions with unresolved RTL checker warnings; unchanged FP32 operations",
+  "build": "E:\\tmp\\liujing_raster_ii1_20261024",
+  "rtl_cosim_status": "Pass with dependence checker warnings",
+  "dependence_warning_count": 8,
+  "ready_for_integration": false
+}

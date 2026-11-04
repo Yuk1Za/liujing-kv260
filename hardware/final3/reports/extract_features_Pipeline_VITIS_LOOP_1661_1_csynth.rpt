@@ -1,0 +1,257 @@
+
+
+================================================================
+== Vitis HLS Report for 'extract_features_Pipeline_VITIS_LOOP_1661_1'
+================================================================
+* Date:           Thu Oct 29 07:54:09 2026
+
+* Version:        2024.2 (Build 5238294 on Nov  8 2024)
+* Project:        hls_build.prj
+* Solution:       solution1 (Vivado IP Flow Target)
+* Product family: zynquplus
+* Target device:  xck26-sfvc784-2LV-c
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+---------+----------+------------+
+    |  Clock |  Target | Estimated| Uncertainty|
+    +--------+---------+----------+------------+
+    |ap_clk  |  5.00 ns|  3.572 ns|     1.35 ns|
+    +--------+---------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+------------------------------------------------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval |                    Pipeline                    |
+    |   min   |   max   |    min   |    max   | min | max |                      Type                      |
+    +---------+---------+----------+----------+-----+-----+------------------------------------------------+
+    |       22|       22|  0.110 us|  0.110 us|   17|   17|  loop auto-rewind stp (delay=0 clock cycles(s))|
+    +---------+---------+----------+----------+-----+-----+------------------------------------------------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +---------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |                     |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
+        |      Loop Name      |   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
+        +---------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |- VITIS_LOOP_1661_1  |       20|       20|         6|          1|          1|    16|       yes|
+        +---------------------+---------+---------+----------+-----------+-----------+------+----------+
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+------+--------+--------+-----+
+|       Name      | BRAM_18K|  DSP |   FF   |   LUT  | URAM|
++-----------------+---------+------+--------+--------+-----+
+|DSP              |        -|     -|       -|       -|    -|
+|Expression       |        -|     -|       0|     437|    -|
+|FIFO             |        -|     -|       -|       -|    -|
+|Instance         |        -|     -|       0|      47|    -|
+|Memory           |        -|     -|       -|       -|    -|
+|Multiplexer      |        -|     -|       0|      99|    -|
+|Register         |        -|     -|     544|     160|    -|
++-----------------+---------+------+--------+--------+-----+
+|Total            |        0|     0|     544|     743|    0|
++-----------------+---------+------+--------+--------+-----+
+|Available        |      288|  1248|  234240|  117120|   64|
++-----------------+---------+------+--------+--------+-----+
+|Utilization (%)  |        0|     0|      ~0|      ~0|    0|
++-----------------+---------+------+--------+--------+-----+
+
++ Detail: 
+    * Instance: 
+    +---------------------+----------------+---------+----+---+----+-----+
+    |       Instance      |     Module     | BRAM_18K| DSP| FF| LUT| URAM|
+    +---------------------+----------------+---------+----+---+----+-----+
+    |ctlz_32_32_1_1_U558  |ctlz_32_32_1_1  |        0|   0|  0|  47|    0|
+    +---------------------+----------------+---------+----+---+----+-----+
+    |Total                |                |        0|   0|  0|  47|    0|
+    +---------------------+----------------+---------+----+---+----+-----+
+
+    * DSP: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +---------------------------------------+----------+----+---+-----+------------+------------+
+    |             Variable Name             | Operation| DSP| FF| LUT | Bitwidth P0| Bitwidth P1|
+    +---------------------------------------+----------+----+---+-----+------------+------------+
+    |add_ln1661_fu_259_p2                   |         +|   0|  0|   12|           5|           1|
+    |add_ln1678_1_fu_416_p2                 |         +|   0|  0|   18|          11|          11|
+    |add_ln1678_fu_360_p2                   |         +|   0|  0|   13|           6|           5|
+    |add_ln1679_fu_460_p2                   |         +|   0|  0|    9|           2|           2|
+    |sub_ln1678_1_fu_406_p2                 |         -|   0|  0|   13|           5|           6|
+    |sub_ln1678_fu_328_p2                   |         -|   0|  0|   39|           1|          32|
+    |LD_fu_429_p5                           |      1003|   0|  0|    2|          64|          12|
+    |and_ln1679_1_fu_485_p2                 |       and|   0|  0|    2|           1|           1|
+    |and_ln1679_fu_479_p2                   |       and|   0|  0|    2|           1|           1|
+    |temp_out_lessflat_fu_491_p2            |       and|   0|  0|    2|           1|           1|
+    |icmp_ln1661_fu_253_p2                  |      icmp|   0|  0|   13|           5|           6|
+    |icmp_ln1678_1_fu_314_p2                |      icmp|   0|  0|   39|          32|           1|
+    |icmp_ln1678_fu_450_p2                  |      icmp|   0|  0|   25|          18|          12|
+    |temp_out_ground_fu_497_p2              |      icmp|   0|  0|    9|           2|           1|
+    |ap_block_pp0_stage0_00001_grp2         |        or|   0|  0|    2|           1|           1|
+    |ap_block_pp0_stage0_01001_grp1         |        or|   0|  0|    2|           1|           1|
+    |ap_block_pp0_stage0_11001              |        or|   0|  0|    2|           1|           1|
+    |ap_block_state2_pp0_stage0_iter1_grp2  |        or|   0|  0|    2|           1|           1|
+    |ap_block_state6_pp0_stage0_iter5_grp2  |        or|   0|  0|    2|           1|           1|
+    |phi_ln1678_fu_455_p2                   |        or|   0|  0|    2|           1|           1|
+    |select_ln1678_1_fu_398_p3              |    select|   0|  0|   10|           1|          10|
+    |select_ln1678_fu_334_p3                |    select|   0|  0|   32|           1|          32|
+    |shl_ln1678_fu_370_p2                   |       shl|   0|  0|  179|          64|          64|
+    |ap_enable_pp0                          |       xor|   0|  0|    2|           1|           2|
+    |xor_ln1678_fu_445_p2                   |       xor|   0|  0|    2|           1|           2|
+    |xor_ln1679_fu_473_p2                   |       xor|   0|  0|    2|           1|           2|
+    +---------------------------------------+----------+----+---+-----+------------+------------+
+    |Total                                  |          |   0|  0|  437|         229|         210|
+    +---------------------------------------+----------+----+---+-----+------------+------------+
+
+    * Multiplexer: 
+    +---------------------------------------------------+----+-----------+-----+-----------+
+    |                        Name                       | LUT| Input Size| Bits| Total Bits|
+    +---------------------------------------------------+----+-----------+-----+-----------+
+    |ap_done_int                                        |   9|          2|    1|          2|
+    |ap_enable_reg_pp0_iter1                            |   9|          2|    1|          2|
+    |ap_sig_allocacmp_i_5                               |   9|          2|    5|         10|
+    |i_fu_124                                           |   9|          2|    5|         10|
+    |out_ground_stream23_blk_n                          |   9|          2|    1|          2|
+    |out_lessflat_stream22_blk_n                        |   9|          2|    1|          2|
+    |registrate_point_cloud_feature_stream19_blk_n      |   9|          2|    1|          2|
+    |registrate_point_cloud_outpoint_stream21_blk_n     |   9|          2|    1|          2|
+    |registrate_point_cloud_outrange_stream20_blk_n     |   9|          2|    1|          2|
+    |registrate_point_cloud_point_range_stream18_blk_n  |   9|          2|    1|          2|
+    |registrate_point_cloud_point_stream17_blk_n        |   9|          2|    1|          2|
+    +---------------------------------------------------+----+-----------+-----+-----------+
+    |Total                                              |  99|         22|   19|         38|
+    +---------------------------------------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +----------------------------------------------------------+----+----+-----+-----------+
+    |                           Name                           | FF | LUT| Bits| Const Bits|
+    +----------------------------------------------------------+----+----+-----+-----------+
+    |LD_reg_560                                                |  64|   0|   64|          0|
+    |ap_CS_fsm                                                 |   1|   0|    1|          0|
+    |ap_block_pp0_stage0_subdone_grp1_done_reg                 |   1|   0|    1|          0|
+    |ap_block_pp0_stage0_subdone_grp2_done_reg                 |   1|   0|    1|          0|
+    |ap_done_reg                                               |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter1                                   |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter2                                   |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter3                                   |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter4                                   |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter5                                   |   1|   0|    1|          0|
+    |ap_loop_exit_ready_pp0_iter1_reg                          |   1|   0|    1|          0|
+    |ap_loop_exit_ready_pp0_iter2_reg                          |   1|   0|    1|          0|
+    |ap_loop_exit_ready_pp0_iter3_reg                          |   1|   0|    1|          0|
+    |ap_loop_exit_ready_pp0_iter4_reg                          |   1|   0|    1|          0|
+    |i_5_reg_513                                               |   5|   0|    5|          0|
+    |i_fu_124                                                  |   5|   0|    5|          0|
+    |icmp_ln1678_1_reg_544                                     |   1|   0|    1|          0|
+    |registrate_point_cloud_point_range_stream18_read_reg_538  |  18|   0|   18|          0|
+    |registrate_point_cloud_point_stream17_read_reg_522        |  80|   0|   80|          0|
+    |select_ln1678_reg_554                                     |  32|   0|   32|          0|
+    |temp_out_ground_reg_575                                   |   1|   0|    1|          0|
+    |temp_out_lessflat_reg_570                                 |   1|   0|    1|          0|
+    |tmp_72_reg_527                                            |   1|   0|    1|          0|
+    |tmp_73_reg_549                                            |   1|   0|    1|          0|
+    |trunc_ln1668_2_reg_532                                    |   2|   0|    2|          0|
+    |icmp_ln1678_1_reg_544                                     |  64|  32|    1|          0|
+    |registrate_point_cloud_point_range_stream18_read_reg_538  |  64|  32|   18|          0|
+    |registrate_point_cloud_point_stream17_read_reg_522        |  64|  32|   80|          0|
+    |tmp_72_reg_527                                            |  64|  32|    1|          0|
+    |trunc_ln1668_2_reg_532                                    |  64|  32|    2|          0|
+    +----------------------------------------------------------+----+----+-----+-----------+
+    |Total                                                     | 544| 160|  326|          0|
+    +----------------------------------------------------------+----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++------------------------------------------------------------+-----+-----+------------+----------------------------------------------+--------------+
+|                          RTL Ports                         | Dir | Bits|  Protocol  |                 Source Object                |    C Type    |
++------------------------------------------------------------+-----+-----+------------+----------------------------------------------+--------------+
+|ap_clk                                                      |   in|    1|  ap_ctrl_hs|   extract_features_Pipeline_VITIS_LOOP_1661_1|  return value|
+|ap_rst                                                      |   in|    1|  ap_ctrl_hs|   extract_features_Pipeline_VITIS_LOOP_1661_1|  return value|
+|ap_start                                                    |   in|    1|  ap_ctrl_hs|   extract_features_Pipeline_VITIS_LOOP_1661_1|  return value|
+|ap_done                                                     |  out|    1|  ap_ctrl_hs|   extract_features_Pipeline_VITIS_LOOP_1661_1|  return value|
+|ap_idle                                                     |  out|    1|  ap_ctrl_hs|   extract_features_Pipeline_VITIS_LOOP_1661_1|  return value|
+|ap_ready                                                    |  out|    1|  ap_ctrl_hs|   extract_features_Pipeline_VITIS_LOOP_1661_1|  return value|
+|grp_fu_595_p_din0                                           |  out|   64|  ap_ctrl_hs|   extract_features_Pipeline_VITIS_LOOP_1661_1|  return value|
+|grp_fu_595_p_din1                                           |  out|   64|  ap_ctrl_hs|   extract_features_Pipeline_VITIS_LOOP_1661_1|  return value|
+|grp_fu_595_p_opcode                                         |  out|    5|  ap_ctrl_hs|   extract_features_Pipeline_VITIS_LOOP_1661_1|  return value|
+|grp_fu_595_p_dout0                                          |   in|    1|  ap_ctrl_hs|   extract_features_Pipeline_VITIS_LOOP_1661_1|  return value|
+|grp_fu_595_p_ce                                             |  out|    1|  ap_ctrl_hs|   extract_features_Pipeline_VITIS_LOOP_1661_1|  return value|
+|registrate_point_cloud_point_stream17_dout                  |   in|   80|     ap_fifo|         registrate_point_cloud_point_stream17|       pointer|
+|registrate_point_cloud_point_stream17_empty_n               |   in|    1|     ap_fifo|         registrate_point_cloud_point_stream17|       pointer|
+|registrate_point_cloud_point_stream17_read                  |  out|    1|     ap_fifo|         registrate_point_cloud_point_stream17|       pointer|
+|registrate_point_cloud_point_stream17_num_data_valid        |   in|    5|     ap_fifo|         registrate_point_cloud_point_stream17|       pointer|
+|registrate_point_cloud_point_stream17_fifo_cap              |   in|    5|     ap_fifo|         registrate_point_cloud_point_stream17|       pointer|
+|registrate_point_cloud_feature_stream19_dout                |   in|   51|     ap_fifo|       registrate_point_cloud_feature_stream19|       pointer|
+|registrate_point_cloud_feature_stream19_empty_n             |   in|    1|     ap_fifo|       registrate_point_cloud_feature_stream19|       pointer|
+|registrate_point_cloud_feature_stream19_read                |  out|    1|     ap_fifo|       registrate_point_cloud_feature_stream19|       pointer|
+|registrate_point_cloud_feature_stream19_num_data_valid      |   in|    5|     ap_fifo|       registrate_point_cloud_feature_stream19|       pointer|
+|registrate_point_cloud_feature_stream19_fifo_cap            |   in|    5|     ap_fifo|       registrate_point_cloud_feature_stream19|       pointer|
+|registrate_point_cloud_point_range_stream18_dout            |   in|   18|     ap_fifo|   registrate_point_cloud_point_range_stream18|       pointer|
+|registrate_point_cloud_point_range_stream18_empty_n         |   in|    1|     ap_fifo|   registrate_point_cloud_point_range_stream18|       pointer|
+|registrate_point_cloud_point_range_stream18_read            |  out|    1|     ap_fifo|   registrate_point_cloud_point_range_stream18|       pointer|
+|registrate_point_cloud_point_range_stream18_num_data_valid  |   in|    5|     ap_fifo|   registrate_point_cloud_point_range_stream18|       pointer|
+|registrate_point_cloud_point_range_stream18_fifo_cap        |   in|    5|     ap_fifo|   registrate_point_cloud_point_range_stream18|       pointer|
+|registrate_point_cloud_outpoint_stream21_din                |  out|   80|     ap_fifo|      registrate_point_cloud_outpoint_stream21|       pointer|
+|registrate_point_cloud_outpoint_stream21_full_n             |   in|    1|     ap_fifo|      registrate_point_cloud_outpoint_stream21|       pointer|
+|registrate_point_cloud_outpoint_stream21_write              |  out|    1|     ap_fifo|      registrate_point_cloud_outpoint_stream21|       pointer|
+|registrate_point_cloud_outpoint_stream21_num_data_valid     |   in|   32|     ap_fifo|      registrate_point_cloud_outpoint_stream21|       pointer|
+|registrate_point_cloud_outpoint_stream21_fifo_cap           |   in|   32|     ap_fifo|      registrate_point_cloud_outpoint_stream21|       pointer|
+|registrate_point_cloud_outrange_stream20_din                |  out|   18|     ap_fifo|      registrate_point_cloud_outrange_stream20|       pointer|
+|registrate_point_cloud_outrange_stream20_full_n             |   in|    1|     ap_fifo|      registrate_point_cloud_outrange_stream20|       pointer|
+|registrate_point_cloud_outrange_stream20_write              |  out|    1|     ap_fifo|      registrate_point_cloud_outrange_stream20|       pointer|
+|registrate_point_cloud_outrange_stream20_num_data_valid     |   in|   32|     ap_fifo|      registrate_point_cloud_outrange_stream20|       pointer|
+|registrate_point_cloud_outrange_stream20_fifo_cap           |   in|   32|     ap_fifo|      registrate_point_cloud_outrange_stream20|       pointer|
+|out_lessflat_stream22_din                                   |  out|    1|     ap_fifo|                         out_lessflat_stream22|       pointer|
+|out_lessflat_stream22_full_n                                |   in|    1|     ap_fifo|                         out_lessflat_stream22|       pointer|
+|out_lessflat_stream22_write                                 |  out|    1|     ap_fifo|                         out_lessflat_stream22|       pointer|
+|out_lessflat_stream22_num_data_valid                        |   in|   32|     ap_fifo|                         out_lessflat_stream22|       pointer|
+|out_lessflat_stream22_fifo_cap                              |   in|   32|     ap_fifo|                         out_lessflat_stream22|       pointer|
+|out_ground_stream23_din                                     |  out|    2|     ap_fifo|                           out_ground_stream23|       pointer|
+|out_ground_stream23_full_n                                  |   in|    1|     ap_fifo|                           out_ground_stream23|       pointer|
+|out_ground_stream23_write                                   |  out|    1|     ap_fifo|                           out_ground_stream23|       pointer|
+|out_ground_stream23_num_data_valid                          |   in|   32|     ap_fifo|                           out_ground_stream23|       pointer|
+|out_ground_stream23_fifo_cap                                |   in|   32|     ap_fifo|                           out_ground_stream23|       pointer|
+|feature_point_cloud_range_buffer_address0                   |  out|    4|   ap_memory|              feature_point_cloud_range_buffer|         array|
+|feature_point_cloud_range_buffer_ce0                        |  out|    1|   ap_memory|              feature_point_cloud_range_buffer|         array|
+|feature_point_cloud_range_buffer_we0                        |  out|    1|   ap_memory|              feature_point_cloud_range_buffer|         array|
+|feature_point_cloud_range_buffer_d0                         |  out|   18|   ap_memory|              feature_point_cloud_range_buffer|         array|
+|feature_point_cloud_feature_buffer_SortInd_address0         |  out|    4|   ap_memory|    feature_point_cloud_feature_buffer_SortInd|         array|
+|feature_point_cloud_feature_buffer_SortInd_ce0              |  out|    1|   ap_memory|    feature_point_cloud_feature_buffer_SortInd|         array|
+|feature_point_cloud_feature_buffer_SortInd_we0              |  out|    1|   ap_memory|    feature_point_cloud_feature_buffer_SortInd|         array|
+|feature_point_cloud_feature_buffer_SortInd_d0               |  out|   16|   ap_memory|    feature_point_cloud_feature_buffer_SortInd|         array|
+|feature_point_cloud_feature_buffer_ground_address0          |  out|    4|   ap_memory|     feature_point_cloud_feature_buffer_ground|         array|
+|feature_point_cloud_feature_buffer_ground_ce0               |  out|    1|   ap_memory|     feature_point_cloud_feature_buffer_ground|         array|
+|feature_point_cloud_feature_buffer_ground_we0               |  out|    1|   ap_memory|     feature_point_cloud_feature_buffer_ground|         array|
+|feature_point_cloud_feature_buffer_ground_d0                |  out|    2|   ap_memory|     feature_point_cloud_feature_buffer_ground|         array|
+|feature_point_cloud_feature_buffer_picked_address0          |  out|    4|   ap_memory|     feature_point_cloud_feature_buffer_picked|         array|
+|feature_point_cloud_feature_buffer_picked_ce0               |  out|    1|   ap_memory|     feature_point_cloud_feature_buffer_picked|         array|
+|feature_point_cloud_feature_buffer_picked_we0               |  out|    1|   ap_memory|     feature_point_cloud_feature_buffer_picked|         array|
+|feature_point_cloud_feature_buffer_picked_d0                |  out|    1|   ap_memory|     feature_point_cloud_feature_buffer_picked|         array|
+|feature_point_cloud_feature_buffer_curvature_address0       |  out|    4|   ap_memory|  feature_point_cloud_feature_buffer_curvature|         array|
+|feature_point_cloud_feature_buffer_curvature_ce0            |  out|    1|   ap_memory|  feature_point_cloud_feature_buffer_curvature|         array|
+|feature_point_cloud_feature_buffer_curvature_we0            |  out|    1|   ap_memory|  feature_point_cloud_feature_buffer_curvature|         array|
+|feature_point_cloud_feature_buffer_curvature_d0             |  out|   32|   ap_memory|  feature_point_cloud_feature_buffer_curvature|         array|
++------------------------------------------------------------+-----+-----+------------+----------------------------------------------+--------------+
+
