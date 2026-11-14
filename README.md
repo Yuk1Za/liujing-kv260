@@ -46,13 +46,25 @@ python liujing/demo_fusion/server.py --out ./output/demo
 
 浏览器打开 `http://127.0.0.1:8097`。彩色地图显示 RGB，高度点云使用 Z 值渐变色；鼠标旋转和平移，WASD 移动视角，F 显示全景，PLY 导出保留原始 RGB。
 
+
+## 双系统融合位流（2026-11 新增）
+
+`hardware/fusion/` 为单静态位流（fusion.bit，7,797,810 B，sha256 885bda03e5ef57cf 前缀），同片含**压缩雷达特征核（60.5k→28k LUT）+ 彩色面元渲染核 + Shi-Tomasi + NMS**，构建入口 `hardware/fusion/fusion_bd.tcl`。正确性与速度均已实测：
+
+- 雷达核与 HLS C 仿真**逐点相同**（flat 33 / sharp 83 / lesssharp 142，双向差集 0），见 `hardware/fusion/csim/`。
+- 渲染核（640×480）与 CPU 参考输出**逐位相同**（depth maxdiff = 0）。
+- 速度（street1 同序列同窗口）：雷达特征提取 28.6 → 7.26 ms（4.0×）；渲染 CPU 侧 196.3 → 64 ms（−67%，渲染转 PL 并行）；整链吞吐 0.34 → 0.55 Hz（+62%）。
+- 资源：CLB 98.05%，WNS +1.135 ns @100 MHz，报告见 `hardware/fusion/reports/`。
+
 ## 目录
 
 - `hardware/final3/`：集成硬件源码、IP、位流、HWH 和实现报告。
 - `localization/final3/`：统一流程使用的定位工程与视觉因子后端。
 - `vision/`：视觉 PL 主机控制、PnP 与视觉节点源码。
 - `mapping/liujing/`：地图融合、传感器接口和会话工具。
-- `integration/`：顶层启动编排、视觉节点和数据接口。
+- `integration/`：顶层启动编排、视觉节点和数据接口；`integration/bench/` 为整机 CPU 版 / PL 版 A/B 基准脚本。
+- `hardware/fusion/`：双系统融合位流（压缩雷达核 + 彩色渲染核 + ST/NMS 单 bit）、BD 构建脚本与 csim 等价性验证。
+
 - `sensors/`：雷达驱动。
 - `pc/`：浏览器服务和三维展示。
 - `localization/live_c16/` 及 `mapping/liujing/tools/fusion_overflow.sh`：独立 C16 实车入口。
