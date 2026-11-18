@@ -1,0 +1,42 @@
+{
+  "device": "xck26-sfvc784-2LV-c",
+  "vivado": "2026.1",
+  "clock_mhz": 100,
+  "compute_ips": {
+    "fpga_feature_extract_0": 2684354560,
+    "fusion_frame_0": 2684420096,
+    "shitomasi_accel_0": 2684485632,
+    "nms_accel_0": 2684551168
+  },
+  "lut_total": 72924,
+  "lut_radar": 24519,
+  "wns_ns": 0.78,
+  "whs_ns": 0.01,
+  "wpws_ns": 3.5,
+  "tns_ns": 0,
+  "ths_ns": 0,
+  "tpws_ns": 0,
+  "routable_nets": 154734,
+  "fully_routed_nets": 154734,
+  "routing_errors": 0,
+  "board_programmed": false,
+  "scope": "hardware implementation as requested in final scope correction",
+  "sha256": {
+    "cdc.rpt": "7ced151c375485323971b8c47637307c20522587eb239d1482b978dd2d2c8898",
+    "check_timing.rpt": "9e6f51c5354de1bda3d94977322567d52a6050b433df21328a53bf1504a44b25",
+    "clocks.rpt": "f5080d53decfcb9808ed22420429668802ea3a693a21cd660fa13eecbace3121",
+    "clock_interaction.rpt": "14ddb4b8b2d2a75c2c69c507155d545fe22cbfdfcff401c3191191543e309056",
+    "drc.rpt": "a0d862e833e30b51e86667947384352e8160b30d45138e0de8fb61d0196826e9",
+    "liujing.bit": "3b1bf1d3542c0fd97e2b3c33138a12a5ba381d479731f95c93ea624760790793",
+    "liujing.hwh": "74eb3bf2ed3236b21c422b9571ff9e0e804e2e51b1c48339dacfeed509be41a0",
+    "methodology.rpt": "9dee3bda35b4682b91e88620c21ae3523f2264e09ad4d4f9801cf35ccee7a3a1",
+    "route.rpt": "315c7197cbafdb6b7870805d4695f7c752f14d89ae2c13cf97a8691726982db5",
+    "routed.dcp": "e7181703b6933ba963dfb2f1ca55e81ea7c6b128fb3c0b6132dd76363ced0a36",
+    "timing.rpt": "f356e8ff4f0b16d5dcd9c0a6d08f926283c278ce5abd9f28b1b87f05cf387f59",
+    "utilization.rpt": "5779bb83a3cfb4184156ad9fa688448630eff53b694610cdffef30517cfdfa50",
+    "util_hier.rpt": "e1f4a5152ae4ccb36096ef0617f074903e09a707cecc8d56e555f4fc477b79ed"
+  },
+  "views_verified": true,
+  "radar_lut_reduction": 32190,
+  "total_lut_reduction": 32611
+}

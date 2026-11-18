@@ -1,0 +1,5 @@
+instance,AXI-Lite interface,base,high
+fpga_feature_extract_0,s_axi_control_bus,0xA0000000,0xA000FFFF
+fusion_frame_0,s_axi_control,0xA0010000,0xA001FFFF
+shitomasi_accel_0,s_axi_control,0xA0020000,0xA002FFFF
+nms_accel_0,s_axi_control,0xA0030000,0xA003FFFF
