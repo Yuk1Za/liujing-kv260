@@ -1,0 +1,1655 @@
+
+****** Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2024.2 (64-bit)
+  **** SW Build 5238294 on Nov  8 2024
+  **** IP Build 5239520 on Sun Nov 10 16:12:51 MST 2024
+  **** SharedData Build 5239561 on Fri Nov 08 14:39:27 MST 2024
+  **** Start of session at: Thu Oct 29 07:53:23 2026
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source /tools/Xilinx/Vitis/2024.2/scripts/vitis_hls/hls.tcl -notrace
+INFO: [HLS 200-10] For user 'srtp2025_nie' on host 'fpga5090' (Linux_x86_64 version 7.0.0-34-generic) on Thu Oct 29 07:53:23 UTC 2026
+INFO: [HLS 200-10] On os Ubuntu 24.04.4 LTS
+INFO: [HLS 200-10] In directory '/home/srtp2025_nie/fe_p0/final1'
+WARNING: [HLS 200-2053] The vitis_hls executable is deprecated. Consider using vitis-run --mode hls --tcl
+Sourcing Tcl script 'run_hls.tcl'
+INFO: [HLS 200-1510] Running: open_project hls_build.prj -reset 
+INFO: [HLS 200-10] Creating and opening project '/home/srtp2025_nie/fe_p0/final1/hls_build.prj'.
+INFO: [HLS 200-1510] Running: set_top fpga_feature_extract_hw 
+INFO: [HLS 200-1510] Running: add_files fpga_feature_extract_hw.cpp -cflags -I. 
+INFO: [HLS 200-10] Adding design file 'fpga_feature_extract_hw.cpp' to the project
+INFO: [HLS 200-1510] Running: add_files registration_fpga.h -cflags -I. 
+INFO: [HLS 200-10] Adding design file 'registration_fpga.h' to the project
+INFO: [HLS 200-1510] Running: add_files registration_fpga.cpp -cflags -I. 
+INFO: [HLS 200-10] Adding design file 'registration_fpga.cpp' to the project
+INFO: [HLS 200-1510] Running: open_solution -reset solution1 
+INFO: [HLS 200-10] Creating and opening solution '/home/srtp2025_nie/fe_p0/final1/hls_build.prj/solution1'.
+INFO: [HLS 200-10] Cleaning up the solution database.
+INFO: [HLS 200-1505] Using default flow_target 'vivado'
+Resolution: For help on HLS 200-1505 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2024.2%20English&url=ug1448-hls-guidance&resourceid=200-1505.html
+INFO: [HLS 200-1510] Running: set_part xck26-sfvc784-2LV-c 
+INFO: [HLS 200-1611] Setting target device to 'xck26-sfvc784-2LV-c'
+INFO: [HLS 200-1510] Running: create_clock -period 5 -name default 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 5ns.
+INFO: [HLS 200-1510] Running: csynth_design 
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0.02 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.03 seconds; current allocated memory: 641.246 MB.
+INFO: [HLS 200-10] Analyzing design file 'registration_fpga.cpp' ... 
+WARNING: [HLS 207-4827] equality comparison with extraneous parentheses (/tools/Xilinx/Vitis/2024.2/include/gmp.h:2304:345)
+INFO: [HLS 207-4186] remove extraneous parentheses around the comparison to silence this warning (/tools/Xilinx/Vitis/2024.2/include/gmp.h:2304:345)
+INFO: [HLS 207-4187] use '=' to turn this equality comparison into an assignment (/tools/Xilinx/Vitis/2024.2/include/gmp.h:2304:345)
+WARNING: [HLS 207-4827] equality comparison with extraneous parentheses (/tools/Xilinx/Vitis/2024.2/include/gmp.h:2304:383)
+INFO: [HLS 207-4186] remove extraneous parentheses around the comparison to silence this warning (/tools/Xilinx/Vitis/2024.2/include/gmp.h:2304:383)
+INFO: [HLS 207-4187] use '=' to turn this equality comparison into an assignment (/tools/Xilinx/Vitis/2024.2/include/gmp.h:2304:383)
+INFO: [HLS 200-10] Analyzing design file 'fpga_feature_extract_hw.cpp' ... 
+WARNING: [HLS 207-4827] equality comparison with extraneous parentheses (/tools/Xilinx/Vitis/2024.2/include/gmp.h:2304:345)
+INFO: [HLS 207-4186] remove extraneous parentheses around the comparison to silence this warning (/tools/Xilinx/Vitis/2024.2/include/gmp.h:2304:345)
+INFO: [HLS 207-4187] use '=' to turn this equality comparison into an assignment (/tools/Xilinx/Vitis/2024.2/include/gmp.h:2304:345)
+WARNING: [HLS 207-5541] 'factor' in '#pragma HLS array_partition' is ignored (./registration_fpga.h:265:22)
+WARNING: [HLS 207-4827] equality comparison with extraneous parentheses (/tools/Xilinx/Vitis/2024.2/include/gmp.h:2304:383)
+INFO: [HLS 207-4186] remove extraneous parentheses around the comparison to silence this warning (/tools/Xilinx/Vitis/2024.2/include/gmp.h:2304:383)
+INFO: [HLS 207-4187] use '=' to turn this equality comparison into an assignment (/tools/Xilinx/Vitis/2024.2/include/gmp.h:2304:383)
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 26.27 seconds. CPU system time: 1.66 seconds. Elapsed time: 27.96 seconds; current allocated memory: 653.902 MB.
+INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
+INFO: [HLS 200-1995] There were 31,591 instructions in the design after the 'Compile/Link' phase of compilation. See the Design Size Report for more details: /home/srtp2025_nie/fe_p0/final1/hls_build.prj/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 11,111 instructions in the design after the 'Unroll/Inline (step 1)' phase of compilation. See the Design Size Report for more details: /home/srtp2025_nie/fe_p0/final1/hls_build.prj/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 5,463 instructions in the design after the 'Unroll/Inline (step 2)' phase of compilation. See the Design Size Report for more details: /home/srtp2025_nie/fe_p0/final1/hls_build.prj/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 5,239 instructions in the design after the 'Unroll/Inline (step 3)' phase of compilation. See the Design Size Report for more details: /home/srtp2025_nie/fe_p0/final1/hls_build.prj/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 5,006 instructions in the design after the 'Unroll/Inline (step 4)' phase of compilation. See the Design Size Report for more details: /home/srtp2025_nie/fe_p0/final1/hls_build.prj/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 9,580 instructions in the design after the 'Array/Struct (step 1)' phase of compilation. See the Design Size Report for more details: /home/srtp2025_nie/fe_p0/final1/hls_build.prj/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 7,027 instructions in the design after the 'Array/Struct (step 2)' phase of compilation. See the Design Size Report for more details: /home/srtp2025_nie/fe_p0/final1/hls_build.prj/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 8,126 instructions in the design after the 'Array/Struct (step 3)' phase of compilation. See the Design Size Report for more details: /home/srtp2025_nie/fe_p0/final1/hls_build.prj/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 8,672 instructions in the design after the 'Array/Struct (step 4)' phase of compilation. See the Design Size Report for more details: /home/srtp2025_nie/fe_p0/final1/hls_build.prj/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 8,824 instructions in the design after the 'Array/Struct (step 5)' phase of compilation. See the Design Size Report for more details: /home/srtp2025_nie/fe_p0/final1/hls_build.prj/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 8,081 instructions in the design after the 'Performance (step 1)' phase of compilation. See the Design Size Report for more details: /home/srtp2025_nie/fe_p0/final1/hls_build.prj/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 8,037 instructions in the design after the 'Performance (step 2)' phase of compilation. See the Design Size Report for more details: /home/srtp2025_nie/fe_p0/final1/hls_build.prj/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 8,076 instructions in the design after the 'Performance (step 3)' phase of compilation. See the Design Size Report for more details: /home/srtp2025_nie/fe_p0/final1/hls_build.prj/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 8,033 instructions in the design after the 'Performance (step 4)' phase of compilation. See the Design Size Report for more details: /home/srtp2025_nie/fe_p0/final1/hls_build.prj/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 7,895 instructions in the design after the 'HW Transforms (step 1)' phase of compilation. See the Design Size Report for more details: /home/srtp2025_nie/fe_p0/final1/hls_build.prj/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 7,887 instructions in the design after the 'HW Transforms (step 2)' phase of compilation. See the Design Size Report for more details: /home/srtp2025_nie/fe_p0/final1/hls_build.prj/solution1/syn/report/csynth_design_size.rpt
+WARNING: [HLS 214-199] Ignoring dependence pragma on local scalar variable 'read_flag'. (fpga_feature_extract_hw.cpp:633:9)
+INFO: [HLS 214-291] Loop 'VITIS_LOOP_2114_3' is marked as complete unroll implied by the pipeline pragma (fpga_feature_extract_hw.cpp:2114:21)
+INFO: [HLS 214-291] Loop 'VITIS_LOOP_2119_4' is marked as complete unroll implied by the pipeline pragma (fpga_feature_extract_hw.cpp:2119:24)
+INFO: [HLS 214-291] Loop 'VITIS_LOOP_2124_5' is marked as complete unroll implied by the pipeline pragma (fpga_feature_extract_hw.cpp:2124:24)
+INFO: [HLS 214-291] Loop 'VITIS_LOOP_1753_7' is marked as complete unroll implied by the pipeline pragma (fpga_feature_extract_hw.cpp:1753:21)
+INFO: [HLS 214-291] Loop 'VITIS_LOOP_1866_15' is marked as complete unroll implied by the pipeline pragma (fpga_feature_extract_hw.cpp:1866:25)
+INFO: [HLS 214-291] Loop 'VITIS_LOOP_1888_16' is marked as complete unroll implied by the pipeline pragma (fpga_feature_extract_hw.cpp:1888:27)
+INFO: [HLS 214-291] Loop 'VITIS_LOOP_1921_18' is marked as complete unroll implied by the pipeline pragma (fpga_feature_extract_hw.cpp:1921:28)
+INFO: [HLS 214-291] Loop 'VITIS_LOOP_1908_17' is marked as complete unroll implied by the pipeline pragma (fpga_feature_extract_hw.cpp:1908:28)
+INFO: [HLS 214-291] Loop 'VITIS_LOOP_1959_19' is marked as complete unroll implied by the pipeline pragma (fpga_feature_extract_hw.cpp:1959:27)
+INFO: [HLS 214-291] Loop 'VITIS_LOOP_1992_21' is marked as complete unroll implied by the pipeline pragma (fpga_feature_extract_hw.cpp:1992:28)
+INFO: [HLS 214-291] Loop 'VITIS_LOOP_1979_20' is marked as complete unroll implied by the pipeline pragma (fpga_feature_extract_hw.cpp:1979:28)
+INFO: [HLS 214-291] Loop 'VITIS_LOOP_1816_8' is marked as complete unroll implied by the pipeline pragma (fpga_feature_extract_hw.cpp:1816:24)
+INFO: [HLS 214-291] Loop 'VITIS_LOOP_1818_9' is marked as complete unroll implied by the pipeline pragma (fpga_feature_extract_hw.cpp:1818:25)
+INFO: [HLS 214-291] Loop 'VITIS_LOOP_1832_10' is marked as complete unroll implied by the pipeline pragma (fpga_feature_extract_hw.cpp:1832:26)
+INFO: [HLS 214-291] Loop 'VITIS_LOOP_1841_11' is marked as complete unroll implied by the pipeline pragma (fpga_feature_extract_hw.cpp:1841:25)
+INFO: [HLS 214-291] Loop 'VITIS_LOOP_1844_12' is marked as complete unroll implied by the pipeline pragma (fpga_feature_extract_hw.cpp:1844:22)
+INFO: [HLS 214-291] Loop 'VITIS_LOOP_1852_13' is marked as complete unroll implied by the pipeline pragma (fpga_feature_extract_hw.cpp:1852:25)
+INFO: [HLS 214-291] Loop 'VITIS_LOOP_1855_14' is marked as complete unroll implied by the pipeline pragma (fpga_feature_extract_hw.cpp:1855:22)
+INFO: [HLS 214-291] Loop 'VITIS_LOOP_1725_6' is marked as complete unroll implied by the pipeline pragma (fpga_feature_extract_hw.cpp:1725:21)
+INFO: [HLS 214-291] Loop 'VITIS_LOOP_1713_4' is marked as complete unroll implied by the pipeline pragma (fpga_feature_extract_hw.cpp:1713:21)
+INFO: [HLS 214-291] Loop 'VITIS_LOOP_1664_2' is marked as complete unroll implied by the pipeline pragma (fpga_feature_extract_hw.cpp:1664:21)
+INFO: [HLS 214-291] Loop 'VITIS_LOOP_1583_1' is marked as complete unroll implied by the pipeline pragma (fpga_feature_extract_hw.cpp:1583:21)
+INFO: [HLS 214-291] Loop 'loop_compute_ground_read' is marked as complete unroll implied by the pipeline pragma (fpga_feature_extract_hw.cpp:1468:3)
+INFO: [HLS 214-291] Loop 'VITIS_LOOP_1479_2' is marked as complete unroll implied by the pipeline pragma (fpga_feature_extract_hw.cpp:1479:22)
+INFO: [HLS 214-291] Loop 'VITIS_LOOP_1376_4' is marked as complete unroll implied by the pipeline pragma (fpga_feature_extract_hw.cpp:1376:21)
+INFO: [HLS 214-291] Loop 'loop_compute_curvature_read' is marked as complete unroll implied by the pipeline pragma (fpga_feature_extract_hw.cpp:1232:3)
+INFO: [HLS 214-291] Loop 'VITIS_LOOP_1245_3' is marked as complete unroll implied by the pipeline pragma (fpga_feature_extract_hw.cpp:1245:23)
+INFO: [HLS 214-291] Loop 'loop_compute_curvature_each_line' is marked as complete unroll implied by the pipeline pragma (fpga_feature_extract_hw.cpp:1261:3)
+INFO: [HLS 214-291] Loop 'VITIS_LOOP_1192_2' is marked as complete unroll implied by the pipeline pragma (fpga_feature_extract_hw.cpp:1192:21)
+INFO: [HLS 214-291] Loop 'VITIS_LOOP_1113_1' is marked as complete unroll implied by the pipeline pragma (fpga_feature_extract_hw.cpp:1113:21)
+INFO: [HLS 214-291] Loop 'VITIS_LOOP_1123_2' is marked as complete unroll implied by the pipeline pragma (fpga_feature_extract_hw.cpp:1123:22)
+INFO: [HLS 214-291] Loop 'VITIS_LOOP_1125_3' is marked as complete unroll implied by the pipeline pragma (fpga_feature_extract_hw.cpp:1125:23)
+INFO: [HLS 214-291] Loop 'VITIS_LOOP_1072_7' is marked as complete unroll implied by the pipeline pragma (fpga_feature_extract_hw.cpp:1072:21)
+INFO: [HLS 214-291] Loop 'VITIS_LOOP_981_3' is marked as complete unroll implied by the pipeline pragma (fpga_feature_extract_hw.cpp:981:20)
+INFO: [HLS 214-291] Loop 'VITIS_LOOP_997_4' is marked as complete unroll implied by the pipeline pragma (fpga_feature_extract_hw.cpp:997:21)
+INFO: [HLS 214-291] Loop 'VITIS_LOOP_1037_5' is marked as complete unroll implied by the pipeline pragma (fpga_feature_extract_hw.cpp:1037:22)
+INFO: [HLS 214-291] Loop 'VITIS_LOOP_1046_6' is marked as complete unroll implied by the pipeline pragma (fpga_feature_extract_hw.cpp:1046:22)
+INFO: [HLS 214-291] Loop 'VITIS_LOOP_946_1' is marked as complete unroll implied by the pipeline pragma (fpga_feature_extract_hw.cpp:946:20)
+INFO: [HLS 214-291] Loop 'VITIS_LOOP_720_6' is marked as complete unroll implied by the pipeline pragma (fpga_feature_extract_hw.cpp:720:20)
+INFO: [HLS 214-291] Loop 'VITIS_LOOP_659_4' is marked as complete unroll implied by the pipeline pragma (fpga_feature_extract_hw.cpp:659:22)
+INFO: [HLS 214-291] Loop 'VITIS_LOOP_649_3' is marked as complete unroll implied by the pipeline pragma (fpga_feature_extract_hw.cpp:649:22)
+INFO: [HLS 214-291] Loop 'VITIS_LOOP_685_5' is marked as complete unroll implied by the pipeline pragma (fpga_feature_extract_hw.cpp:685:22)
+INFO: [HLS 214-291] Loop 'VITIS_LOOP_602_1' is marked as complete unroll implied by the pipeline pragma (fpga_feature_extract_hw.cpp:602:20)
+INFO: [HLS 214-291] Loop 'VITIS_LOOP_268_2' is marked as complete unroll implied by the pipeline pragma (/tools/Xilinx/Vitis/2024.2/common/technology/autopilot/etc/hls_sqrt_apfixed.h:268:27)
+INFO: [HLS 214-291] Loop 'VITIS_LOOP_240_1' is marked as complete unroll implied by the pipeline pragma (/tools/Xilinx/Vitis/2024.2/common/technology/autopilot/etc/hls_sqrt_apfixed.h:240:27)
+WARNING: [HLS 214-398] Updating loop lower bound from 8 to 16 for loop 'loop_allocate_rangeimage_reset_array' (fpga_feature_extract_hw.cpp:598:2) in function 'organize_point_cloud'. (fpga_feature_extract_hw.cpp:567:0)
+WARNING: [HLS 214-398] Updating loop upper bound from 8 to 16 for loop 'loop_allocate_rangeimage_reset_array' (fpga_feature_extract_hw.cpp:598:2) in function 'organize_point_cloud'. (fpga_feature_extract_hw.cpp:567:0)
+WARNING: [HLS 214-398] Updating loop lower bound from 28800 to 28624 for loop 'loop_compute_curvature_main' (fpga_feature_extract_hw.cpp:1216:2) in function 'compute_curvature'. (fpga_feature_extract_hw.cpp:1147:0)
+WARNING: [HLS 214-398] Updating loop upper bound from 28800 to 28624 for loop 'loop_compute_curvature_main' (fpga_feature_extract_hw.cpp:1216:2) in function 'compute_curvature'. (fpga_feature_extract_hw.cpp:1147:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_2114_3' (fpga_feature_extract_hw.cpp:2114:21) in function 'out_flat_sharp_result' completely with a factor of 2 (fpga_feature_extract_hw.cpp:2100:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_2119_4' (fpga_feature_extract_hw.cpp:2119:24) in function 'out_flat_sharp_result' completely with a factor of 2 (fpga_feature_extract_hw.cpp:2100:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_2124_5' (fpga_feature_extract_hw.cpp:2124:24) in function 'out_flat_sharp_result' completely with a factor of 6 (fpga_feature_extract_hw.cpp:2100:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_1753_7' (fpga_feature_extract_hw.cpp:1753:21) in function 'extract_features' completely with a factor of 1 (fpga_feature_extract_hw.cpp:1623:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_1866_15' (fpga_feature_extract_hw.cpp:1866:25) in function 'extract_features' completely with a factor of 1 (fpga_feature_extract_hw.cpp:1623:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_1979_20' (fpga_feature_extract_hw.cpp:1979:28) in function 'extract_features' completely with a factor of 2 (fpga_feature_extract_hw.cpp:1623:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_1992_21' (fpga_feature_extract_hw.cpp:1992:28) in function 'extract_features' completely with a factor of 1 (fpga_feature_extract_hw.cpp:1623:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_1959_19' (fpga_feature_extract_hw.cpp:1959:27) in function 'extract_features' completely with a factor of 2 (fpga_feature_extract_hw.cpp:1623:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_1908_17' (fpga_feature_extract_hw.cpp:1908:28) in function 'extract_features' completely with a factor of 6 (fpga_feature_extract_hw.cpp:1623:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_1921_18' (fpga_feature_extract_hw.cpp:1921:28) in function 'extract_features' completely with a factor of 5 (fpga_feature_extract_hw.cpp:1623:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_1888_16' (fpga_feature_extract_hw.cpp:1888:27) in function 'extract_features' completely with a factor of 6 (fpga_feature_extract_hw.cpp:1623:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_1816_8' (fpga_feature_extract_hw.cpp:1816:24) in function 'extract_features' completely with a factor of 1 (fpga_feature_extract_hw.cpp:1623:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_1832_10' (fpga_feature_extract_hw.cpp:1832:26) in function 'extract_features' completely with a factor of 2 (fpga_feature_extract_hw.cpp:1623:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_1818_9' (fpga_feature_extract_hw.cpp:1818:25) in function 'extract_features' completely with a factor of 6 (fpga_feature_extract_hw.cpp:1623:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_1841_11' (fpga_feature_extract_hw.cpp:1841:25) in function 'extract_features' completely with a factor of 1 (fpga_feature_extract_hw.cpp:1623:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_1844_12' (fpga_feature_extract_hw.cpp:1844:22) in function 'extract_features' completely with a factor of 6 (fpga_feature_extract_hw.cpp:1623:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_1852_13' (fpga_feature_extract_hw.cpp:1852:25) in function 'extract_features' completely with a factor of 1 (fpga_feature_extract_hw.cpp:1623:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_1855_14' (fpga_feature_extract_hw.cpp:1855:22) in function 'extract_features' completely with a factor of 2 (fpga_feature_extract_hw.cpp:1623:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_1725_6' (fpga_feature_extract_hw.cpp:1725:21) in function 'extract_features' completely with a factor of 2 (fpga_feature_extract_hw.cpp:1623:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_1713_4' (fpga_feature_extract_hw.cpp:1713:21) in function 'extract_features' completely with a factor of 6 (fpga_feature_extract_hw.cpp:1623:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_1664_2' (fpga_feature_extract_hw.cpp:1664:21) in function 'extract_features' completely with a factor of 1 (fpga_feature_extract_hw.cpp:1623:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_1583_1' (fpga_feature_extract_hw.cpp:1583:21) in function 'integrate_features' completely with a factor of 1 (fpga_feature_extract_hw.cpp:1558:0)
+INFO: [HLS 214-186] Unrolling loop 'loop_compute_ground_read' (fpga_feature_extract_hw.cpp:1468:3) in function 'compute_ground' completely with a factor of 1 (fpga_feature_extract_hw.cpp:1411:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_1479_2' (fpga_feature_extract_hw.cpp:1479:22) in function 'compute_ground' completely with a factor of 1 (fpga_feature_extract_hw.cpp:1411:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_1376_4' (fpga_feature_extract_hw.cpp:1376:21) in function 'compute_curvature' completely with a factor of 1 (fpga_feature_extract_hw.cpp:1147:0)
+INFO: [HLS 214-186] Unrolling loop 'loop_compute_curvature_read' (fpga_feature_extract_hw.cpp:1232:3) in function 'compute_curvature' completely with a factor of 1 (fpga_feature_extract_hw.cpp:1147:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_1245_3' (fpga_feature_extract_hw.cpp:1245:23) in function 'compute_curvature' completely with a factor of 11 (fpga_feature_extract_hw.cpp:1147:0)
+INFO: [HLS 214-186] Unrolling loop 'loop_compute_curvature_each_line' (fpga_feature_extract_hw.cpp:1261:3) in function 'compute_curvature' completely with a factor of 1 (fpga_feature_extract_hw.cpp:1147:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_1192_2' (fpga_feature_extract_hw.cpp:1192:21) in function 'compute_curvature' completely with a factor of 1 (fpga_feature_extract_hw.cpp:1147:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_1113_1' (fpga_feature_extract_hw.cpp:1113:21) in function 'cache_rangeimage' completely with a factor of 1 (fpga_feature_extract_hw.cpp:1100:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_1123_2' (fpga_feature_extract_hw.cpp:1123:22) in function 'cache_rangeimage' completely with a factor of 1 (fpga_feature_extract_hw.cpp:1100:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_1125_3' (fpga_feature_extract_hw.cpp:1125:23) in function 'cache_rangeimage' completely with a factor of 1 (fpga_feature_extract_hw.cpp:1100:0)
+INFO: [HLS 214-186] Unrolling loop 'loop_update_range_final2_write' (fpga_feature_extract_hw.cpp:1083:2) in function 'update_range' completely with a factor of 1 (fpga_feature_extract_hw.cpp:913:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_1072_7' (fpga_feature_extract_hw.cpp:1072:21) in function 'update_range' completely with a factor of 1 (fpga_feature_extract_hw.cpp:913:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_981_3' (fpga_feature_extract_hw.cpp:981:20) in function 'update_range' completely with a factor of 1 (fpga_feature_extract_hw.cpp:913:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_997_4' (fpga_feature_extract_hw.cpp:997:21) in function 'update_range' completely with a factor of 1 (fpga_feature_extract_hw.cpp:913:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_1037_5' (fpga_feature_extract_hw.cpp:1037:22) in function 'update_range' completely with a factor of 1 (fpga_feature_extract_hw.cpp:913:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_1046_6' (fpga_feature_extract_hw.cpp:1046:22) in function 'update_range' completely with a factor of 1 (fpga_feature_extract_hw.cpp:913:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_962_2' (fpga_feature_extract_hw.cpp:962:20) in function 'update_range' completely with a factor of 1 (fpga_feature_extract_hw.cpp:913:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_946_1' (fpga_feature_extract_hw.cpp:946:20) in function 'update_range' completely with a factor of 1 (fpga_feature_extract_hw.cpp:913:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_720_6' (fpga_feature_extract_hw.cpp:720:20) in function 'organize_point_cloud' completely with a factor of 1 (fpga_feature_extract_hw.cpp:567:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_659_4' (fpga_feature_extract_hw.cpp:659:22) in function 'organize_point_cloud' completely with a factor of 8 (fpga_feature_extract_hw.cpp:567:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_649_3' (fpga_feature_extract_hw.cpp:649:22) in function 'organize_point_cloud' completely with a factor of 7 (fpga_feature_extract_hw.cpp:567:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_685_5' (fpga_feature_extract_hw.cpp:685:22) in function 'organize_point_cloud' completely with a factor of 1 (fpga_feature_extract_hw.cpp:567:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_602_1' (fpga_feature_extract_hw.cpp:602:20) in function 'organize_point_cloud' completely with a factor of 16 (fpga_feature_extract_hw.cpp:567:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_268_2' (/tools/Xilinx/Vitis/2024.2/common/technology/autopilot/etc/hls_sqrt_apfixed.h:268:27) in function 'sqrt_fixed<36, 20>' completely with a factor of 17 (/tools/Xilinx/Vitis/2024.2/common/technology/autopilot/etc/hls_sqrt_apfixed.h:17:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_240_1' (/tools/Xilinx/Vitis/2024.2/common/technology/autopilot/etc/hls_sqrt_apfixed.h:240:27) in function 'sqrt_fixed<36, 20>' completely with a factor of 10 (/tools/Xilinx/Vitis/2024.2/common/technology/autopilot/etc/hls_sqrt_apfixed.h:17:0)
+INFO: [HLS 214-178] Inlining function 'ap_int<33> fabs_fixed<33>(ap_int<33>)' into 'ap_int<33> hls::abs<33>(ap_int<33>)' (/tools/Xilinx/Vitis/2024.2/common/technology/autopilot/hls_math.h:1417:0)
+INFO: [HLS 214-178] Inlining function 'ap_int<17> fabs_fixed<17>(ap_int<17>) (.49)' into 'ap_int<17> hls::abs<17>(ap_int<17>)' (/tools/Xilinx/Vitis/2024.2/common/technology/autopilot/hls_math.h:1417:0)
+INFO: [HLS 214-248] Applying array_partition to 'input_pp_buffer.x': Complete partitioning on dimension 1. (fpga_feature_extract_hw.cpp:501:18)
+INFO: [HLS 214-248] Applying array_partition to 'input_pp_buffer.y': Complete partitioning on dimension 1. (fpga_feature_extract_hw.cpp:501:18)
+INFO: [HLS 214-248] Applying array_partition to 'input_pp_buffer.z': Complete partitioning on dimension 1. (fpga_feature_extract_hw.cpp:501:18)
+INFO: [HLS 214-248] Applying array_partition to 'idx_pp_buffer': Complete partitioning on dimension 1. (fpga_feature_extract_hw.cpp:502:14)
+WARNING: [HLS 214-358] Array transformation on index using bit extension logic may lead to poor performance. Please use int or long for array index computation to benefit from optimizations. (fpga_feature_extract_hw.cpp:522:2)
+WARNING: [HLS 214-358] Array transformation on index using bit extension logic may lead to poor performance. Please use int or long for array index computation to benefit from optimizations. (fpga_feature_extract_hw.cpp:529:43)
+INFO: [HLS 214-248] Applying array_partition to 'raw_point_line_buffer.x': Complete partitioning on dimension 2. (fpga_feature_extract_hw.cpp:580:18)
+INFO: [HLS 214-248] Applying array_partition to 'raw_point_line_buffer.y': Complete partitioning on dimension 2. (fpga_feature_extract_hw.cpp:580:18)
+INFO: [HLS 214-248] Applying array_partition to 'raw_point_line_buffer.z': Complete partitioning on dimension 2. (fpga_feature_extract_hw.cpp:580:18)
+INFO: [HLS 214-248] Applying array_partition to 'raw_point_line_buffer.intensity': Complete partitioning on dimension 2. (fpga_feature_extract_hw.cpp:580:18)
+INFO: [HLS 214-248] Applying array_partition to 'raw_range_line_buffer': Complete partitioning on dimension 2. (fpga_feature_extract_hw.cpp:581:16)
+INFO: [HLS 214-248] Applying array_partition to 'insert_flag_buffer': Cyclic partitioning with factor 8 on dimension 2. (fpga_feature_extract_hw.cpp:587:13)
+WARNING: [HLS 214-358] Array transformation on index using bit extension logic may lead to poor performance. Please use int or long for array index computation to benefit from optimizations. (fpga_feature_extract_hw.cpp:645:4)
+WARNING: [HLS 214-358] Array transformation on index using bit extension logic may lead to poor performance. Please use int or long for array index computation to benefit from optimizations. (fpga_feature_extract_hw.cpp:647:4)
+WARNING: [HLS 214-358] Array transformation on index using bit extension logic may lead to poor performance. Please use int or long for array index computation to benefit from optimizations.
+INFO: [HLS 214-248] Applying array_partition to 'point_line_buffer.x': Cyclic partitioning with factor 4 on dimension 1. (fpga_feature_extract_hw.cpp:925:18)
+INFO: [HLS 214-248] Applying array_partition to 'point_line_buffer.y': Cyclic partitioning with factor 4 on dimension 1. (fpga_feature_extract_hw.cpp:925:18)
+INFO: [HLS 214-248] Applying array_partition to 'point_line_buffer.z': Cyclic partitioning with factor 4 on dimension 1. (fpga_feature_extract_hw.cpp:925:18)
+INFO: [HLS 214-248] Applying array_partition to 'point_line_buffer.intensity': Cyclic partitioning with factor 4 on dimension 1. (fpga_feature_extract_hw.cpp:925:18)
+INFO: [HLS 214-248] Applying array_partition to 'range_line_buffer': Cyclic partitioning with factor 4 on dimension 1. (fpga_feature_extract_hw.cpp:927:16)
+INFO: [HLS 214-248] Applying array_partition to 'range_window_buffer': Complete partitioning on dimension 1. (fpga_feature_extract_hw.cpp:930:16)
+INFO: [HLS 214-248] Applying array_partition to 'point_window_buffer.x': Complete partitioning on dimension 1. (fpga_feature_extract_hw.cpp:934:18)
+INFO: [HLS 214-248] Applying array_partition to 'point_window_buffer.y': Complete partitioning on dimension 1. (fpga_feature_extract_hw.cpp:934:18)
+INFO: [HLS 214-248] Applying array_partition to 'point_window_buffer.z': Complete partitioning on dimension 1. (fpga_feature_extract_hw.cpp:934:18)
+INFO: [HLS 214-248] Applying array_partition to 'point_window_buffer.intensity': Complete partitioning on dimension 1. (fpga_feature_extract_hw.cpp:934:18)
+INFO: [HLS 214-248] Applying array_partition to 'rangeimage_line_buffer': Complete partitioning on dimension 2. (fpga_feature_extract_hw.cpp:1154:18)
+INFO: [HLS 214-248] Applying array_partition to 'rangeimage_curvature_buffer': Complete partitioning on dimension 2. (fpga_feature_extract_hw.cpp:1155:20)
+INFO: [HLS 214-248] Applying array_partition to 'rangeimage_picked_buffer': Cyclic partitioning with factor 16 on dimension 2. (fpga_feature_extract_hw.cpp:1156:17)
+INFO: [HLS 214-248] Applying array_partition to 'feature_point_cloud_range_buffer': Complete partitioning on dimension 2. (fpga_feature_extract_hw.cpp:1629:16)
+INFO: [HLS 214-248] Applying array_partition to 'feature_point_cloud_feature_buffer.curvature': Complete partitioning on dimension 2. (fpga_feature_extract_hw.cpp:1630:21)
+INFO: [HLS 214-248] Applying array_partition to 'feature_point_cloud_feature_buffer.picked': Complete partitioning on dimension 2. (fpga_feature_extract_hw.cpp:1630:21)
+INFO: [HLS 214-248] Applying array_partition to 'feature_point_cloud_feature_buffer.ground': Complete partitioning on dimension 2. (fpga_feature_extract_hw.cpp:1630:21)
+INFO: [HLS 214-248] Applying array_partition to 'feature_point_cloud_feature_buffer.SortInd': Complete partitioning on dimension 2. (fpga_feature_extract_hw.cpp:1630:21)
+INFO: [HLS 214-248] Applying array_partition to 'sharp_outfeature_buffer.scanId': Complete partitioning on dimension 2. (fpga_feature_extract_hw.cpp:1646:29)
+INFO: [HLS 214-248] Applying array_partition to 'sharp_outfeature_buffer.columnId': Complete partitioning on dimension 2. (fpga_feature_extract_hw.cpp:1646:29)
+INFO: [HLS 214-248] Applying array_partition to 'flat_outfeature_buffer.scanId': Complete partitioning on dimension 2. (fpga_feature_extract_hw.cpp:1647:29)
+INFO: [HLS 214-248] Applying array_partition to 'flat_outfeature_buffer.columnId': Complete partitioning on dimension 2. (fpga_feature_extract_hw.cpp:1647:29)
+INFO: [HLS 214-248] Applying array_partition to 'less_sharp_points.curvature': Complete partitioning on dimension 2. (fpga_feature_extract_hw.cpp:1654:25)
+INFO: [HLS 214-248] Applying array_partition to 'less_sharp_points.SortInd': Complete partitioning on dimension 2. (fpga_feature_extract_hw.cpp:1654:25)
+INFO: [HLS 214-248] Applying array_partition to 'less_flat_points.curvature': Complete partitioning on dimension 2. (fpga_feature_extract_hw.cpp:1655:25)
+INFO: [HLS 214-248] Applying array_partition to 'less_flat_points.SortInd': Complete partitioning on dimension 2. (fpga_feature_extract_hw.cpp:1655:25)
+INFO: [HLS 214-248] Applying array_partition to 'registrate_point_cloud_stream': Complete partitioning on dimension 1. (fpga_feature_extract_hw.cpp:2164:31)
+INFO: [HLS 214-248] Applying array_partition to 'registrate_point_cloud_range_stream': Complete partitioning on dimension 1. (fpga_feature_extract_hw.cpp:2166:29)
+INFO: [HLS 214-248] Applying array_partition to 'update_registrate_point_cloud_point_stream': Complete partitioning on dimension 1. (fpga_feature_extract_hw.cpp:2179:31)
+INFO: [HLS 214-248] Applying array_partition to 'update_registrate_point_cloud_range_stream': Complete partitioning on dimension 1. (fpga_feature_extract_hw.cpp:2181:29)
+INFO: [HLS 214-248] Applying array_partition to 'cache_image_point_stream': Complete partitioning on dimension 1. (fpga_feature_extract_hw.cpp:2187:31)
+INFO: [HLS 214-248] Applying array_partition to 'cache_image_range_stream': Complete partitioning on dimension 1. (fpga_feature_extract_hw.cpp:2189:29)
+INFO: [HLS 214-248] Applying array_partition to 'curvature_out_point_stream': Complete partitioning on dimension 1. (fpga_feature_extract_hw.cpp:2195:31)
+INFO: [HLS 214-248] Applying array_partition to 'curvature_out_range_stream': Complete partitioning on dimension 1. (fpga_feature_extract_hw.cpp:2197:29)
+INFO: [HLS 214-248] Applying array_partition to 'curvature_out_curvature_stream': Complete partitioning on dimension 1. (fpga_feature_extract_hw.cpp:2199:33)
+INFO: [HLS 214-248] Applying array_partition to 'curvature_out_picked_stream': Complete partitioning on dimension 1. (fpga_feature_extract_hw.cpp:2201:30)
+INFO: [HLS 214-248] Applying array_partition to 'ground_out_point_stream': Complete partitioning on dimension 1. (fpga_feature_extract_hw.cpp:2208:31)
+INFO: [HLS 214-248] Applying array_partition to 'ground_out_range_stream': Complete partitioning on dimension 1. (fpga_feature_extract_hw.cpp:2210:29)
+INFO: [HLS 214-248] Applying array_partition to 'ground_out_curvature_stream': Complete partitioning on dimension 1. (fpga_feature_extract_hw.cpp:2212:33)
+INFO: [HLS 214-248] Applying array_partition to 'ground_out_picked_stream': Complete partitioning on dimension 1. (fpga_feature_extract_hw.cpp:2214:30)
+INFO: [HLS 214-248] Applying array_partition to 'ground_out_sortind_stream': Complete partitioning on dimension 1. (fpga_feature_extract_hw.cpp:2216:31)
+INFO: [HLS 214-248] Applying array_partition to 'ground_out_ground_stream': Complete partitioning on dimension 1. (fpga_feature_extract_hw.cpp:2218:30)
+INFO: [HLS 214-248] Applying array_partition to 'registrate_point_cloud_point_stream': Complete partitioning on dimension 1. (fpga_feature_extract_hw.cpp:2228:31)
+INFO: [HLS 214-248] Applying array_partition to 'registrate_point_cloud_point_range_stream': Complete partitioning on dimension 1. (fpga_feature_extract_hw.cpp:2230:29)
+INFO: [HLS 214-248] Applying array_partition to 'registrate_point_cloud_feature_stream': Complete partitioning on dimension 1. (fpga_feature_extract_hw.cpp:2232:34)
+INFO: [HLS 214-248] Applying array_partition to 'registrate_point_cloud_outrange_stream': Complete partitioning on dimension 1. (fpga_feature_extract_hw.cpp:2239:29)
+INFO: [HLS 214-248] Applying array_partition to 'registrate_point_cloud_outpoint_stream': Complete partitioning on dimension 1. (fpga_feature_extract_hw.cpp:2240:31)
+INFO: [HLS 214-248] Applying array_partition to 'out_lessflat_stream': Complete partitioning on dimension 1. (fpga_feature_extract_hw.cpp:2241:30)
+INFO: [HLS 214-248] Applying array_partition to 'out_ground_stream': Complete partitioning on dimension 1. (fpga_feature_extract_hw.cpp:2242:30)
+INFO: [HLS 214-248] Applying array_partition to 'out_sharp_stream': Complete partitioning on dimension 1. (fpga_feature_extract_hw.cpp:2243:42)
+INFO: [HLS 214-248] Applying array_partition to 'out_lesssharp_stream': Complete partitioning on dimension 1. (fpga_feature_extract_hw.cpp:2244:42)
+INFO: [HLS 214-248] Applying array_partition to 'out_flat_stream': Complete partitioning on dimension 1. (fpga_feature_extract_hw.cpp:2245:42)
+INFO: [HLS 214-241] Aggregating fifo (hls::stream) variable 'input_point_stream' with compact=bit mode in 80-bits (fpga_feature_extract_hw.cpp:2144:31)
+INFO: [HLS 214-241] Aggregating fifo (hls::stream) variable 'allocate_rangeimage_point_stream' with compact=bit mode in 80-bits (fpga_feature_extract_hw.cpp:2152:31)
+INFO: [HLS 214-241] Aggregating fifo (hls::stream) variable 'registrate_point_cloud_stream1' with compact=bit mode in 80-bits (fpga_feature_extract_hw.cpp:2164:31)
+INFO: [HLS 214-241] Aggregating fifo (hls::stream) variable 'update_registrate_point_cloud_point_stream3' with compact=bit mode in 80-bits (fpga_feature_extract_hw.cpp:2179:31)
+INFO: [HLS 214-241] Aggregating fifo (hls::stream) variable 'cache_image_point_stream5' with compact=bit mode in 80-bits (fpga_feature_extract_hw.cpp:2187:31)
+INFO: [HLS 214-241] Aggregating fifo (hls::stream) variable 'curvature_out_point_stream7' with compact=bit mode in 80-bits (fpga_feature_extract_hw.cpp:2195:31)
+INFO: [HLS 214-241] Aggregating fifo (hls::stream) variable 'ground_out_point_stream11' with compact=bit mode in 80-bits (fpga_feature_extract_hw.cpp:2208:31)
+INFO: [HLS 214-241] Aggregating fifo (hls::stream) variable 'registrate_point_cloud_point_stream17' with compact=bit mode in 80-bits (fpga_feature_extract_hw.cpp:2228:31)
+INFO: [HLS 214-241] Aggregating fifo (hls::stream) variable 'registrate_point_cloud_feature_stream19' with compact=bit mode in 51-bits (fpga_feature_extract_hw.cpp:2232:34)
+INFO: [HLS 214-241] Aggregating fifo (hls::stream) variable 'registrate_point_cloud_outpoint_stream21' with compact=bit mode in 80-bits (fpga_feature_extract_hw.cpp:2240:31)
+INFO: [HLS 214-241] Aggregating fifo (hls::stream) variable 'out_sharp_stream_0' with compact=bit mode in 32-bits (fpga_feature_extract_hw.cpp:2243:42)
+INFO: [HLS 214-241] Aggregating fifo (hls::stream) variable 'out_sharp_stream_1' with compact=bit mode in 32-bits (fpga_feature_extract_hw.cpp:2243:42)
+INFO: [HLS 214-241] Aggregating fifo (hls::stream) variable 'out_lesssharp_stream_0' with compact=bit mode in 32-bits (fpga_feature_extract_hw.cpp:2244:42)
+INFO: [HLS 214-241] Aggregating fifo (hls::stream) variable 'out_lesssharp_stream_1' with compact=bit mode in 32-bits (fpga_feature_extract_hw.cpp:2244:42)
+INFO: [HLS 214-241] Aggregating fifo (hls::stream) variable 'out_lesssharp_stream_2' with compact=bit mode in 32-bits (fpga_feature_extract_hw.cpp:2244:42)
+INFO: [HLS 214-241] Aggregating fifo (hls::stream) variable 'out_lesssharp_stream_3' with compact=bit mode in 32-bits (fpga_feature_extract_hw.cpp:2244:42)
+INFO: [HLS 214-241] Aggregating fifo (hls::stream) variable 'out_lesssharp_stream_4' with compact=bit mode in 32-bits (fpga_feature_extract_hw.cpp:2244:42)
+INFO: [HLS 214-241] Aggregating fifo (hls::stream) variable 'out_lesssharp_stream_5' with compact=bit mode in 32-bits (fpga_feature_extract_hw.cpp:2244:42)
+INFO: [HLS 214-241] Aggregating fifo (hls::stream) variable 'out_flat_stream_0' with compact=bit mode in 32-bits (fpga_feature_extract_hw.cpp:2245:42)
+INFO: [HLS 214-241] Aggregating fifo (hls::stream) variable 'out_flat_stream_1' with compact=bit mode in 32-bits (fpga_feature_extract_hw.cpp:2245:42)
+INFO: [HLS 214-241] Aggregating maxi variable 'laserCloudInArray' with compact=none mode in 128-bits
+INFO: [HLS 214-241] Aggregating maxi variable 'rangeimage_point' with compact=none mode in 128-bits
+INFO: [HLS 214-241] Aggregating maxi variable 'rangeimage_flat' with compact=none mode in 32-bits
+INFO: [HLS 214-241] Aggregating maxi variable 'rangeimage_lesssharp' with compact=none mode in 32-bits
+INFO: [HLS 214-241] Aggregating maxi variable 'rangeimage_sharp' with compact=none mode in 32-bits (fpga_feature_extract_hw.cpp:2321:0)
+INFO: [HLS 214-241] Aggregating bram variable 'rangeimage_line_buffer_15' with compact=bit mode in 80-bits (fpga_feature_extract_hw.cpp:1154:18)
+INFO: [HLS 214-241] Aggregating bram variable 'rangeimage_line_buffer_14' with compact=bit mode in 80-bits (fpga_feature_extract_hw.cpp:1154:18)
+INFO: [HLS 214-241] Aggregating bram variable 'rangeimage_line_buffer_13' with compact=bit mode in 80-bits (fpga_feature_extract_hw.cpp:1154:18)
+INFO: [HLS 214-241] Aggregating bram variable 'rangeimage_line_buffer_12' with compact=bit mode in 80-bits (fpga_feature_extract_hw.cpp:1154:18)
+INFO: [HLS 214-241] Aggregating bram variable 'rangeimage_line_buffer_11' with compact=bit mode in 80-bits (fpga_feature_extract_hw.cpp:1154:18)
+INFO: [HLS 214-241] Aggregating bram variable 'rangeimage_line_buffer_10' with compact=bit mode in 80-bits (fpga_feature_extract_hw.cpp:1154:18)
+INFO: [HLS 214-241] Aggregating bram variable 'rangeimage_line_buffer_9' with compact=bit mode in 80-bits (fpga_feature_extract_hw.cpp:1154:18)
+INFO: [HLS 214-241] Aggregating bram variable 'rangeimage_line_buffer_8' with compact=bit mode in 80-bits (fpga_feature_extract_hw.cpp:1154:18)
+INFO: [HLS 214-241] Aggregating bram variable 'rangeimage_line_buffer_7' with compact=bit mode in 80-bits (fpga_feature_extract_hw.cpp:1154:18)
+INFO: [HLS 214-241] Aggregating bram variable 'rangeimage_line_buffer_6' with compact=bit mode in 80-bits (fpga_feature_extract_hw.cpp:1154:18)
+INFO: [HLS 214-241] Aggregating bram variable 'rangeimage_line_buffer_5' with compact=bit mode in 80-bits (fpga_feature_extract_hw.cpp:1154:18)
+INFO: [HLS 214-241] Aggregating bram variable 'rangeimage_line_buffer_4' with compact=bit mode in 80-bits (fpga_feature_extract_hw.cpp:1154:18)
+INFO: [HLS 214-241] Aggregating bram variable 'rangeimage_line_buffer_3' with compact=bit mode in 80-bits (fpga_feature_extract_hw.cpp:1154:18)
+INFO: [HLS 214-241] Aggregating bram variable 'rangeimage_line_buffer_2' with compact=bit mode in 80-bits (fpga_feature_extract_hw.cpp:1154:18)
+INFO: [HLS 214-241] Aggregating bram variable 'rangeimage_line_buffer_1' with compact=bit mode in 80-bits (fpga_feature_extract_hw.cpp:1154:18)
+INFO: [HLS 214-241] Aggregating bram variable 'rangeimage_line_buffer_0' with compact=bit mode in 80-bits (fpga_feature_extract_hw.cpp:1154:18)
+INFO: [HLS 214-376] automatically set the pipeline for Loop< VITIS_LOOP_2109_1> at fpga_feature_extract_hw.cpp:2109:22 
+INFO: [HLS 214-376] automatically set the pipeline for Loop< VITIS_LOOP_2066_1> at fpga_feature_extract_hw.cpp:2066:22 
+INFO: [HLS 214-364] Automatically inlining function 'ap_fixed<36, 20, (ap_q_mode)5, (ap_o_mode)3, 0> sqrt_fixed<36, 20>(ap_fixed<36, 20, (ap_q_mode)5, (ap_o_mode)3, 0>)' to improve effectiveness of pipeline pragma in function 'allocate_rangeimage(hls::stream<FourDimPointHW, 0>&, int&, float, float, hls::stream<FourDimPointHW, 0>&, hls::stream<ap_fixed<18, 8, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_int<16>, 0>&, hls::stream<ap_int<16>, 0>&, hls::stream<ap_uint<1>, 0>&, hls::stream<ap_uint<16>, 0>&)' (/tools/Xilinx/Vitis/2024.2/common/technology/autopilot/hls_math.h:1268:12)
+INFO: [HLS 214-449] Automatically partitioning array 'insert_flag' dimension 1 completely based on constant index. (fpga_feature_extract_hw.cpp:1884:18)
+INFO: [HLS 214-270] Inferring pragma 'array_partition type=complete dim=1' for array 'insert_flag' due to pipeline pragma (fpga_feature_extract_hw.cpp:1884:18)
+INFO: [HLS 214-248] Applying array_partition to 'insert_flag': Complete partitioning on dimension 1. (fpga_feature_extract_hw.cpp:1884:18)
+INFO: [HLS 214-115] Multiple burst writes of length 28800 and bit width 32 in loop 'loop_out_point_range_lessflat_result_main'(fpga_feature_extract_hw.cpp:2064:2) has been inferred on bundle 'gmem2'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (fpga_feature_extract_hw.cpp:2064:2)
+INFO: [HLS 214-115] Multiple burst writes of length 28800 and bit width 8 in loop 'loop_out_point_range_lessflat_result_main'(fpga_feature_extract_hw.cpp:2064:2) has been inferred on bundle 'gmem3'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (fpga_feature_extract_hw.cpp:2064:2)
+INFO: [HLS 214-115] Multiple burst writes of length 28800 and bit width 8 in loop 'loop_out_point_range_lessflat_result_main'(fpga_feature_extract_hw.cpp:2064:2) has been inferred on bundle 'gmem4'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (fpga_feature_extract_hw.cpp:2064:2)
+INFO: [HLS 214-115] Multiple burst writes of length 2 and bit width 32 has been inferred on bundle 'gmem5'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (fpga_feature_extract_hw.cpp:2121:90)
+INFO: [HLS 214-115] Multiple burst writes of length 2 and bit width 32 has been inferred on bundle 'gmem7'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (fpga_feature_extract_hw.cpp:2126:108)
+INFO: [HLS 214-115] Multiple burst writes of length 6 and bit width 32 has been inferred on bundle 'gmem6'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (fpga_feature_extract_hw.cpp:2109:61)
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 4.09 seconds. CPU system time: 0.55 seconds. Elapsed time: 7.49 seconds; current allocated memory: 665.164 MB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0 seconds; current allocated memory: 665.164 MB.
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0.12 seconds. CPU system time: 0 seconds. Elapsed time: 0.12 seconds; current allocated memory: 671.688 MB.
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [XFORM 203-602] Inlining function 'hls::abs<17>' into 'extract_features' (fpga_feature_extract_hw.cpp:1897) automatically.
+WARNING: [SYNCHK 200-23] fpga_feature_extract_hw.cpp:2080: variable-indexed range selection may cause suboptimal QoR.
+WARNING: [SYNCHK 200-120] fpga_feature_extract_hw.cpp:1291: multiplication is assumed not to overflow by default, otherwise, please add option '-fwrapv'.
+INFO: [SYNCHK 200-10] 0 error(s), 2 warning(s).
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0.17 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.18 seconds; current allocated memory: 680.578 MB.
+WARNING: [XFORM 203-561] Updating loop upper bound from 160000 to 28797 for loop 'loop_update_range_main' (fpga_feature_extract_hw.cpp:977:9) in function 'update_range'.
+WARNING: [XFORM 203-561] Updating loop lower bound from 110000 to 28797 for loop 'loop_update_range_main' (fpga_feature_extract_hw.cpp:977:9) in function 'update_range'.
+INFO: [XFORM 203-602] Inlining function 'hls::abs<17>' into 'extract_features' (fpga_feature_extract_hw.cpp:1897) automatically.
+INFO: [XFORM 203-712] Applying dataflow to function 'fpga_feature_extract_dataflow' (fpga_feature_extract_hw.cpp:2137), detected/extracted 12 process function(s): 
+	 'entry_proc'
+	 'array_to_stream'
+	 'allocate_rangeimage'
+	 'organize_point_cloud'
+	 'update_range'
+	 'cache_rangeimage'
+	 'compute_curvature'
+	 'compute_ground'
+	 'integrate_features'
+	 'extract_features'
+	 'out_point_range_lessflat_result'
+	 'out_flat_sharp_result'.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock to (fpga_feature_extract_hw.cpp:974:2) in function 'update_range'... converting 5 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (fpga_feature_extract_hw.cpp:2066:30) to (fpga_feature_extract_hw.cpp:2082:44) in function 'out_point_range_lessflat_result'... converting 16 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (fpga_feature_extract_hw.cpp:2082:44) to (fpga_feature_extract_hw.cpp:2066:22) in function 'out_point_range_lessflat_result'... converting 3 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (fpga_feature_extract_hw.cpp:736:19) to (fpga_feature_extract_hw.cpp:716:2) in function 'organize_point_cloud'... converting 3 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (fpga_feature_extract_hw.cpp:1663:9) to (fpga_feature_extract_hw.cpp:1661:21) in function 'extract_features'... converting 6 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (fpga_feature_extract_hw.cpp:1762:51) to (fpga_feature_extract_hw.cpp:1804:37) in function 'extract_features'... converting 6 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (fpga_feature_extract_hw.cpp:2022:14) to (fpga_feature_extract_hw.cpp:1739:2) in function 'extract_features'... converting 3 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (fpga_feature_extract_hw.cpp:1868:37) to (fpga_feature_extract_hw.cpp:1880:39) in function 'extract_features'... converting 5 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (fpga_feature_extract_hw.cpp:1951:91) to (fpga_feature_extract_hw.cpp:1951:97) in function 'extract_features'... converting 3 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (fpga_feature_extract_hw.cpp:1342:14) to (fpga_feature_extract_hw.cpp:1216:2) in function 'compute_curvature'... converting 3 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (fpga_feature_extract_hw.cpp:460:41) to (fpga_feature_extract_hw.cpp:456:2) in function 'array_to_stream'... converting 25 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (fpga_feature_extract_hw.cpp:518:9) to (fpga_feature_extract_hw.cpp:516:2) in function 'allocate_rangeimage'... converting 75 basic blocks.
+INFO: [XFORM 203-11] Balancing expressions in function 'extract_features' (fpga_feature_extract_hw.cpp:164:6)...11 expression(s) balanced.
+INFO: [XFORM 203-11] Balancing expressions in function 'compute_curvature' (fpga_feature_extract_hw.cpp:1155:6)...12 expression(s) balanced.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 0.65 seconds. CPU system time: 0.03 seconds. Elapsed time: 0.68 seconds; current allocated memory: 711.492 MB.
+INFO: [HLS 200-2061] Successfully converted nested loops 'loop_out_flat_sharp_result_result_main'(fpga_feature_extract_hw.cpp:2107:2) and 'VITIS_LOOP_2109_1'(fpga_feature_extract_hw.cpp:2109:22) in function 'out_flat_sharp_result' into perfectly nested loops.
+INFO: [HLS 200-2061] Successfully converted nested loops 'loop_reset_compute_curvature_buffer'(fpga_feature_extract_hw.cpp:1186:2) and 'VITIS_LOOP_1188_1'(fpga_feature_extract_hw.cpp:1188:22) in function 'compute_curvature' into perfectly nested loops.
+INFO: [HLS 200-2061] Successfully converted nested loops 'loop_out_final_compute_curvature_stream'(fpga_feature_extract_hw.cpp:1369:2) and 'loop_out_final_scan_compute_curvature_stream'(fpga_feature_extract_hw.cpp:1373:3) in function 'compute_curvature' into perfectly nested loops.
+INFO: [XFORM 203-541] Flattening a loop nest 'loop_out_point_range_lessflat_result_main' (fpga_feature_extract_hw.cpp:2064:2) in function 'out_point_range_lessflat_result'.
+INFO: [XFORM 203-541] Flattening a loop nest 'loop_out_flat_sharp_result_result_main' (fpga_feature_extract_hw.cpp:2107:2) in function 'out_flat_sharp_result'.
+INFO: [XFORM 203-541] Flattening a loop nest 'loop_reset_compute_curvature_buffer' (fpga_feature_extract_hw.cpp:1186:2) in function 'compute_curvature'.
+INFO: [XFORM 203-541] Flattening a loop nest 'loop_out_final_compute_curvature_stream' (fpga_feature_extract_hw.cpp:1369:2) in function 'compute_curvature'.
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'raw_point_line_buffer.x.7' (fpga_feature_extract_hw.cpp:580).
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'raw_point_line_buffer.x.6' (fpga_feature_extract_hw.cpp:580).
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'raw_point_line_buffer.x.5' (fpga_feature_extract_hw.cpp:580).
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'raw_point_line_buffer.x.4' (fpga_feature_extract_hw.cpp:580).
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'raw_point_line_buffer.x.3' (fpga_feature_extract_hw.cpp:580).
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'raw_point_line_buffer.x.2' (fpga_feature_extract_hw.cpp:580).
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'raw_point_line_buffer.x.1' (fpga_feature_extract_hw.cpp:580).
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'raw_point_line_buffer.x' (fpga_feature_extract_hw.cpp:580).
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'raw_point_line_buffer.y.7' (fpga_feature_extract_hw.cpp:580).
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'raw_point_line_buffer.y.6' (fpga_feature_extract_hw.cpp:580).
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'raw_point_line_buffer.y.5' (fpga_feature_extract_hw.cpp:580).
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'raw_point_line_buffer.y.4' (fpga_feature_extract_hw.cpp:580).
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'raw_point_line_buffer.y.3' (fpga_feature_extract_hw.cpp:580).
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'raw_point_line_buffer.y.2' (fpga_feature_extract_hw.cpp:580).
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'raw_point_line_buffer.y.1' (fpga_feature_extract_hw.cpp:580).
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'raw_point_line_buffer.y' (fpga_feature_extract_hw.cpp:580).
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'raw_point_line_buffer.z.7' (fpga_feature_extract_hw.cpp:580).
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'raw_point_line_buffer.z.6' (fpga_feature_extract_hw.cpp:580).
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'raw_point_line_buffer.z.5' (fpga_feature_extract_hw.cpp:580).
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'raw_point_line_buffer.z.4' (fpga_feature_extract_hw.cpp:580).
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'raw_point_line_buffer.z.3' (fpga_feature_extract_hw.cpp:580).
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'raw_point_line_buffer.z.2' (fpga_feature_extract_hw.cpp:580).
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'raw_point_line_buffer.z.1' (fpga_feature_extract_hw.cpp:580).
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'raw_point_line_buffer.z' (fpga_feature_extract_hw.cpp:580).
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'raw_point_line_buffer.intensity.7' (fpga_feature_extract_hw.cpp:580).
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'raw_point_line_buffer.intensity.6' (fpga_feature_extract_hw.cpp:580).
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'raw_point_line_buffer.intensity.5' (fpga_feature_extract_hw.cpp:580).
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'raw_point_line_buffer.intensity.4' (fpga_feature_extract_hw.cpp:580).
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'raw_point_line_buffer.intensity.3' (fpga_feature_extract_hw.cpp:580).
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'raw_point_line_buffer.intensity.2' (fpga_feature_extract_hw.cpp:580).
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'raw_point_line_buffer.intensity.1' (fpga_feature_extract_hw.cpp:580).
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'raw_point_line_buffer.intensity' (fpga_feature_extract_hw.cpp:580).
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'raw_range_line_buffer.7' (fpga_feature_extract_hw.cpp:581).
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'raw_range_line_buffer.6' (fpga_feature_extract_hw.cpp:581).
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'raw_range_line_buffer.5' (fpga_feature_extract_hw.cpp:581).
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'raw_range_line_buffer.4' (fpga_feature_extract_hw.cpp:581).
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'raw_range_line_buffer.3' (fpga_feature_extract_hw.cpp:581).
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'raw_range_line_buffer.2' (fpga_feature_extract_hw.cpp:581).
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'raw_range_line_buffer.1' (fpga_feature_extract_hw.cpp:581).
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'raw_range_line_buffer' (fpga_feature_extract_hw.cpp:581).
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'insert_flag_buffer.7' (fpga_feature_extract_hw.cpp:587).
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'insert_flag_buffer.6' (fpga_feature_extract_hw.cpp:587).
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'insert_flag_buffer.5' (fpga_feature_extract_hw.cpp:587).
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'insert_flag_buffer.4' (fpga_feature_extract_hw.cpp:587).
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'insert_flag_buffer.3' (fpga_feature_extract_hw.cpp:587).
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'insert_flag_buffer.2' (fpga_feature_extract_hw.cpp:587).
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'insert_flag_buffer.1' (fpga_feature_extract_hw.cpp:587).
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'insert_flag_buffer' (fpga_feature_extract_hw.cpp:587).
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'insert_flag_buffer.7' (fpga_feature_extract_hw.cpp:587).
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'insert_flag_buffer.6' (fpga_feature_extract_hw.cpp:587).
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'insert_flag_buffer.5' (fpga_feature_extract_hw.cpp:587).
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'insert_flag_buffer.4' (fpga_feature_extract_hw.cpp:587).
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'insert_flag_buffer.3' (fpga_feature_extract_hw.cpp:587).
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'insert_flag_buffer.2' (fpga_feature_extract_hw.cpp:587).
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'insert_flag_buffer.1' (fpga_feature_extract_hw.cpp:587).
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'insert_flag_buffer' (fpga_feature_extract_hw.cpp:587).
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'less_flat_points.curvature.1' (fpga_feature_extract_hw.cpp:1655).
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'less_flat_points.curvature' (fpga_feature_extract_hw.cpp:1655).
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'less_flat_points.SortInd.1' (fpga_feature_extract_hw.cpp:1655).
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'less_flat_points.SortInd' (fpga_feature_extract_hw.cpp:1655).
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'flat_outfeature_buffer.scanId.1' (fpga_feature_extract_hw.cpp:1647).
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'flat_outfeature_buffer.scanId' (fpga_feature_extract_hw.cpp:1647).
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'flat_outfeature_buffer.columnId.1' (fpga_feature_extract_hw.cpp:1647).
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'flat_outfeature_buffer.columnId' (fpga_feature_extract_hw.cpp:1647).
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'less_sharp_points.curvature.5' (fpga_feature_extract_hw.cpp:1654).
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'less_sharp_points.curvature.4' (fpga_feature_extract_hw.cpp:1654).
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'less_sharp_points.curvature.3' (fpga_feature_extract_hw.cpp:1654).
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'less_sharp_points.curvature.2' (fpga_feature_extract_hw.cpp:1654).
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'less_sharp_points.curvature.1' (fpga_feature_extract_hw.cpp:1654).
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'less_sharp_points.curvature' (fpga_feature_extract_hw.cpp:1654).
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'less_sharp_points.SortInd.5' (fpga_feature_extract_hw.cpp:1654).
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'less_sharp_points.SortInd.4' (fpga_feature_extract_hw.cpp:1654).
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'less_sharp_points.SortInd.3' (fpga_feature_extract_hw.cpp:1654).
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'less_sharp_points.SortInd.2' (fpga_feature_extract_hw.cpp:1654).
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'less_sharp_points.SortInd.1' (fpga_feature_extract_hw.cpp:1654).
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'less_sharp_points.SortInd' (fpga_feature_extract_hw.cpp:1654).
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'sharp_outfeature_buffer.scanId.5' (fpga_feature_extract_hw.cpp:1646).
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'sharp_outfeature_buffer.scanId.4' (fpga_feature_extract_hw.cpp:1646).
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'sharp_outfeature_buffer.scanId.3' (fpga_feature_extract_hw.cpp:1646).
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'sharp_outfeature_buffer.scanId.2' (fpga_feature_extract_hw.cpp:1646).
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'sharp_outfeature_buffer.scanId.1' (fpga_feature_extract_hw.cpp:1646).
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'sharp_outfeature_buffer.scanId' (fpga_feature_extract_hw.cpp:1646).
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'sharp_outfeature_buffer.columnId.5' (fpga_feature_extract_hw.cpp:1646).
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'sharp_outfeature_buffer.columnId.4' (fpga_feature_extract_hw.cpp:1646).
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'sharp_outfeature_buffer.columnId.3' (fpga_feature_extract_hw.cpp:1646).
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'sharp_outfeature_buffer.columnId.2' (fpga_feature_extract_hw.cpp:1646).
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'sharp_outfeature_buffer.columnId.1' (fpga_feature_extract_hw.cpp:1646).
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'sharp_outfeature_buffer.columnId' (fpga_feature_extract_hw.cpp:1646).
+INFO: [ANALYSIS 214-51] Found 'RAW' inter dependency for variable 'less_flat_points.curvature.1' (fpga_feature_extract_hw.cpp:1655) (distance = 16).
+INFO: [ANALYSIS 214-51] Found 'RAW' inter dependency for variable 'less_flat_points.curvature' (fpga_feature_extract_hw.cpp:1655) (distance = 16).
+INFO: [ANALYSIS 214-51] Found 'RAW' inter dependency for variable 'less_flat_points.SortInd.1' (fpga_feature_extract_hw.cpp:1655) (distance = 16).
+INFO: [ANALYSIS 214-51] Found 'RAW' inter dependency for variable 'less_flat_points.SortInd' (fpga_feature_extract_hw.cpp:1655) (distance = 16).
+INFO: [ANALYSIS 214-51] Found 'RAW' inter dependency for variable 'flat_outfeature_buffer.scanId.1' (fpga_feature_extract_hw.cpp:1647) (distance = 16).
+INFO: [ANALYSIS 214-51] Found 'RAW' inter dependency for variable 'flat_outfeature_buffer.scanId' (fpga_feature_extract_hw.cpp:1647) (distance = 16).
+INFO: [ANALYSIS 214-51] Found 'RAW' inter dependency for variable 'flat_outfeature_buffer.columnId.1' (fpga_feature_extract_hw.cpp:1647) (distance = 16).
+INFO: [ANALYSIS 214-51] Found 'RAW' inter dependency for variable 'flat_outfeature_buffer.columnId' (fpga_feature_extract_hw.cpp:1647) (distance = 16).
+INFO: [ANALYSIS 214-51] Found 'RAW' inter dependency for variable 'less_sharp_points.curvature.5' (fpga_feature_extract_hw.cpp:1654) (distance = 16).
+INFO: [ANALYSIS 214-51] Found 'RAW' inter dependency for variable 'less_sharp_points.curvature.4' (fpga_feature_extract_hw.cpp:1654) (distance = 16).
+INFO: [ANALYSIS 214-51] Found 'RAW' inter dependency for variable 'less_sharp_points.curvature.3' (fpga_feature_extract_hw.cpp:1654) (distance = 16).
+INFO: [ANALYSIS 214-51] Found 'RAW' inter dependency for variable 'less_sharp_points.curvature.2' (fpga_feature_extract_hw.cpp:1654) (distance = 16).
+INFO: [ANALYSIS 214-51] Found 'RAW' inter dependency for variable 'less_sharp_points.curvature.1' (fpga_feature_extract_hw.cpp:1654) (distance = 16).
+INFO: [ANALYSIS 214-51] Found 'RAW' inter dependency for variable 'less_sharp_points.curvature' (fpga_feature_extract_hw.cpp:1654) (distance = 16).
+INFO: [ANALYSIS 214-51] Found 'RAW' inter dependency for variable 'less_sharp_points.SortInd.5' (fpga_feature_extract_hw.cpp:1654) (distance = 16).
+INFO: [ANALYSIS 214-51] Found 'RAW' inter dependency for variable 'less_sharp_points.SortInd.4' (fpga_feature_extract_hw.cpp:1654) (distance = 16).
+INFO: [ANALYSIS 214-51] Found 'RAW' inter dependency for variable 'less_sharp_points.SortInd.3' (fpga_feature_extract_hw.cpp:1654) (distance = 16).
+INFO: [ANALYSIS 214-51] Found 'RAW' inter dependency for variable 'less_sharp_points.SortInd.2' (fpga_feature_extract_hw.cpp:1654) (distance = 16).
+INFO: [ANALYSIS 214-51] Found 'RAW' inter dependency for variable 'less_sharp_points.SortInd.1' (fpga_feature_extract_hw.cpp:1654) (distance = 16).
+INFO: [ANALYSIS 214-51] Found 'RAW' inter dependency for variable 'less_sharp_points.SortInd' (fpga_feature_extract_hw.cpp:1654) (distance = 16).
+INFO: [ANALYSIS 214-51] Found 'RAW' inter dependency for variable 'sharp_outfeature_buffer.scanId.5' (fpga_feature_extract_hw.cpp:1646) (distance = 16).
+INFO: [ANALYSIS 214-51] Found 'RAW' inter dependency for variable 'sharp_outfeature_buffer.scanId.4' (fpga_feature_extract_hw.cpp:1646) (distance = 16).
+INFO: [ANALYSIS 214-51] Found 'RAW' inter dependency for variable 'sharp_outfeature_buffer.scanId.3' (fpga_feature_extract_hw.cpp:1646) (distance = 16).
+INFO: [ANALYSIS 214-51] Found 'RAW' inter dependency for variable 'sharp_outfeature_buffer.scanId.2' (fpga_feature_extract_hw.cpp:1646) (distance = 16).
+INFO: [ANALYSIS 214-51] Found 'RAW' inter dependency for variable 'sharp_outfeature_buffer.scanId.1' (fpga_feature_extract_hw.cpp:1646) (distance = 16).
+INFO: [ANALYSIS 214-51] Found 'RAW' inter dependency for variable 'sharp_outfeature_buffer.scanId' (fpga_feature_extract_hw.cpp:1646) (distance = 16).
+INFO: [ANALYSIS 214-51] Found 'RAW' inter dependency for variable 'sharp_outfeature_buffer.columnId.5' (fpga_feature_extract_hw.cpp:1646) (distance = 16).
+INFO: [ANALYSIS 214-51] Found 'RAW' inter dependency for variable 'sharp_outfeature_buffer.columnId.4' (fpga_feature_extract_hw.cpp:1646) (distance = 16).
+INFO: [ANALYSIS 214-51] Found 'RAW' inter dependency for variable 'sharp_outfeature_buffer.columnId.3' (fpga_feature_extract_hw.cpp:1646) (distance = 16).
+INFO: [ANALYSIS 214-51] Found 'RAW' inter dependency for variable 'sharp_outfeature_buffer.columnId.2' (fpga_feature_extract_hw.cpp:1646) (distance = 16).
+INFO: [ANALYSIS 214-51] Found 'RAW' inter dependency for variable 'sharp_outfeature_buffer.columnId.1' (fpga_feature_extract_hw.cpp:1646) (distance = 16).
+INFO: [ANALYSIS 214-51] Found 'RAW' inter dependency for variable 'sharp_outfeature_buffer.columnId' (fpga_feature_extract_hw.cpp:1646) (distance = 16).
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'rangeimage_picked_buffer.15' (fpga_feature_extract_hw.cpp:1156).
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'rangeimage_picked_buffer.14' (fpga_feature_extract_hw.cpp:1156).
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'rangeimage_picked_buffer.13' (fpga_feature_extract_hw.cpp:1156).
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'rangeimage_picked_buffer.12' (fpga_feature_extract_hw.cpp:1156).
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'rangeimage_picked_buffer.11' (fpga_feature_extract_hw.cpp:1156).
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'rangeimage_picked_buffer.10' (fpga_feature_extract_hw.cpp:1156).
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'rangeimage_picked_buffer.9' (fpga_feature_extract_hw.cpp:1156).
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'rangeimage_picked_buffer.8' (fpga_feature_extract_hw.cpp:1156).
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'rangeimage_picked_buffer.7' (fpga_feature_extract_hw.cpp:1156).
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'rangeimage_picked_buffer.6' (fpga_feature_extract_hw.cpp:1156).
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'rangeimage_picked_buffer.5' (fpga_feature_extract_hw.cpp:1156).
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'rangeimage_picked_buffer.4' (fpga_feature_extract_hw.cpp:1156).
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'rangeimage_picked_buffer.3' (fpga_feature_extract_hw.cpp:1156).
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'rangeimage_picked_buffer.2' (fpga_feature_extract_hw.cpp:1156).
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'rangeimage_picked_buffer.1' (fpga_feature_extract_hw.cpp:1156).
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'rangeimage_picked_buffer' (fpga_feature_extract_hw.cpp:1156).
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'rangeimage_picked_buffer.15' (fpga_feature_extract_hw.cpp:1156).
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'rangeimage_picked_buffer.14' (fpga_feature_extract_hw.cpp:1156).
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'rangeimage_picked_buffer.13' (fpga_feature_extract_hw.cpp:1156).
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'rangeimage_picked_buffer.12' (fpga_feature_extract_hw.cpp:1156).
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'rangeimage_picked_buffer.11' (fpga_feature_extract_hw.cpp:1156).
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'rangeimage_picked_buffer.10' (fpga_feature_extract_hw.cpp:1156).
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'rangeimage_picked_buffer.9' (fpga_feature_extract_hw.cpp:1156).
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'rangeimage_picked_buffer.8' (fpga_feature_extract_hw.cpp:1156).
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'rangeimage_picked_buffer.7' (fpga_feature_extract_hw.cpp:1156).
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'rangeimage_picked_buffer.6' (fpga_feature_extract_hw.cpp:1156).
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'rangeimage_picked_buffer.5' (fpga_feature_extract_hw.cpp:1156).
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'rangeimage_picked_buffer.4' (fpga_feature_extract_hw.cpp:1156).
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'rangeimage_picked_buffer.3' (fpga_feature_extract_hw.cpp:1156).
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'rangeimage_picked_buffer.2' (fpga_feature_extract_hw.cpp:1156).
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'rangeimage_picked_buffer.1' (fpga_feature_extract_hw.cpp:1156).
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'rangeimage_picked_buffer' (fpga_feature_extract_hw.cpp:1156).
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'rangeimage_line_buffer_15'.
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'rangeimage_line_buffer_14'.
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'rangeimage_line_buffer_13'.
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'rangeimage_line_buffer_12'.
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'rangeimage_line_buffer_11'.
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'rangeimage_line_buffer_10'.
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'rangeimage_line_buffer_9'.
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'rangeimage_line_buffer_8'.
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'rangeimage_line_buffer_7'.
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'rangeimage_line_buffer_6'.
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'rangeimage_line_buffer_5'.
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'rangeimage_line_buffer_4'.
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'rangeimage_line_buffer_3'.
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'rangeimage_line_buffer_2'.
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'rangeimage_line_buffer_1'.
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'rangeimage_line_buffer_0'.
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'rangeimage_range_buffer' (fpga_feature_extract_hw.cpp:1157).
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'raw_point_line_buffer.x.7'.
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'raw_point_line_buffer.x.6'.
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'raw_point_line_buffer.x.5'.
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'raw_point_line_buffer.x.4'.
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'raw_point_line_buffer.x.3'.
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'raw_point_line_buffer.x.2'.
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'raw_point_line_buffer.x.1'.
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'raw_point_line_buffer.x'.
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'raw_point_line_buffer.y.7'.
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'raw_point_line_buffer.y.6'.
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'raw_point_line_buffer.y.5'.
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'raw_point_line_buffer.y.4'.
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'raw_point_line_buffer.y.3'.
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'raw_point_line_buffer.y.2'.
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'raw_point_line_buffer.y.1'.
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'raw_point_line_buffer.y'.
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'raw_point_line_buffer.z.7'.
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'raw_point_line_buffer.z.6'.
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'raw_point_line_buffer.z.5'.
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'raw_point_line_buffer.z.4'.
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'raw_point_line_buffer.z.3'.
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'raw_point_line_buffer.z.2'.
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'raw_point_line_buffer.z.1'.
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'raw_point_line_buffer.z'.
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'raw_point_line_buffer.intensity.7'.
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'raw_point_line_buffer.intensity.6'.
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'raw_point_line_buffer.intensity.5'.
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'raw_point_line_buffer.intensity.4'.
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'raw_point_line_buffer.intensity.3'.
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'raw_point_line_buffer.intensity.2'.
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'raw_point_line_buffer.intensity.1'.
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'raw_point_line_buffer.intensity'.
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'raw_range_line_buffer.7'.
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'raw_range_line_buffer.6'.
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'raw_range_line_buffer.5'.
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'raw_range_line_buffer.4'.
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'raw_range_line_buffer.3'.
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'raw_range_line_buffer.2'.
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'raw_range_line_buffer.1'.
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'raw_range_line_buffer'.
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'less_flat_points.curvature.1'.
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'less_flat_points.curvature'.
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'less_flat_points.SortInd.1'.
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'less_flat_points.SortInd'.
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'flat_outfeature_buffer.scanId.1'.
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'flat_outfeature_buffer.scanId'.
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'flat_outfeature_buffer.columnId.1'.
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'flat_outfeature_buffer.columnId'.
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'less_sharp_points.curvature.5'.
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'less_sharp_points.curvature.4'.
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'less_sharp_points.curvature.3'.
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'less_sharp_points.curvature.2'.
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'less_sharp_points.curvature.1'.
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'less_sharp_points.curvature'.
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'less_sharp_points.SortInd.5'.
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'less_sharp_points.SortInd.4'.
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'less_sharp_points.SortInd.3'.
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'less_sharp_points.SortInd.2'.
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'less_sharp_points.SortInd.1'.
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'less_sharp_points.SortInd'.
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'sharp_outfeature_buffer.scanId.5'.
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'sharp_outfeature_buffer.scanId.4'.
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'sharp_outfeature_buffer.scanId.3'.
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'sharp_outfeature_buffer.scanId.2'.
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'sharp_outfeature_buffer.scanId.1'.
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'sharp_outfeature_buffer.scanId'.
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'sharp_outfeature_buffer.columnId.5'.
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'sharp_outfeature_buffer.columnId.4'.
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'sharp_outfeature_buffer.columnId.3'.
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'sharp_outfeature_buffer.columnId.2'.
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'sharp_outfeature_buffer.columnId.1'.
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'sharp_outfeature_buffer.columnId'.
+INFO: [ANALYSIS 214-51] Found 'RAW' inter dependency for variable 'less_flat_points.curvature.1' (distance = 16).
+INFO: [ANALYSIS 214-51] Found 'RAW' inter dependency for variable 'less_flat_points.curvature' (distance = 16).
+INFO: [ANALYSIS 214-51] Found 'RAW' inter dependency for variable 'less_flat_points.SortInd.1' (distance = 16).
+INFO: [ANALYSIS 214-51] Found 'RAW' inter dependency for variable 'less_flat_points.SortInd' (distance = 16).
+INFO: [ANALYSIS 214-51] Found 'RAW' inter dependency for variable 'flat_outfeature_buffer.scanId.1' (distance = 16).
+INFO: [ANALYSIS 214-51] Found 'RAW' inter dependency for variable 'flat_outfeature_buffer.scanId' (distance = 16).
+INFO: [ANALYSIS 214-51] Found 'RAW' inter dependency for variable 'flat_outfeature_buffer.columnId.1' (distance = 16).
+INFO: [ANALYSIS 214-51] Found 'RAW' inter dependency for variable 'flat_outfeature_buffer.columnId' (distance = 16).
+INFO: [ANALYSIS 214-51] Found 'RAW' inter dependency for variable 'less_sharp_points.curvature.5' (distance = 16).
+INFO: [ANALYSIS 214-51] Found 'RAW' inter dependency for variable 'less_sharp_points.curvature.4' (distance = 16).
+INFO: [ANALYSIS 214-51] Found 'RAW' inter dependency for variable 'less_sharp_points.curvature.3' (distance = 16).
+INFO: [ANALYSIS 214-51] Found 'RAW' inter dependency for variable 'less_sharp_points.curvature.2' (distance = 16).
+INFO: [ANALYSIS 214-51] Found 'RAW' inter dependency for variable 'less_sharp_points.curvature.1' (distance = 16).
+INFO: [ANALYSIS 214-51] Found 'RAW' inter dependency for variable 'less_sharp_points.curvature' (distance = 16).
+INFO: [ANALYSIS 214-51] Found 'RAW' inter dependency for variable 'less_sharp_points.SortInd.5' (distance = 16).
+INFO: [ANALYSIS 214-51] Found 'RAW' inter dependency for variable 'less_sharp_points.SortInd.4' (distance = 16).
+INFO: [ANALYSIS 214-51] Found 'RAW' inter dependency for variable 'less_sharp_points.SortInd.3' (distance = 16).
+INFO: [ANALYSIS 214-51] Found 'RAW' inter dependency for variable 'less_sharp_points.SortInd.2' (distance = 16).
+INFO: [ANALYSIS 214-51] Found 'RAW' inter dependency for variable 'less_sharp_points.SortInd.1' (distance = 16).
+INFO: [ANALYSIS 214-51] Found 'RAW' inter dependency for variable 'less_sharp_points.SortInd' (distance = 16).
+INFO: [ANALYSIS 214-51] Found 'RAW' inter dependency for variable 'sharp_outfeature_buffer.scanId.5' (distance = 16).
+INFO: [ANALYSIS 214-51] Found 'RAW' inter dependency for variable 'sharp_outfeature_buffer.scanId.4' (distance = 16).
+INFO: [ANALYSIS 214-51] Found 'RAW' inter dependency for variable 'sharp_outfeature_buffer.scanId.3' (distance = 16).
+INFO: [ANALYSIS 214-51] Found 'RAW' inter dependency for variable 'sharp_outfeature_buffer.scanId.2' (distance = 16).
+INFO: [ANALYSIS 214-51] Found 'RAW' inter dependency for variable 'sharp_outfeature_buffer.scanId.1' (distance = 16).
+INFO: [ANALYSIS 214-51] Found 'RAW' inter dependency for variable 'sharp_outfeature_buffer.scanId' (distance = 16).
+INFO: [ANALYSIS 214-51] Found 'RAW' inter dependency for variable 'sharp_outfeature_buffer.columnId.5' (distance = 16).
+INFO: [ANALYSIS 214-51] Found 'RAW' inter dependency for variable 'sharp_outfeature_buffer.columnId.4' (distance = 16).
+INFO: [ANALYSIS 214-51] Found 'RAW' inter dependency for variable 'sharp_outfeature_buffer.columnId.3' (distance = 16).
+INFO: [ANALYSIS 214-51] Found 'RAW' inter dependency for variable 'sharp_outfeature_buffer.columnId.2' (distance = 16).
+INFO: [ANALYSIS 214-51] Found 'RAW' inter dependency for variable 'sharp_outfeature_buffer.columnId.1' (distance = 16).
+INFO: [ANALYSIS 214-51] Found 'RAW' inter dependency for variable 'sharp_outfeature_buffer.columnId' (distance = 16).
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'rangeimage_line_buffer_15'.
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'rangeimage_line_buffer_14'.
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'rangeimage_line_buffer_13'.
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'rangeimage_line_buffer_12'.
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'rangeimage_line_buffer_11'.
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'rangeimage_line_buffer_10'.
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'rangeimage_line_buffer_9'.
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'rangeimage_line_buffer_8'.
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'rangeimage_line_buffer_7'.
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'rangeimage_line_buffer_6'.
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'rangeimage_line_buffer_5'.
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'rangeimage_line_buffer_4'.
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'rangeimage_line_buffer_3'.
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'rangeimage_line_buffer_2'.
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'rangeimage_line_buffer_1'.
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'rangeimage_line_buffer_0'.
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 1.11 seconds. CPU system time: 0.07 seconds. Elapsed time: 1.2 seconds; current allocated memory: 1.002 GB.
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'fpga_feature_extract_hw' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'entry_proc' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.12 seconds. CPU system time: 0.04 seconds. Elapsed time: 0.17 seconds; current allocated memory: 1.008 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.01 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.02 seconds; current allocated memory: 1.008 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'array_to_stream_Pipeline_loop_read_input_array' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'loop_read_input_array'.
+WARNING: [HLS 200-880] The II Violation in module 'array_to_stream_Pipeline_loop_read_input_array' (loop 'loop_read_input_array'): Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 1) between bus read operation ('gmem0_addr_read_1', fpga_feature_extract_hw.cpp:460) on port 'gmem0' (fpga_feature_extract_hw.cpp:460) and bus read operation ('gmem0_addr_read', fpga_feature_extract_hw.cpp:460) on port 'gmem0' (fpga_feature_extract_hw.cpp:460).
+Resolution: For help on HLS 200-880 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2024.2%20English&url=ug1448-hls-guidance&resourceid=200-880.html
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 2, Depth = 17, loop 'loop_read_input_array'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.07 seconds. CPU system time: 0 seconds. Elapsed time: 0.06 seconds; current allocated memory: 1.009 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.03 seconds. CPU system time: 0 seconds. Elapsed time: 0.03 seconds; current allocated memory: 1.010 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'array_to_stream' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.02 seconds. CPU system time: 0 seconds. Elapsed time: 0.03 seconds; current allocated memory: 1.011 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.02 seconds. CPU system time: 0 seconds. Elapsed time: 0.02 seconds; current allocated memory: 1.011 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'allocate_rangeimage_Pipeline_loop_allocate_rangeimage_main' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'loop_allocate_rangeimage_main'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 18, loop 'loop_allocate_rangeimage_main'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.28 seconds. CPU system time: 0 seconds. Elapsed time: 0.28 seconds; current allocated memory: 1.028 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.05 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.05 seconds; current allocated memory: 1.028 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'allocate_rangeimage' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.05 seconds. CPU system time: 0 seconds. Elapsed time: 0.05 seconds; current allocated memory: 1.028 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.02 seconds. CPU system time: 0 seconds. Elapsed time: 0.02 seconds; current allocated memory: 1.028 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'organize_point_cloud_Pipeline_loop_allocate_rangeimage_reset_array' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'loop_allocate_rangeimage_reset_array'.
+WARNING: [HLS 200-885] The II Violation in module 'organize_point_cloud_Pipeline_loop_allocate_rangeimage_reset_array' (loop 'loop_allocate_rangeimage_reset_array'): Unable to schedule 'store' operation 0 bit ('insert_flag_buffer_addr_write_ln604', fpga_feature_extract_hw.cpp:604) of constant 0 on array 'insert_flag_buffer' due to limited memory ports (II = 1). Please consider using a memory core with more ports or partitioning the array 'insert_flag_buffer'.
+Resolution: For help on HLS 200-885 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2024.2%20English&url=ug1448-hls-guidance&resourceid=200-885.html
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 2, Depth = 2, loop 'loop_allocate_rangeimage_reset_array'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.03 seconds. CPU system time: 0 seconds. Elapsed time: 0.04 seconds; current allocated memory: 1.028 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.01 seconds. CPU system time: 0 seconds. Elapsed time: 0.02 seconds; current allocated memory: 1.028 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'organize_point_cloud_Pipeline_loop_organize_points_main' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln689) to 3 in order to utilize available DSP registers.
+INFO: [SCHED 204-61] Pipelining loop 'loop_organize_points_main'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 7, loop 'loop_organize_points_main'
+WARNING: [HLS 200-871] Estimated clock period (4.286 ns) exceeds the target (target clock period: 5.000 ns, clock uncertainty: 1.350 ns, effective delay budget: 3.650 ns).
+Resolution: For help on HLS 200-871 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2024.2%20English&url=ug1448-hls-guidance&resourceid=200-871.html
+WARNING: [HLS 200-1016] The critical path in module 'organize_point_cloud_Pipeline_loop_organize_points_main' consists of the following:
+	'load' operation 32 bit ('out_column_id', fpga_feature_extract_hw.cpp:577) on local variable 'out_column_id', fpga_feature_extract_hw.cpp:578 [87]  (0.000 ns)
+	'sub' operation 33 bit ('x', fpga_feature_extract_hw.cpp:677) [1009]  (1.016 ns)
+	'icmp' operation 1 bit ('read_flag', fpga_feature_extract_hw.cpp:677) [1010]  (1.018 ns)
+	multiplexor before 'phi' operation 1 bit ('read_flag') with incoming values : ('read_flag', fpga_feature_extract_hw.cpp:677) [85]  (0.427 ns)
+	'phi' operation 1 bit ('read_flag') with incoming values : ('read_flag', fpga_feature_extract_hw.cpp:677) [85]  (0.000 ns)
+	fifo read operation ('column_id_from_stream', fpga_feature_extract_hw.cpp:640) on port 'allocate_rangeimage_column_id_stream' (fpga_feature_extract_hw.cpp:640) [466]  (1.825 ns)
+
+Resolution: For help on HLS 200-1016 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2024.2%20English&url=ug1448-hls-guidance&resourceid=200-1016.html
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.47 seconds. CPU system time: 0 seconds. Elapsed time: 0.48 seconds; current allocated memory: 1.029 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.06 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.07 seconds; current allocated memory: 1.029 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'organize_point_cloud_Pipeline_loop_write_residual_data' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln724) to 3 in order to utilize available DSP registers.
+INFO: [SCHED 204-61] Pipelining loop 'loop_write_residual_data'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 7, loop 'loop_write_residual_data'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.09 seconds. CPU system time: 0 seconds. Elapsed time: 0.09 seconds; current allocated memory: 1.029 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.03 seconds. CPU system time: 0 seconds. Elapsed time: 0.02 seconds; current allocated memory: 1.029 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'organize_point_cloud' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.04 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.05 seconds; current allocated memory: 1.029 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.03 seconds. CPU system time: 0 seconds. Elapsed time: 0.03 seconds; current allocated memory: 1.029 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'update_range_Pipeline_loop_update_range_precache_data' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'loop_update_range_precache_data'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 2, loop 'loop_update_range_precache_data'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.05 seconds. CPU system time: 0 seconds. Elapsed time: 0.05 seconds; current allocated memory: 1.029 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.03 seconds. CPU system time: 0 seconds. Elapsed time: 0.02 seconds; current allocated memory: 1.029 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'update_range_Pipeline_loop_update_range_main' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'loop_update_range_main'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 4, loop 'loop_update_range_main'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.07 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.07 seconds; current allocated memory: 1.029 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.03 seconds. CPU system time: 0 seconds. Elapsed time: 0.03 seconds; current allocated memory: 1.029 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'update_range_Pipeline_loop_update_range_final_write' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'loop_update_range_final_write'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 2, loop 'loop_update_range_final_write'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.03 seconds. CPU system time: 0 seconds. Elapsed time: 0.05 seconds; current allocated memory: 1.029 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.02 seconds. CPU system time: 0 seconds. Elapsed time: 0.02 seconds; current allocated memory: 1.029 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'update_range' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.04 seconds. CPU system time: 0 seconds. Elapsed time: 0.04 seconds; current allocated memory: 1.030 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.03 seconds. CPU system time: 0 seconds. Elapsed time: 0.02 seconds; current allocated memory: 1.030 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'cache_rangeimage' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'loop_cache_rangeimage_main'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 2, loop 'loop_cache_rangeimage_main'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.03 seconds. CPU system time: 0 seconds. Elapsed time: 0.03 seconds; current allocated memory: 1.031 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.02 seconds. CPU system time: 0 seconds. Elapsed time: 0.02 seconds; current allocated memory: 1.031 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'compute_curvature_Pipeline_loop_reset_compute_curvature_buffer_VITIS_LOOP_1188_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'loop_reset_compute_curvature_buffer_VITIS_LOOP_1188_1'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 2, loop 'loop_reset_compute_curvature_buffer_VITIS_LOOP_1188_1'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.06 seconds. CPU system time: 0 seconds. Elapsed time: 0.06 seconds; current allocated memory: 1.031 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.02 seconds. CPU system time: 0 seconds. Elapsed time: 0.03 seconds; current allocated memory: 1.031 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'compute_curvature_Pipeline_loop_compute_curvature_main' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+WARNING: [SCHED 204-36] Invalid protocol 'xlx_protocol.arrayidx28071.exit.0': additional 'wait'(s) required after the multi-cycle operation:
+   'load' operation 1 bit ('rangeimage_picked_buffer_load', fpga_feature_extract_hw.cpp:1305) on array 'rangeimage_picked_buffer'.
+WARNING: [SCHED 204-36] Invalid protocol 'xlx_protocol.arrayidx28071.exit.0': additional 'wait'(s) required after the multi-cycle operation:
+   'load' operation 1 bit ('rangeimage_picked_buffer_1_load', fpga_feature_extract_hw.cpp:1305) on array 'rangeimage_picked_buffer_1'.
+WARNING: [SCHED 204-36] Invalid protocol 'xlx_protocol.arrayidx28071.exit.0': additional 'wait'(s) required after the multi-cycle operation:
+   'load' operation 1 bit ('rangeimage_picked_buffer_2_load', fpga_feature_extract_hw.cpp:1305) on array 'rangeimage_picked_buffer_2'.
+WARNING: [SCHED 204-36] Invalid protocol 'xlx_protocol.arrayidx28071.exit.0': additional 'wait'(s) required after the multi-cycle operation:
+   'load' operation 1 bit ('rangeimage_picked_buffer_3_load', fpga_feature_extract_hw.cpp:1305) on array 'rangeimage_picked_buffer_3'.
+WARNING: [SCHED 204-36] Invalid protocol 'xlx_protocol.arrayidx28071.exit.0': additional 'wait'(s) required after the multi-cycle operation:
+   'load' operation 1 bit ('rangeimage_picked_buffer_4_load', fpga_feature_extract_hw.cpp:1305) on array 'rangeimage_picked_buffer_4'.
+WARNING: [SCHED 204-36] Invalid protocol 'xlx_protocol.arrayidx28071.exit.0': additional 'wait'(s) required after the multi-cycle operation:
+   'load' operation 1 bit ('rangeimage_picked_buffer_5_load', fpga_feature_extract_hw.cpp:1305) on array 'rangeimage_picked_buffer_5'.
+WARNING: [SCHED 204-36] Invalid protocol 'xlx_protocol.arrayidx28071.exit.0': additional 'wait'(s) required after the multi-cycle operation:
+   'load' operation 1 bit ('rangeimage_picked_buffer_6_load', fpga_feature_extract_hw.cpp:1305) on array 'rangeimage_picked_buffer_6'.
+WARNING: [SCHED 204-36] Invalid protocol 'xlx_protocol.arrayidx28071.exit.0': additional 'wait'(s) required after the multi-cycle operation:
+   'load' operation 1 bit ('rangeimage_picked_buffer_7_load', fpga_feature_extract_hw.cpp:1305) on array 'rangeimage_picked_buffer_7'.
+WARNING: [SCHED 204-36] Invalid protocol 'xlx_protocol.arrayidx28071.exit.0': additional 'wait'(s) required after the multi-cycle operation:
+   'load' operation 1 bit ('rangeimage_picked_buffer_8_load', fpga_feature_extract_hw.cpp:1305) on array 'rangeimage_picked_buffer_8'.
+WARNING: [SCHED 204-36] Invalid protocol 'xlx_protocol.arrayidx28071.exit.0': additional 'wait'(s) required after the multi-cycle operation:
+   'load' operation 1 bit ('rangeimage_picked_buffer_9_load', fpga_feature_extract_hw.cpp:1305) on array 'rangeimage_picked_buffer_9'.
+WARNING: [SCHED 204-36] Invalid protocol 'xlx_protocol.arrayidx28071.exit.0': additional 'wait'(s) required after the multi-cycle operation:
+   'load' operation 1 bit ('rangeimage_picked_buffer_10_load', fpga_feature_extract_hw.cpp:1305) on array 'rangeimage_picked_buffer_10'.
+WARNING: [SCHED 204-36] Invalid protocol 'xlx_protocol.arrayidx28071.exit.0': additional 'wait'(s) required after the multi-cycle operation:
+   'load' operation 1 bit ('rangeimage_picked_buffer_11_load', fpga_feature_extract_hw.cpp:1305) on array 'rangeimage_picked_buffer_11'.
+WARNING: [SCHED 204-36] Invalid protocol 'xlx_protocol.arrayidx28071.exit.0': additional 'wait'(s) required after the multi-cycle operation:
+   'load' operation 1 bit ('rangeimage_picked_buffer_12_load', fpga_feature_extract_hw.cpp:1305) on array 'rangeimage_picked_buffer_12'.
+WARNING: [SCHED 204-36] Invalid protocol 'xlx_protocol.arrayidx28071.exit.0': additional 'wait'(s) required after the multi-cycle operation:
+   'load' operation 1 bit ('rangeimage_picked_buffer_13_load', fpga_feature_extract_hw.cpp:1305) on array 'rangeimage_picked_buffer_13'.
+WARNING: [SCHED 204-36] Invalid protocol 'xlx_protocol.arrayidx28071.exit.0': additional 'wait'(s) required after the multi-cycle operation:
+   'load' operation 1 bit ('rangeimage_picked_buffer_14_load', fpga_feature_extract_hw.cpp:1305) on array 'rangeimage_picked_buffer_14'.
+WARNING: [SCHED 204-36] Invalid protocol 'xlx_protocol.arrayidx28071.exit.0': additional 'wait'(s) required after the multi-cycle operation:
+   'load' operation 1 bit ('rangeimage_picked_buffer_15_load', fpga_feature_extract_hw.cpp:1305) on array 'rangeimage_picked_buffer_15'.
+WARNING: [SCHED 204-36] Unable to schedule the protocol specified by region 'xlx_protocol.arrayidx28071.exit.0'.
+INFO: [SCHED 204-61] Pipelining loop 'loop_compute_curvature_main'.
+INFO: [SCHED 204-61] Discarding stage scheduling solution.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 10, loop 'loop_compute_curvature_main'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.42 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.43 seconds; current allocated memory: 1.045 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.07 seconds. CPU system time: 0 seconds. Elapsed time: 0.07 seconds; current allocated memory: 1.061 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'compute_curvature_Pipeline_loop_out_final_compute_curvature_stream_loop_out_fina' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln1383) to 3 in order to utilize available DSP registers.
+INFO: [SCHED 204-61] Pipelining loop 'loop_out_final_compute_curvature_stream_loop_out_final_scan_compute_curvature_stream'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 6, loop 'loop_out_final_compute_curvature_stream_loop_out_final_scan_compute_curvature_stream'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.11 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.12 seconds; current allocated memory: 1.061 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.03 seconds. CPU system time: 0 seconds. Elapsed time: 0.03 seconds; current allocated memory: 1.061 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'compute_curvature' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.04 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.04 seconds; current allocated memory: 1.061 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.03 seconds. CPU system time: 0 seconds. Elapsed time: 0.03 seconds; current allocated memory: 1.061 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'compute_ground_Pipeline_loop_compute_ground_main' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'loop_compute_ground_main'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 3, loop 'loop_compute_ground_main'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.05 seconds. CPU system time: 0 seconds. Elapsed time: 0.05 seconds; current allocated memory: 1.061 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.03 seconds. CPU system time: 0 seconds. Elapsed time: 0.02 seconds; current allocated memory: 1.061 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'compute_ground' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.03 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.03 seconds; current allocated memory: 1.061 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.02 seconds. CPU system time: 0 seconds. Elapsed time: 0.03 seconds; current allocated memory: 1.061 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'integrate_features' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'loop_integrate_features_main'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 2, loop 'loop_integrate_features_main'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.04 seconds. CPU system time: 0 seconds. Elapsed time: 0.03 seconds; current allocated memory: 1.061 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.02 seconds. CPU system time: 0 seconds. Elapsed time: 0.02 seconds; current allocated memory: 1.061 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'extract_features_Pipeline_VITIS_LOOP_1661_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_1661_1'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 6, loop 'VITIS_LOOP_1661_1'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.05 seconds. CPU system time: 0 seconds. Elapsed time: 0.05 seconds; current allocated memory: 1.061 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.02 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.03 seconds; current allocated memory: 1.061 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'extract_features_Pipeline_VITIS_LOOP_1710_3' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_1710_3'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 1, loop 'VITIS_LOOP_1710_3'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.04 seconds. CPU system time: 0 seconds. Elapsed time: 0.04 seconds; current allocated memory: 1.061 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.03 seconds. CPU system time: 0 seconds. Elapsed time: 0.02 seconds; current allocated memory: 1.061 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'extract_features_Pipeline_VITIS_LOOP_1722_5' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_1722_5'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 1, loop 'VITIS_LOOP_1722_5'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.03 seconds. CPU system time: 0 seconds. Elapsed time: 0.03 seconds; current allocated memory: 1.061 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.02 seconds. CPU system time: 0 seconds. Elapsed time: 0.02 seconds; current allocated memory: 1.061 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'extract_features_Pipeline_loop_extract_features_main' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'loop_extract_features_main'.
+INFO: [SCHED 204-61] Discarding stage scheduling solution.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 13, loop 'loop_extract_features_main'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.33 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.32 seconds; current allocated memory: 1.064 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.05 seconds. CPU system time: 0 seconds. Elapsed time: 0.05 seconds; current allocated memory: 1.064 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'extract_features' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.06 seconds. CPU system time: 0 seconds. Elapsed time: 0.06 seconds; current allocated memory: 1.064 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.02 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.03 seconds; current allocated memory: 1.064 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'out_point_range_lessflat_result_Pipeline_loop_out_point_range_lessflat_result_ma' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'loop_out_point_range_lessflat_result_main_VITIS_LOOP_2066_1'.
+WARNING: [HLS 200-880] The II Violation in module 'out_point_range_lessflat_result_Pipeline_loop_out_point_range_lessflat_result_ma' (loop 'loop_out_point_range_lessflat_result_main_VITIS_LOOP_2066_1'): Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 1) between bus write operation ('gmem1_addr_write_ln2082', fpga_feature_extract_hw.cpp:2082) on port 'gmem1' (fpga_feature_extract_hw.cpp:2082) and bus write operation ('gmem1_addr_write_ln2082', fpga_feature_extract_hw.cpp:2082) on port 'gmem1' (fpga_feature_extract_hw.cpp:2082).
+Resolution: For help on HLS 200-880 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2024.2%20English&url=ug1448-hls-guidance&resourceid=200-880.html
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 2, Depth = 11, loop 'loop_out_point_range_lessflat_result_main_VITIS_LOOP_2066_1'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.08 seconds. CPU system time: 0 seconds. Elapsed time: 0.08 seconds; current allocated memory: 1.064 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.03 seconds. CPU system time: 0 seconds. Elapsed time: 0.03 seconds; current allocated memory: 1.064 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'out_point_range_lessflat_result' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.03 seconds. CPU system time: 0 seconds. Elapsed time: 0.03 seconds; current allocated memory: 1.064 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.03 seconds. CPU system time: 0 seconds. Elapsed time: 0.03 seconds; current allocated memory: 1.064 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'out_flat_sharp_result_Pipeline_loop_out_flat_sharp_result_result_main_VITIS_LOOP' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'loop_out_flat_sharp_result_result_main_VITIS_LOOP_2109_1'.
+WARNING: [HLS 200-880] The II Violation in module 'out_flat_sharp_result_Pipeline_loop_out_flat_sharp_result_result_main_VITIS_LOOP' (loop 'loop_out_flat_sharp_result_result_main_VITIS_LOOP_2109_1'): Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 1) between bus write operation ('gmem6_addr_write_ln2109', fpga_feature_extract_hw.cpp:2109) on port 'gmem6' (fpga_feature_extract_hw.cpp:2109) and bus write operation ('gmem6_addr_write_ln2109', fpga_feature_extract_hw.cpp:2109) on port 'gmem6' (fpga_feature_extract_hw.cpp:2109).
+Resolution: For help on HLS 200-880 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2024.2%20English&url=ug1448-hls-guidance&resourceid=200-880.html
+WARNING: [HLS 200-880] The II Violation in module 'out_flat_sharp_result_Pipeline_loop_out_flat_sharp_result_result_main_VITIS_LOOP' (loop 'loop_out_flat_sharp_result_result_main_VITIS_LOOP_2109_1'): Unable to enforce a carried dependence constraint (II = 2, distance = 1, offset = 1) between bus write operation ('gmem6_addr_write_ln2109', fpga_feature_extract_hw.cpp:2109) on port 'gmem6' (fpga_feature_extract_hw.cpp:2109) and bus write operation ('gmem6_addr_write_ln2109', fpga_feature_extract_hw.cpp:2109) on port 'gmem6' (fpga_feature_extract_hw.cpp:2109).
+Resolution: For help on HLS 200-880 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2024.2%20English&url=ug1448-hls-guidance&resourceid=200-880.html
+WARNING: [HLS 200-880] The II Violation in module 'out_flat_sharp_result_Pipeline_loop_out_flat_sharp_result_result_main_VITIS_LOOP' (loop 'loop_out_flat_sharp_result_result_main_VITIS_LOOP_2109_1'): Unable to enforce a carried dependence constraint (II = 3, distance = 1, offset = 1) between bus write operation ('gmem6_addr_write_ln2109', fpga_feature_extract_hw.cpp:2109) on port 'gmem6' (fpga_feature_extract_hw.cpp:2109) and bus write operation ('gmem6_addr_write_ln2109', fpga_feature_extract_hw.cpp:2109) on port 'gmem6' (fpga_feature_extract_hw.cpp:2109).
+Resolution: For help on HLS 200-880 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2024.2%20English&url=ug1448-hls-guidance&resourceid=200-880.html
+WARNING: [HLS 200-880] The II Violation in module 'out_flat_sharp_result_Pipeline_loop_out_flat_sharp_result_result_main_VITIS_LOOP' (loop 'loop_out_flat_sharp_result_result_main_VITIS_LOOP_2109_1'): Unable to enforce a carried dependence constraint (II = 4, distance = 1, offset = 1) between bus write operation ('gmem6_addr_write_ln2109', fpga_feature_extract_hw.cpp:2109) on port 'gmem6' (fpga_feature_extract_hw.cpp:2109) and bus write operation ('gmem6_addr_write_ln2109', fpga_feature_extract_hw.cpp:2109) on port 'gmem6' (fpga_feature_extract_hw.cpp:2109).
+Resolution: For help on HLS 200-880 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2024.2%20English&url=ug1448-hls-guidance&resourceid=200-880.html
+WARNING: [HLS 200-880] The II Violation in module 'out_flat_sharp_result_Pipeline_loop_out_flat_sharp_result_result_main_VITIS_LOOP' (loop 'loop_out_flat_sharp_result_result_main_VITIS_LOOP_2109_1'): Unable to enforce a carried dependence constraint (II = 5, distance = 1, offset = 1) between bus write operation ('gmem6_addr_write_ln2109', fpga_feature_extract_hw.cpp:2109) on port 'gmem6' (fpga_feature_extract_hw.cpp:2109) and bus write operation ('gmem6_addr_write_ln2109', fpga_feature_extract_hw.cpp:2109) on port 'gmem6' (fpga_feature_extract_hw.cpp:2109).
+Resolution: For help on HLS 200-880 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2024.2%20English&url=ug1448-hls-guidance&resourceid=200-880.html
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 6, Depth = 14, loop 'loop_out_flat_sharp_result_result_main_VITIS_LOOP_2109_1'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.08 seconds. CPU system time: 0 seconds. Elapsed time: 0.08 seconds; current allocated memory: 1.064 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.03 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.02 seconds; current allocated memory: 1.064 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'out_flat_sharp_result' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.02 seconds. CPU system time: 0 seconds. Elapsed time: 0.03 seconds; current allocated memory: 1.064 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.02 seconds. CPU system time: 0 seconds. Elapsed time: 0.02 seconds; current allocated memory: 1.064 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'fpga_feature_extract_dataflow' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+WARNING: [HLS 200-1020] Increasing the depth of FIFO start_for_out_point_range_lessflat_result_U0 (from entry_proc_U0 to out_point_range_lessflat_result_U0) to 10 to improve performance and/or avoid deadlocks.
+WARNING: [HLS 200-1020] Increasing the depth of FIFO start_for_out_flat_sharp_result_U0 (from entry_proc_U0 to out_flat_sharp_result_U0) to 10 to improve performance and/or avoid deadlocks.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.04 seconds. CPU system time: 0 seconds. Elapsed time: 0.05 seconds; current allocated memory: 1.065 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.03 seconds. CPU system time: 0 seconds. Elapsed time: 0.03 seconds; current allocated memory: 1.066 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'fpga_feature_extract_hw' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.04 seconds. CPU system time: 0 seconds. Elapsed time: 0.05 seconds; current allocated memory: 1.066 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.03 seconds. CPU system time: 0 seconds. Elapsed time: 0.03 seconds; current allocated memory: 1.066 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'entry_proc' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'entry_proc'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.05 seconds. CPU system time: 0 seconds. Elapsed time: 0.05 seconds; current allocated memory: 1.066 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'array_to_stream_Pipeline_loop_read_input_array' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'array_to_stream_Pipeline_loop_read_input_array' pipeline 'loop_read_input_array' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'fpext_32ns_64_2_no_dsp_1': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'sparsemux_9_3_18_1_1': 3 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'sparsemux_9_3_26_1_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'array_to_stream_Pipeline_loop_read_input_array'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.07 seconds. CPU system time: 0 seconds. Elapsed time: 0.07 seconds; current allocated memory: 1.069 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'array_to_stream' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'array_to_stream'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.07 seconds. CPU system time: 0 seconds. Elapsed time: 0.07 seconds; current allocated memory: 1.073 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'allocate_rangeimage_Pipeline_loop_allocate_rangeimage_main' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'allocate_rangeimage_Pipeline_loop_allocate_rangeimage_main' pipeline 'loop_allocate_rangeimage_main' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'mul_18s_18s_36_1_1': 3 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'allocate_rangeimage_Pipeline_loop_allocate_rangeimage_main'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.11 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.11 seconds; current allocated memory: 1.078 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'allocate_rangeimage' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'allocate_rangeimage'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.14 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.15 seconds; current allocated memory: 1.090 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'organize_point_cloud_Pipeline_loop_allocate_rangeimage_reset_array' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'organize_point_cloud_Pipeline_loop_allocate_rangeimage_reset_array'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.04 seconds. CPU system time: 0 seconds. Elapsed time: 0.04 seconds; current allocated memory: 1.090 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'organize_point_cloud_Pipeline_loop_organize_points_main' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'organize_point_cloud_Pipeline_loop_organize_points_main' pipeline 'loop_organize_points_main' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'mac_muladd_12s_8ns_12ns_12_4_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_12s_9ns_12_1_1': 3 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'sparsemux_17_3_18_1_1': 4 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'sparsemux_17_3_1_1_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'sparsemux_17_3_26_1_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'organize_point_cloud_Pipeline_loop_organize_points_main'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.23 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.24 seconds; current allocated memory: 1.100 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'organize_point_cloud_Pipeline_loop_write_residual_data' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'organize_point_cloud_Pipeline_loop_write_residual_data' pipeline 'loop_write_residual_data' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'mac_muladd_12s_8ns_12ns_12_4_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'sparsemux_17_3_18_1_1': 4 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'sparsemux_17_3_1_1_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'sparsemux_17_3_26_1_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'organize_point_cloud_Pipeline_loop_write_residual_data'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.19 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.2 seconds; current allocated memory: 1.115 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'organize_point_cloud' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'organize_point_cloud'.
+INFO: [RTMG 210-278] Implementing memory 'fpga_feature_extract_hw_organize_point_cloud_raw_point_line_buffer_x_RAM_AUTO_1R1W' using auto RAMs.
+INFO: [RTMG 210-278] Implementing memory 'fpga_feature_extract_hw_organize_point_cloud_raw_point_line_buffer_intensity_RAM_AUTO_1R1W' using auto RAMs.
+INFO: [RTMG 210-278] Implementing memory 'fpga_feature_extract_hw_organize_point_cloud_insert_flag_buffer_RAM_1WNR_AUTO_1R1W' using auto RAMs.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.08 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.08 seconds; current allocated memory: 1.123 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'update_range_Pipeline_loop_update_range_precache_data' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'update_range_Pipeline_loop_update_range_precache_data' pipeline 'loop_update_range_precache_data' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Finished creating RTL model for 'update_range_Pipeline_loop_update_range_precache_data'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.07 seconds. CPU system time: 0 seconds. Elapsed time: 0.07 seconds; current allocated memory: 1.126 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'update_range_Pipeline_loop_update_range_main' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'update_range_Pipeline_loop_update_range_main' pipeline 'loop_update_range_main' pipeline type 'loop pipeline'
+INFO: [SYN 201-210] Renamed object name 'update_range_Pipeline_loop_update_range_main_range_line_buffer_3_local_RAM_AUTO_1R1W' to 'update_range_Pipeline_loop_update_range_main_range_line_buffer_3_local_RAM_AUbkb' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'update_range_Pipeline_loop_update_range_main_point_line_buffer_intensity_3_local_RAM_AUTO_1R1W' to 'update_range_Pipeline_loop_update_range_main_point_line_buffer_intensity_3_locud' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'update_range_Pipeline_loop_update_range_main_point_line_buffer_z_3_local_RAM_AUTO_1R1W' to 'update_range_Pipeline_loop_update_range_main_point_line_buffer_z_3_local_RAM_dEe' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'update_range_Pipeline_loop_update_range_main_point_line_buffer_y_3_local_RAM_AUTO_1R1W' to 'update_range_Pipeline_loop_update_range_main_point_line_buffer_y_3_local_RAM_eOg' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'update_range_Pipeline_loop_update_range_main_point_line_buffer_x_3_local_RAM_AUTO_1R1W' to 'update_range_Pipeline_loop_update_range_main_point_line_buffer_x_3_local_RAM_fYi' due to the length limit 80
+INFO: [RTGEN 206-100] Generating core module 'sparsemux_7_2_18_1_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'sparsemux_9_2_18_1_1': 4 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'sparsemux_9_2_26_1_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'update_range_Pipeline_loop_update_range_main'.
+INFO: [RTMG 210-278] Implementing memory 'fpga_feature_extract_hw_update_range_Pipeline_loop_update_range_main_range_line_buffer_3_local_RAM_AUbkb' using auto RAMs.
+INFO: [RTMG 210-278] Implementing memory 'fpga_feature_extract_hw_update_range_Pipeline_loop_update_range_main_point_line_buffer_intensity_3_locud' using auto RAMs.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.1 seconds. CPU system time: 0 seconds. Elapsed time: 0.1 seconds; current allocated memory: 1.130 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'update_range_Pipeline_loop_update_range_final_write' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'update_range_Pipeline_loop_update_range_final_write' pipeline 'loop_update_range_final_write' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Finished creating RTL model for 'update_range_Pipeline_loop_update_range_final_write'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.08 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.08 seconds; current allocated memory: 1.134 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'update_range' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'update_range'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.05 seconds. CPU system time: 0 seconds. Elapsed time: 0.05 seconds; current allocated memory: 1.137 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'cache_rangeimage' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'cache_rangeimage' pipeline 'loop_cache_rangeimage_main' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Finished creating RTL model for 'cache_rangeimage'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.06 seconds. CPU system time: 0 seconds. Elapsed time: 0.07 seconds; current allocated memory: 1.139 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'compute_curvature_Pipeline_loop_reset_compute_curvature_buffer_VITIS_LOOP_1188_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'compute_curvature_Pipeline_loop_reset_compute_curvature_buffer_VITIS_LOOP_1188_1' pipeline 'loop_reset_compute_curvature_buffer_VITIS_LOOP_1188_1' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'mul_5ns_8ns_12_1_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'compute_curvature_Pipeline_loop_reset_compute_curvature_buffer_VITIS_LOOP_1188_1'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.06 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.06 seconds; current allocated memory: 1.141 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'compute_curvature_Pipeline_loop_compute_curvature_main' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'compute_curvature_Pipeline_loop_compute_curvature_main' pipeline 'loop_compute_curvature_main' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-104] Estimated max fanout for 'compute_curvature_Pipeline_loop_compute_curvature_main' is 8002 from HDL expression: ((ap_enable_reg_pp0_iter4 == 1'b1) & (1'b0 == ap_block_pp0_stage0_grp1))
+INFO: [RTGEN 206-100] Generating core module 'mul_11s_8ns_11_1_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_27s_27s_46_1_1': 3 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'sparsemux_33_4_18_1_1': 36 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'sparsemux_33_4_1_1_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'sparsemux_33_4_26_1_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'sparsemux_33_4_32_1_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'compute_curvature_Pipeline_loop_compute_curvature_main'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.63 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.65 seconds; current allocated memory: 1.161 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'compute_curvature_Pipeline_loop_out_final_compute_curvature_stream_loop_out_fina' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'compute_curvature_Pipeline_loop_out_final_compute_curvature_stream_loop_out_fina' pipeline 'loop_out_final_compute_curvature_stream_loop_out_final_scan_compute_curvature_stream' pipeline type 'loop pipeline'
+WARNING: [RTGEN 206-101] RTL name 'sparsemux_33_4_1_1_1' is changed to 'sparsemux_33_4_1_1_1_x' due to conflict.
+INFO: [RTGEN 206-100] Generating core module 'mac_muladd_7ns_5ns_11ns_11_4_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'sparsemux_33_4_18_1_1': 3 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'sparsemux_33_4_1_1_1_x': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'sparsemux_33_4_26_1_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'sparsemux_33_4_32_1_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'compute_curvature_Pipeline_loop_out_final_compute_curvature_stream_loop_out_fina'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.24 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.26 seconds; current allocated memory: 1.180 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'compute_curvature' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'compute_curvature'.
+INFO: [RTMG 210-278] Implementing memory 'fpga_feature_extract_hw_compute_curvature_rangeimage_line_buffer_0_RAM_AUTO_1R1W' using auto RAMs.
+INFO: [RTMG 210-278] Implementing memory 'fpga_feature_extract_hw_compute_curvature_rangeimage_curvature_buffer_RAM_AUTO_1R1W' using auto RAMs.
+INFO: [RTMG 210-278] Implementing memory 'fpga_feature_extract_hw_compute_curvature_rangeimage_picked_buffer_RAM_AUTO_1R1W' using auto RAMs.
+INFO: [HLS 200-2167] Implementing memory 'fpga_feature_extract_hw_compute_curvature_rangeimage_range_buffer_RAM_1WNR_BRAM_1R1W' using block RAMs with 3 copies to ensure enough ports to satisfy II or latency constraints.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.09 seconds. CPU system time: 0 seconds. Elapsed time: 0.11 seconds; current allocated memory: 1.190 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'compute_ground_Pipeline_loop_compute_ground_main' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'compute_ground_Pipeline_loop_compute_ground_main' pipeline 'loop_compute_ground_main' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Finished creating RTL model for 'compute_ground_Pipeline_loop_compute_ground_main'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.08 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.09 seconds; current allocated memory: 1.193 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'compute_ground' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'compute_ground'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.05 seconds. CPU system time: 0 seconds. Elapsed time: 0.05 seconds; current allocated memory: 1.196 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'integrate_features' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'integrate_features' pipeline 'loop_integrate_features_main' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Finished creating RTL model for 'integrate_features'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.05 seconds. CPU system time: 0 seconds. Elapsed time: 0.06 seconds; current allocated memory: 1.198 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'extract_features_Pipeline_VITIS_LOOP_1661_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'extract_features_Pipeline_VITIS_LOOP_1661_1' pipeline 'VITIS_LOOP_1661_1' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'ctlz_32_32_1_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'dcmp_64ns_64ns_1_2_no_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'extract_features_Pipeline_VITIS_LOOP_1661_1'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.06 seconds. CPU system time: 0 seconds. Elapsed time: 0.06 seconds; current allocated memory: 1.199 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'extract_features_Pipeline_VITIS_LOOP_1710_3' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'extract_features_Pipeline_VITIS_LOOP_1710_3'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.05 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.05 seconds; current allocated memory: 1.201 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'extract_features_Pipeline_VITIS_LOOP_1722_5' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'extract_features_Pipeline_VITIS_LOOP_1722_5'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.05 seconds. CPU system time: 0 seconds. Elapsed time: 0.05 seconds; current allocated memory: 1.203 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'extract_features_Pipeline_loop_extract_features_main' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'extract_features_Pipeline_loop_extract_features_main' pipeline 'loop_extract_features_main' pipeline type 'loop pipeline'
+INFO: [SYN 201-210] Renamed object name 'extract_features_Pipeline_loop_extract_features_main_feature_point_cloud_feature_buffer_SortInd_1_local_RAM_AUTO_1R1W' to 'extract_features_Pipeline_loop_extract_features_main_feature_point_cloud_featg8j' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'extract_features_Pipeline_loop_extract_features_main_feature_point_cloud_feature_buffer_ground_1_local_RAM_AUTO_1R1W' to 'extract_features_Pipeline_loop_extract_features_main_feature_point_cloud_feathbi' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'extract_features_Pipeline_loop_extract_features_main_feature_point_cloud_feature_buffer_picked_1_local_RAM_AUTO_1R1W' to 'extract_features_Pipeline_loop_extract_features_main_feature_point_cloud_featibs' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'extract_features_Pipeline_loop_extract_features_main_feature_point_cloud_feature_buffer_curvature_1_local_RAM_AUTO_1R1W' to 'extract_features_Pipeline_loop_extract_features_main_feature_point_cloud_featjbC' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'extract_features_Pipeline_loop_extract_features_main_feature_point_cloud_range_buffer_1_local_RAM_AUTO_1R1W' to 'extract_features_Pipeline_loop_extract_features_main_feature_point_cloud_rangkbM' due to the length limit 80
+INFO: [RTGEN 206-100] Generating core module 'ctlz_32_32_1_1': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'dcmp_64ns_64ns_1_2_no_dsp_1': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'sparsemux_9_3_15_1_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'extract_features_Pipeline_loop_extract_features_main'.
+INFO: [RTMG 210-278] Implementing memory 'fpga_feature_extract_hw_extract_features_Pipeline_loop_extract_features_main_feature_point_cloud_featg8j' using auto RAMs.
+INFO: [RTMG 210-278] Implementing memory 'fpga_feature_extract_hw_extract_features_Pipeline_loop_extract_features_main_feature_point_cloud_feathbi' using auto RAMs.
+INFO: [RTMG 210-278] Implementing memory 'fpga_feature_extract_hw_extract_features_Pipeline_loop_extract_features_main_feature_point_cloud_featibs' using auto RAMs.
+INFO: [RTMG 210-278] Implementing memory 'fpga_feature_extract_hw_extract_features_Pipeline_loop_extract_features_main_feature_point_cloud_featjbC' using auto RAMs.
+INFO: [RTMG 210-278] Implementing memory 'fpga_feature_extract_hw_extract_features_Pipeline_loop_extract_features_main_feature_point_cloud_rangkbM' using auto RAMs.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.19 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.2 seconds; current allocated memory: 1.210 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'extract_features' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Generating core module 'dcmp_64ns_64ns_1_2_no_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'extract_features'.
+INFO: [RTMG 210-278] Implementing memory 'fpga_feature_extract_hw_extract_features_sharp_outfeature_buffer_scanId_RAM_AUTO_1R1W' using auto RAMs.
+INFO: [RTMG 210-278] Implementing memory 'fpga_feature_extract_hw_extract_features_sharp_outfeature_buffer_columnId_RAM_AUTO_1R1W' using auto RAMs.
+INFO: [RTMG 210-278] Implementing memory 'fpga_feature_extract_hw_extract_features_sharp_outfeature_buffer_columnId_5_RAM_AUTO_1R1W' using auto RAMs.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.19 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.2 seconds; current allocated memory: 1.225 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'out_point_range_lessflat_result_Pipeline_loop_out_point_range_lessflat_result_ma' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'out_point_range_lessflat_result_Pipeline_loop_out_point_range_lessflat_result_ma' pipeline 'loop_out_point_range_lessflat_result_main_VITIS_LOOP_2066_1' pipeline type 'loop pipeline'
+WARNING: [RTGEN 206-101] Setting dangling out port 'out_point_range_lessflat_result_Pipeline_loop_out_point_range_lessflat_result_ma/m_axi_gmem3_0_AWVALID' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'out_point_range_lessflat_result_Pipeline_loop_out_point_range_lessflat_result_ma/m_axi_gmem3_0_AWADDR' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'out_point_range_lessflat_result_Pipeline_loop_out_point_range_lessflat_result_ma/m_axi_gmem3_0_AWID' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'out_point_range_lessflat_result_Pipeline_loop_out_point_range_lessflat_result_ma/m_axi_gmem3_0_AWLEN' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'out_point_range_lessflat_result_Pipeline_loop_out_point_range_lessflat_result_ma/m_axi_gmem3_0_AWSIZE' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'out_point_range_lessflat_result_Pipeline_loop_out_point_range_lessflat_result_ma/m_axi_gmem3_0_AWBURST' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'out_point_range_lessflat_result_Pipeline_loop_out_point_range_lessflat_result_ma/m_axi_gmem3_0_AWLOCK' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'out_point_range_lessflat_result_Pipeline_loop_out_point_range_lessflat_result_ma/m_axi_gmem3_0_AWCACHE' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'out_point_range_lessflat_result_Pipeline_loop_out_point_range_lessflat_result_ma/m_axi_gmem3_0_AWPROT' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'out_point_range_lessflat_result_Pipeline_loop_out_point_range_lessflat_result_ma/m_axi_gmem3_0_AWQOS' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'out_point_range_lessflat_result_Pipeline_loop_out_point_range_lessflat_result_ma/m_axi_gmem3_0_AWREGION' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'out_point_range_lessflat_result_Pipeline_loop_out_point_range_lessflat_result_ma/m_axi_gmem3_0_AWUSER' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'out_point_range_lessflat_result_Pipeline_loop_out_point_range_lessflat_result_ma/m_axi_gmem3_0_BREADY' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'out_point_range_lessflat_result_Pipeline_loop_out_point_range_lessflat_result_ma/m_axi_gmem4_0_AWVALID' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'out_point_range_lessflat_result_Pipeline_loop_out_point_range_lessflat_result_ma/m_axi_gmem4_0_AWADDR' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'out_point_range_lessflat_result_Pipeline_loop_out_point_range_lessflat_result_ma/m_axi_gmem4_0_AWID' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'out_point_range_lessflat_result_Pipeline_loop_out_point_range_lessflat_result_ma/m_axi_gmem4_0_AWLEN' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'out_point_range_lessflat_result_Pipeline_loop_out_point_range_lessflat_result_ma/m_axi_gmem4_0_AWSIZE' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'out_point_range_lessflat_result_Pipeline_loop_out_point_range_lessflat_result_ma/m_axi_gmem4_0_AWBURST' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'out_point_range_lessflat_result_Pipeline_loop_out_point_range_lessflat_result_ma/m_axi_gmem4_0_AWLOCK' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'out_point_range_lessflat_result_Pipeline_loop_out_point_range_lessflat_result_ma/m_axi_gmem4_0_AWCACHE' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'out_point_range_lessflat_result_Pipeline_loop_out_point_range_lessflat_result_ma/m_axi_gmem4_0_AWPROT' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'out_point_range_lessflat_result_Pipeline_loop_out_point_range_lessflat_result_ma/m_axi_gmem4_0_AWQOS' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'out_point_range_lessflat_result_Pipeline_loop_out_point_range_lessflat_result_ma/m_axi_gmem4_0_AWREGION' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'out_point_range_lessflat_result_Pipeline_loop_out_point_range_lessflat_result_ma/m_axi_gmem4_0_AWUSER' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'out_point_range_lessflat_result_Pipeline_loop_out_point_range_lessflat_result_ma/m_axi_gmem4_0_BREADY' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'out_point_range_lessflat_result_Pipeline_loop_out_point_range_lessflat_result_ma/m_axi_gmem2_0_AWVALID' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'out_point_range_lessflat_result_Pipeline_loop_out_point_range_lessflat_result_ma/m_axi_gmem2_0_AWADDR' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'out_point_range_lessflat_result_Pipeline_loop_out_point_range_lessflat_result_ma/m_axi_gmem2_0_AWID' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'out_point_range_lessflat_result_Pipeline_loop_out_point_range_lessflat_result_ma/m_axi_gmem2_0_AWLEN' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'out_point_range_lessflat_result_Pipeline_loop_out_point_range_lessflat_result_ma/m_axi_gmem2_0_AWSIZE' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'out_point_range_lessflat_result_Pipeline_loop_out_point_range_lessflat_result_ma/m_axi_gmem2_0_AWBURST' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'out_point_range_lessflat_result_Pipeline_loop_out_point_range_lessflat_result_ma/m_axi_gmem2_0_AWLOCK' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'out_point_range_lessflat_result_Pipeline_loop_out_point_range_lessflat_result_ma/m_axi_gmem2_0_AWCACHE' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'out_point_range_lessflat_result_Pipeline_loop_out_point_range_lessflat_result_ma/m_axi_gmem2_0_AWPROT' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'out_point_range_lessflat_result_Pipeline_loop_out_point_range_lessflat_result_ma/m_axi_gmem2_0_AWQOS' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'out_point_range_lessflat_result_Pipeline_loop_out_point_range_lessflat_result_ma/m_axi_gmem2_0_AWREGION' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'out_point_range_lessflat_result_Pipeline_loop_out_point_range_lessflat_result_ma/m_axi_gmem2_0_AWUSER' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'out_point_range_lessflat_result_Pipeline_loop_out_point_range_lessflat_result_ma/m_axi_gmem2_0_BREADY' to 0.
+INFO: [RTGEN 206-100] Generating core module 'bitselect_1ns_26ns_32s_1_1_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'ctlz_18_18_1_1': 4 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'ctlz_26_26_1_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'out_point_range_lessflat_result_Pipeline_loop_out_point_range_lessflat_result_ma'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.22 seconds. CPU system time: 0 seconds. Elapsed time: 0.22 seconds; current allocated memory: 1.230 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'out_point_range_lessflat_result' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'out_point_range_lessflat_result'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.08 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.08 seconds; current allocated memory: 1.235 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'out_flat_sharp_result_Pipeline_loop_out_flat_sharp_result_result_main_VITIS_LOOP' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'out_flat_sharp_result_Pipeline_loop_out_flat_sharp_result_result_main_VITIS_LOOP' pipeline 'loop_out_flat_sharp_result_result_main_VITIS_LOOP_2109_1' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Finished creating RTL model for 'out_flat_sharp_result_Pipeline_loop_out_flat_sharp_result_result_main_VITIS_LOOP'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.08 seconds. CPU system time: 0 seconds. Elapsed time: 0.08 seconds; current allocated memory: 1.240 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'out_flat_sharp_result' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'out_flat_sharp_result'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.06 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.06 seconds; current allocated memory: 1.243 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'fpga_feature_extract_dataflow' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+WARNING: [RTGEN 206-101] Setting dangling out port 'fpga_feature_extract_dataflow/m_axi_gmem0_0_AWVALID' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'fpga_feature_extract_dataflow/m_axi_gmem0_0_AWADDR' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'fpga_feature_extract_dataflow/m_axi_gmem0_0_AWID' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'fpga_feature_extract_dataflow/m_axi_gmem0_0_AWLEN' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'fpga_feature_extract_dataflow/m_axi_gmem0_0_AWSIZE' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'fpga_feature_extract_dataflow/m_axi_gmem0_0_AWBURST' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'fpga_feature_extract_dataflow/m_axi_gmem0_0_AWLOCK' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'fpga_feature_extract_dataflow/m_axi_gmem0_0_AWCACHE' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'fpga_feature_extract_dataflow/m_axi_gmem0_0_AWPROT' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'fpga_feature_extract_dataflow/m_axi_gmem0_0_AWQOS' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'fpga_feature_extract_dataflow/m_axi_gmem0_0_AWREGION' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'fpga_feature_extract_dataflow/m_axi_gmem0_0_AWUSER' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'fpga_feature_extract_dataflow/m_axi_gmem0_0_WVALID' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'fpga_feature_extract_dataflow/m_axi_gmem0_0_WDATA' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'fpga_feature_extract_dataflow/m_axi_gmem0_0_WSTRB' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'fpga_feature_extract_dataflow/m_axi_gmem0_0_WLAST' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'fpga_feature_extract_dataflow/m_axi_gmem0_0_WID' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'fpga_feature_extract_dataflow/m_axi_gmem0_0_WUSER' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'fpga_feature_extract_dataflow/m_axi_gmem0_0_BREADY' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'fpga_feature_extract_dataflow/m_axi_gmem1_0_ARVALID' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'fpga_feature_extract_dataflow/m_axi_gmem1_0_ARADDR' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'fpga_feature_extract_dataflow/m_axi_gmem1_0_ARID' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'fpga_feature_extract_dataflow/m_axi_gmem1_0_ARLEN' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'fpga_feature_extract_dataflow/m_axi_gmem1_0_ARSIZE' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'fpga_feature_extract_dataflow/m_axi_gmem1_0_ARBURST' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'fpga_feature_extract_dataflow/m_axi_gmem1_0_ARLOCK' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'fpga_feature_extract_dataflow/m_axi_gmem1_0_ARCACHE' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'fpga_feature_extract_dataflow/m_axi_gmem1_0_ARPROT' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'fpga_feature_extract_dataflow/m_axi_gmem1_0_ARQOS' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'fpga_feature_extract_dataflow/m_axi_gmem1_0_ARREGION' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'fpga_feature_extract_dataflow/m_axi_gmem1_0_ARUSER' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'fpga_feature_extract_dataflow/m_axi_gmem1_0_RREADY' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'fpga_feature_extract_dataflow/m_axi_gmem2_0_ARVALID' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'fpga_feature_extract_dataflow/m_axi_gmem2_0_ARADDR' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'fpga_feature_extract_dataflow/m_axi_gmem2_0_ARID' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'fpga_feature_extract_dataflow/m_axi_gmem2_0_ARLEN' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'fpga_feature_extract_dataflow/m_axi_gmem2_0_ARSIZE' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'fpga_feature_extract_dataflow/m_axi_gmem2_0_ARBURST' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'fpga_feature_extract_dataflow/m_axi_gmem2_0_ARLOCK' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'fpga_feature_extract_dataflow/m_axi_gmem2_0_ARCACHE' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'fpga_feature_extract_dataflow/m_axi_gmem2_0_ARPROT' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'fpga_feature_extract_dataflow/m_axi_gmem2_0_ARQOS' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'fpga_feature_extract_dataflow/m_axi_gmem2_0_ARREGION' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'fpga_feature_extract_dataflow/m_axi_gmem2_0_ARUSER' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'fpga_feature_extract_dataflow/m_axi_gmem2_0_RREADY' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'fpga_feature_extract_dataflow/m_axi_gmem3_0_ARVALID' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'fpga_feature_extract_dataflow/m_axi_gmem3_0_ARADDR' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'fpga_feature_extract_dataflow/m_axi_gmem3_0_ARID' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'fpga_feature_extract_dataflow/m_axi_gmem3_0_ARLEN' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'fpga_feature_extract_dataflow/m_axi_gmem3_0_ARSIZE' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'fpga_feature_extract_dataflow/m_axi_gmem3_0_ARBURST' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'fpga_feature_extract_dataflow/m_axi_gmem3_0_ARLOCK' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'fpga_feature_extract_dataflow/m_axi_gmem3_0_ARCACHE' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'fpga_feature_extract_dataflow/m_axi_gmem3_0_ARPROT' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'fpga_feature_extract_dataflow/m_axi_gmem3_0_ARQOS' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'fpga_feature_extract_dataflow/m_axi_gmem3_0_ARREGION' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'fpga_feature_extract_dataflow/m_axi_gmem3_0_ARUSER' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'fpga_feature_extract_dataflow/m_axi_gmem3_0_RREADY' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'fpga_feature_extract_dataflow/m_axi_gmem4_0_ARVALID' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'fpga_feature_extract_dataflow/m_axi_gmem4_0_ARADDR' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'fpga_feature_extract_dataflow/m_axi_gmem4_0_ARID' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'fpga_feature_extract_dataflow/m_axi_gmem4_0_ARLEN' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'fpga_feature_extract_dataflow/m_axi_gmem4_0_ARSIZE' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'fpga_feature_extract_dataflow/m_axi_gmem4_0_ARBURST' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'fpga_feature_extract_dataflow/m_axi_gmem4_0_ARLOCK' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'fpga_feature_extract_dataflow/m_axi_gmem4_0_ARCACHE' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'fpga_feature_extract_dataflow/m_axi_gmem4_0_ARPROT' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'fpga_feature_extract_dataflow/m_axi_gmem4_0_ARQOS' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'fpga_feature_extract_dataflow/m_axi_gmem4_0_ARREGION' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'fpga_feature_extract_dataflow/m_axi_gmem4_0_ARUSER' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'fpga_feature_extract_dataflow/m_axi_gmem4_0_RREADY' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'fpga_feature_extract_dataflow/m_axi_gmem5_0_ARVALID' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'fpga_feature_extract_dataflow/m_axi_gmem5_0_ARADDR' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'fpga_feature_extract_dataflow/m_axi_gmem5_0_ARID' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'fpga_feature_extract_dataflow/m_axi_gmem5_0_ARLEN' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'fpga_feature_extract_dataflow/m_axi_gmem5_0_ARSIZE' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'fpga_feature_extract_dataflow/m_axi_gmem5_0_ARBURST' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'fpga_feature_extract_dataflow/m_axi_gmem5_0_ARLOCK' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'fpga_feature_extract_dataflow/m_axi_gmem5_0_ARCACHE' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'fpga_feature_extract_dataflow/m_axi_gmem5_0_ARPROT' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'fpga_feature_extract_dataflow/m_axi_gmem5_0_ARQOS' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'fpga_feature_extract_dataflow/m_axi_gmem5_0_ARREGION' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'fpga_feature_extract_dataflow/m_axi_gmem5_0_ARUSER' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'fpga_feature_extract_dataflow/m_axi_gmem5_0_RREADY' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'fpga_feature_extract_dataflow/m_axi_gmem6_0_ARVALID' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'fpga_feature_extract_dataflow/m_axi_gmem6_0_ARADDR' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'fpga_feature_extract_dataflow/m_axi_gmem6_0_ARID' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'fpga_feature_extract_dataflow/m_axi_gmem6_0_ARLEN' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'fpga_feature_extract_dataflow/m_axi_gmem6_0_ARSIZE' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'fpga_feature_extract_dataflow/m_axi_gmem6_0_ARBURST' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'fpga_feature_extract_dataflow/m_axi_gmem6_0_ARLOCK' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'fpga_feature_extract_dataflow/m_axi_gmem6_0_ARCACHE' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'fpga_feature_extract_dataflow/m_axi_gmem6_0_ARPROT' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'fpga_feature_extract_dataflow/m_axi_gmem6_0_ARQOS' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'fpga_feature_extract_dataflow/m_axi_gmem6_0_ARREGION' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'fpga_feature_extract_dataflow/m_axi_gmem6_0_ARUSER' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'fpga_feature_extract_dataflow/m_axi_gmem6_0_RREADY' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'fpga_feature_extract_dataflow/m_axi_gmem7_0_ARVALID' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'fpga_feature_extract_dataflow/m_axi_gmem7_0_ARADDR' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'fpga_feature_extract_dataflow/m_axi_gmem7_0_ARID' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'fpga_feature_extract_dataflow/m_axi_gmem7_0_ARLEN' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'fpga_feature_extract_dataflow/m_axi_gmem7_0_ARSIZE' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'fpga_feature_extract_dataflow/m_axi_gmem7_0_ARBURST' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'fpga_feature_extract_dataflow/m_axi_gmem7_0_ARLOCK' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'fpga_feature_extract_dataflow/m_axi_gmem7_0_ARCACHE' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'fpga_feature_extract_dataflow/m_axi_gmem7_0_ARPROT' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'fpga_feature_extract_dataflow/m_axi_gmem7_0_ARQOS' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'fpga_feature_extract_dataflow/m_axi_gmem7_0_ARREGION' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'fpga_feature_extract_dataflow/m_axi_gmem7_0_ARUSER' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'fpga_feature_extract_dataflow/m_axi_gmem7_0_RREADY' to 0.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'fpga_feature_extract_dataflow'.
+INFO: [RTMG 210-285] Implementing FIFO 'rangeimage_point_c_U(fpga_feature_extract_hw_fifo_w64_d11_S)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'rangeimage_range_c_U(fpga_feature_extract_hw_fifo_w64_d11_S)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'rangeimage_lessflat_c_U(fpga_feature_extract_hw_fifo_w64_d11_S)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'rangeimage_ground_c_U(fpga_feature_extract_hw_fifo_w64_d11_S)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'rangeimage_flat_c_U(fpga_feature_extract_hw_fifo_w64_d11_S)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'rangeimage_lesssharp_c_U(fpga_feature_extract_hw_fifo_w64_d11_S)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'rangeimage_sharp_c_U(fpga_feature_extract_hw_fifo_w64_d11_S)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'input_point_stream_U(fpga_feature_extract_hw_fifo_w80_d16_A)' using Vivado Default RAMs.
+INFO: [RTMG 210-285] Implementing FIFO 'point_idx_stream_U(fpga_feature_extract_hw_fifo_w16_d64_S)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'cloudSize_c_U(fpga_feature_extract_hw_fifo_w32_d2_S)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'allocate_rangeimage_point_stream_U(fpga_feature_extract_hw_fifo_w80_d16_A)' using Vivado Default RAMs.
+INFO: [RTMG 210-285] Implementing FIFO 'allocate_rangeimage_range_stream_U(fpga_feature_extract_hw_fifo_w18_d16_S)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'allocate_rangeimage_scanid_stream_U(fpga_feature_extract_hw_fifo_w16_d16_S)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'allocate_rangeimage_column_id_stream_U(fpga_feature_extract_hw_fifo_w16_d16_S)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'allocate_rangeimage_end_stream_U(fpga_feature_extract_hw_fifo_w1_d16_S)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'registrate_point_cloud_stream1_U(fpga_feature_extract_hw_fifo_w80_d16_A)' using Vivado Default RAMs.
+INFO: [RTMG 210-285] Implementing FIFO 'registrate_point_cloud_range_stream_U(fpga_feature_extract_hw_fifo_w18_d16_S)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'update_registrate_point_cloud_point_stream3_U(fpga_feature_extract_hw_fifo_w80_d16_A)' using Vivado Default RAMs.
+INFO: [RTMG 210-285] Implementing FIFO 'update_registrate_point_cloud_range_stream_U(fpga_feature_extract_hw_fifo_w18_d16_S)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'cache_image_point_stream5_U(fpga_feature_extract_hw_fifo_w80_d16_A)' using Vivado Default RAMs.
+INFO: [RTMG 210-285] Implementing FIFO 'cache_image_range_stream_U(fpga_feature_extract_hw_fifo_w18_d16_S)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'curvature_out_point_stream7_U(fpga_feature_extract_hw_fifo_w80_d16_A)' using Vivado Default RAMs.
+INFO: [RTMG 210-285] Implementing FIFO 'curvature_out_range_stream_U(fpga_feature_extract_hw_fifo_w18_d16_S)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'curvature_out_curvature_stream_U(fpga_feature_extract_hw_fifo_w32_d16_S)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'curvature_out_picked_stream_U(fpga_feature_extract_hw_fifo_w1_d16_S)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'ground_out_point_stream11_U(fpga_feature_extract_hw_fifo_w80_d16_A)' using Vivado Default RAMs.
+INFO: [RTMG 210-285] Implementing FIFO 'ground_out_range_stream_U(fpga_feature_extract_hw_fifo_w18_d16_S)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'ground_out_curvature_stream_U(fpga_feature_extract_hw_fifo_w32_d16_S)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'ground_out_picked_stream_U(fpga_feature_extract_hw_fifo_w1_d16_S)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'ground_out_sortind_stream_U(fpga_feature_extract_hw_fifo_w16_d16_S)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'ground_out_ground_stream_U(fpga_feature_extract_hw_fifo_w2_d16_S)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'registrate_point_cloud_point_stream17_U(fpga_feature_extract_hw_fifo_w80_d16_A)' using Vivado Default RAMs.
+INFO: [RTMG 210-285] Implementing FIFO 'registrate_point_cloud_point_range_stream_U(fpga_feature_extract_hw_fifo_w18_d16_S)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'registrate_point_cloud_feature_stream19_U(fpga_feature_extract_hw_fifo_w51_d16_S)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'out_sharp_stream_0_U(fpga_feature_extract_hw_fifo_w32_d16_S)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'out_sharp_stream_1_U(fpga_feature_extract_hw_fifo_w32_d16_S)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'out_lesssharp_stream_0_U(fpga_feature_extract_hw_fifo_w32_d16_S)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'out_lesssharp_stream_1_U(fpga_feature_extract_hw_fifo_w32_d16_S)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'out_lesssharp_stream_2_U(fpga_feature_extract_hw_fifo_w32_d16_S)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'out_lesssharp_stream_3_U(fpga_feature_extract_hw_fifo_w32_d16_S)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'out_lesssharp_stream_4_U(fpga_feature_extract_hw_fifo_w32_d16_S)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'out_lesssharp_stream_5_U(fpga_feature_extract_hw_fifo_w32_d16_S)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'out_flat_stream_0_U(fpga_feature_extract_hw_fifo_w32_d16_S)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'out_flat_stream_1_U(fpga_feature_extract_hw_fifo_w32_d16_S)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'out_lessflat_stream_U(fpga_feature_extract_hw_fifo_w1_d16_S)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'out_ground_stream_U(fpga_feature_extract_hw_fifo_w2_d16_S)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'registrate_point_cloud_outpoint_stream21_U(fpga_feature_extract_hw_fifo_w80_d16_A)' using Vivado Default RAMs.
+INFO: [RTMG 210-285] Implementing FIFO 'registrate_point_cloud_outrange_stream_U(fpga_feature_extract_hw_fifo_w18_d16_S)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'start_for_out_point_range_lessflat_result_U0_U(fpga_feature_extract_hw_start_for_out_point_range_lessflat_result_U0)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'start_for_out_flat_sharp_result_U0_U(fpga_feature_extract_hw_start_for_out_flat_sharp_result_U0)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'start_for_allocate_rangeimage_U0_U(fpga_feature_extract_hw_start_for_allocate_rangeimage_U0)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'start_for_organize_point_cloud_U0_U(fpga_feature_extract_hw_start_for_organize_point_cloud_U0)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'start_for_update_range_U0_U(fpga_feature_extract_hw_start_for_update_range_U0)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'start_for_cache_rangeimage_U0_U(fpga_feature_extract_hw_start_for_cache_rangeimage_U0)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'start_for_compute_curvature_U0_U(fpga_feature_extract_hw_start_for_compute_curvature_U0)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'start_for_compute_ground_U0_U(fpga_feature_extract_hw_start_for_compute_ground_U0)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'start_for_integrate_features_U0_U(fpga_feature_extract_hw_start_for_integrate_features_U0)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'start_for_extract_features_U0_U(fpga_feature_extract_hw_start_for_extract_features_U0)' using Shift Registers.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.59 seconds. CPU system time: 0.04 seconds. Elapsed time: 0.64 seconds; current allocated memory: 1.248 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'fpga_feature_extract_hw' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+WARNING: [RTGEN 206-101] Design contains AXI ports. Reset is fixed to synchronous and active low.
+INFO: [RTGEN 206-500] Setting interface mode on port 'fpga_feature_extract_hw/gmem0' to 'm_axi'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'fpga_feature_extract_hw/gmem1' to 'm_axi'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'fpga_feature_extract_hw/gmem2' to 'm_axi'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'fpga_feature_extract_hw/gmem3' to 'm_axi'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'fpga_feature_extract_hw/gmem4' to 'm_axi'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'fpga_feature_extract_hw/gmem5' to 'm_axi'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'fpga_feature_extract_hw/gmem6' to 'm_axi'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'fpga_feature_extract_hw/gmem7' to 'm_axi'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'fpga_feature_extract_hw/laserCloudInArray' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'fpga_feature_extract_hw/cloudSize' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'fpga_feature_extract_hw/start_point_ori' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'fpga_feature_extract_hw/end_point_ori' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'fpga_feature_extract_hw/rangeimage_point' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'fpga_feature_extract_hw/rangeimage_range' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'fpga_feature_extract_hw/rangeimage_lessflat' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'fpga_feature_extract_hw/rangeimage_ground' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'fpga_feature_extract_hw/rangeimage_flat' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'fpga_feature_extract_hw/rangeimage_lesssharp' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'fpga_feature_extract_hw/rangeimage_sharp' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'fpga_feature_extract_hw' to 's_axilite & ap_ctrl_hs'.
+INFO: [RTGEN 206-100] Bundling port 'laserCloudInArray', 'cloudSize', 'start_point_ori', 'end_point_ori', 'rangeimage_point', 'rangeimage_range', 'rangeimage_lessflat', 'rangeimage_ground', 'rangeimage_flat', 'rangeimage_lesssharp', 'rangeimage_sharp' and 'return' to AXI-Lite port control_bus.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'fpga_feature_extract_hw'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.19 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.19 seconds; current allocated memory: 1.254 GB.
+INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 0.31 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.33 seconds; current allocated memory: 1.262 GB.
+INFO: [HLS 200-1603] Design has inferred MAXI bursts and missed bursts, see Vitis HLS GUI synthesis summary report for detailed information.
+INFO: [HLS 200-111] Finished Updating report files: CPU user time: 2.14 seconds. CPU system time: 0.01 seconds. Elapsed time: 2.16 seconds; current allocated memory: 1.300 GB.
+INFO: [VHDL 208-304] Generating VHDL RTL for fpga_feature_extract_hw.
+INFO: [VLOG 209-307] Generating Verilog RTL for fpga_feature_extract_hw.
+INFO: [HLS 200-789] **** Estimated Fmax: 233.32 MHz
+INFO: [HLS 200-2161] Finished Command csynth_design Elapsed time: 00:00:48; Allocated memory: 689.707 MB.
+INFO: [HLS 200-1510] Running: export_design 
+INFO: [IMPL 213-8] Exporting RTL as a Vivado IP.
+WARNING: /tools/Xilinx/Vivado/2024.2/tps/lnx64/jre11.0.16_1 does not exist.
+
+****** Vivado v2024.2 (64-bit)
+  **** SW Build 5239630 on Fri Nov 08 22:34:34 MST 2024
+  **** IP Build 5239520 on Sun Nov 10 16:12:51 MST 2024
+  **** SharedData Build 5239561 on Fri Nov 08 14:39:27 MST 2024
+  **** Start of session at: Thu Oct 29 07:54:27 2026
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source run_ippack.tcl -notrace
+INFO: calling package_hls_ip ip_types=vitis sysgen json_file=/home/srtp2025_nie/fe_p0/final1/hls_build.prj/solution1/solution1_data.json outdir=/home/srtp2025_nie/fe_p0/final1/hls_build.prj/solution1/impl/ip srcdir=/home/srtp2025_nie/fe_p0/final1/hls_build.prj/solution1 sort_interfaces_ports=false
+INFO: Copied 1 ipmisc file(s) to /home/srtp2025_nie/fe_p0/final1/hls_build.prj/solution1/impl/ip/misc
+INFO: Copied 112 verilog file(s) to /home/srtp2025_nie/fe_p0/final1/hls_build.prj/solution1/impl/ip/hdl/verilog
+INFO: Copied 107 vhdl file(s) to /home/srtp2025_nie/fe_p0/final1/hls_build.prj/solution1/impl/ip/hdl/vhdl
+INFO: Copied 10 swdriver file(s) to /home/srtp2025_nie/fe_p0/final1/hls_build.prj/solution1/impl/ip/drivers
+Generating 2 subcores in /home/srtp2025_nie/fe_p0/final1/hls_build.prj/solution1/impl/ip/hdl/ip.tmp:
+impl/misc/fpga_feature_extract_hw_dcmp_64ns_64ns_1_2_no_dsp_1_ip.tcl
+impl/misc/fpga_feature_extract_hw_fpext_32ns_64_2_no_dsp_1_ip.tcl
+INFO: Using COE_DIR=/home/srtp2025_nie/fe_p0/final1/hls_build.prj/solution1/impl/ip/hdl/verilog
+INFO: Generating fpga_feature_extract_hw_dcmp_64ns_64ns_1_2_no_dsp_1_ip via file impl/misc/fpga_feature_extract_hw_dcmp_64ns_64ns_1_2_no_dsp_1_ip.tcl
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/tools/Xilinx/Vivado/2024.2/data/ip'.
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'fpga_feature_extract_hw_dcmp_64ns_64ns_1_2_no_dsp_1_ip'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'fpga_feature_extract_hw_dcmp_64ns_64ns_1_2_no_dsp_1_ip'...
+INFO: Done generating fpga_feature_extract_hw_dcmp_64ns_64ns_1_2_no_dsp_1_ip via file impl/misc/fpga_feature_extract_hw_dcmp_64ns_64ns_1_2_no_dsp_1_ip.tcl
+INFO: Generating fpga_feature_extract_hw_fpext_32ns_64_2_no_dsp_1_ip via file impl/misc/fpga_feature_extract_hw_fpext_32ns_64_2_no_dsp_1_ip.tcl
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'fpga_feature_extract_hw_fpext_32ns_64_2_no_dsp_1_ip'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'fpga_feature_extract_hw_fpext_32ns_64_2_no_dsp_1_ip'...
+INFO: Done generating fpga_feature_extract_hw_fpext_32ns_64_2_no_dsp_1_ip via file impl/misc/fpga_feature_extract_hw_fpext_32ns_64_2_no_dsp_1_ip.tcl
+INFO: Import ports from HDL: /home/srtp2025_nie/fe_p0/final1/hls_build.prj/solution1/impl/ip/hdl/vhdl/fpga_feature_extract_hw.vhd (fpga_feature_extract_hw)
+INFO: Add axi4lite interface s_axi_control_bus
+INFO: Add clock interface ap_clk
+INFO: Add reset interface ap_rst_n
+INFO: Add interrupt interface interrupt
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/tools/Xilinx/Vivado/2024.2/data/ip'.
+INFO: Add axi4full interface m_axi_gmem0
+INFO: Add axi4full interface m_axi_gmem1
+INFO: Add axi4full interface m_axi_gmem2
+INFO: Add axi4full interface m_axi_gmem3
+INFO: Add axi4full interface m_axi_gmem4
+INFO: Add axi4full interface m_axi_gmem5
+INFO: Add axi4full interface m_axi_gmem6
+INFO: Add axi4full interface m_axi_gmem7
+INFO: Calling post_process_vitis to specialize IP
+INFO: Calling post_process_sysgen to specialize IP
+Generating sysgen info xml from json file
+INFO: Created IP /home/srtp2025_nie/fe_p0/final1/hls_build.prj/solution1/impl/ip/component.xml
+INFO: Created IP archive /home/srtp2025_nie/fe_p0/final1/hls_build.prj/solution1/impl/ip/xilinx_com_hls_fpga_feature_extract_hw_1_0.zip
+INFO: [Common 17-206] Exiting Vivado at Thu Oct 29 07:54:41 2026...
+INFO: [HLS 200-802] Generated output file hls_build.prj/solution1/impl/export.zip
+INFO: [HLS 200-2161] Finished Command export_design Elapsed time: 00:00:38; Allocated memory: 6.461 MB.
+INFO: [HLS 200-112] Total CPU user time: 73.64 seconds. Total CPU system time: 3.47 seconds. Total elapsed time: 89.27 seconds; peak allocated memory: 1.306 GB.

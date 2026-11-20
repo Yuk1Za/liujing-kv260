@@ -49,7 +49,7 @@ python liujing/demo_fusion/server.py --out ./output/demo
 
 ## 四核融合位流（2026-11-18，替换旧 fusion.bit）
 
-`hardware/fusion/` 现为单静态四核位流（liujing.bit，7,797,905 B，sha256 `3b1bf1d3542c0fd9` 前缀），100 MHz PL 时钟，同片含**压缩雷达特征核（60.5k→24.5k LUT）+ fusion_frame 彩色面元渲染与地图融合核（URAM 常驻）+ Shi-Tomasi + NMS**。构建入口 `hardware/fusion/build.tcl`（Vivado 2026.1；重建须先将本目录复制到短英文路径；`shi_synth.tcl` 在综合前预载 Vivado 2024.2 Floating-Point 7.1 rev19 旧库，解决浮点子核版本互斥）。HLS 源码与 BD 工程同目录提供（`hls_src/`、`platform/`）。
+`hardware/fusion/` 现为单静态四核位流（liujing.bit，7,797,905 B，sha256 `3b1bf1d3542c0fd9` 前缀），100 MHz PL 时钟，同片含**压缩雷达特征核（60.5k→24.5k LUT）+ fusion_frame 彩色面元渲染与地图融合核（URAM 常驻）+ Shi-Tomasi + NMS**。构建入口 `hardware/fusion/build.tcl`（Vivado 2026.1；重建须先将本目录复制到短英文路径；`shi_synth.tcl` 在综合前预载 Vivado 2024.2 Floating-Point 7.1 rev19 旧库，解决浮点子核版本互斥）。HLS 源码与 BD 工程同目录提供：**四个核的 HLS C++ 源与综合脚本在 `hls_src/{radar,fusion,shi,nms}/`**（雷达核含 `csynth.log`，雷达与 Shi-Tomasi 无独立 testbench；fusion 与 NMS 自带 testbench），BD 工程在 `platform/`。
 
 布线后资源与时序：整机 72,924 / 117,120 LUT（62.26%）、URAM 61 / 64、DSP 285；WNS +0.780 ns、0 布线错误。分核明细见 `hardware/fusion/reports/`，全交付物 SHA256 见 `hardware/fusion/manifest.json`。
 
